@@ -1,7 +1,7 @@
-#HI
+# HI
 
-#ALU - Arithmetic Logic Unit
-##Design and Verification
+# ALU - Arithmetic Logic Unit
+## Design and Verification
 
 
 -shreeshakumar
