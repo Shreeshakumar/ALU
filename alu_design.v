@@ -27,7 +27,11 @@ parameter C = 4
 );
 
 //Count reg
-reg cnt = 0;
+reg [1:0]cnt = 0;
+
+//signed reg
+reg signed [A-1:0]sOPA;
+reg signed [B-1:0]sOPB;
 
 always@(posedge CLK or posedge RST)
 begin
@@ -119,7 +123,9 @@ begin
 				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
 								begin
-									RES <= (OPA + 1) * (OPB + 1);
+									if (cnt == 0) 	begin	OPA_1 <= OPA + 1; 	cnt <= cnt +1;	end
+									else if (cnt == 1)	begin	OPB_1 <= OPB + 1; 	cnt <= cnt +1;	end
+									else if (cnt == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt <= 0;	end
 								end
 							end
 				4'd10	:	begin	// A<<1 nA * B
@@ -127,8 +133,14 @@ begin
 									RES <= (OPA <<< 1) * OPB;  
 							end
 				4'd11	:	begin	//A n B signed A+B
+								sOPA <= OPA;
+								sOPB <= OPB;
+								{COUT,RES[A-1:0]} <= sOPA + sOPB;
 							end
 				4'd12	:	begin	//A n B signed A-B
+								sOPA <= OPA;
+								sOPB <= OPB;
+								{COUT,RES[A-1:0]} <= sOPA - sOPB;
 							end	
 				default	:	RES <= RES;
 			endcase
@@ -215,15 +227,15 @@ begin
 								if (INP_VALID == 2'b11)
 								begin
 									casez(OPB[3:0])
-										4'b?000	:	RES <= OPA;
-										4'b?001	:	RES <= {OPA[6:0],OPA[7]};
-										4'b?010	:	RES <= {OPA[5:0],OPA[7:6]};
-										4'b?011	:	RES <= {OPA[4:0],OPA[7:5]};
-										4'b?100	:	RES <= {OPA[3:0],OPA[7:4]};
-										4'b?101	:	RES <= {OPA[2:0],OPA[7:3]};
-										4'b?110	:	RES <= {OPA[1:0],OPA[7:2]};
-										4'b?111	:	RES <= {OPA[0],OPA[7:1]};
-										default :	RES <= RES;
+										4'b?000	:	RES[A-1:0] <= OPA;
+										4'b?001	:	RES[A-1:0] <= {OPA[6:0],OPA[7]};
+										4'b?010	:	RES[A-1:0] <= {OPA[5:0],OPA[7:6]};
+										4'b?011	:	RES[A-1:0] <= {OPA[4:0],OPA[7:5]};
+										4'b?100	:	RES[A-1:0] <= {OPA[3:0],OPA[7:4]};
+										4'b?101	:	RES[A-1:0] <= {OPA[2:0],OPA[7:3]};
+										4'b?110	:	RES[A-1:0] <= {OPA[1:0],OPA[7:2]};
+										4'b?111	:	RES[A-1:0] <= {OPA[0],OPA[7:1]};
+										default :	RES[A-1:0] <= RES;
 							         endcase
 							     end
 					       end
@@ -232,14 +244,14 @@ begin
 								begin
 									casez(OPB[3:0])
 										4'b?000	:	RES[A-1:0] <= OPA;
-										4'b?001	:	RES <= {OPA[0],OPA[7:1]};
-										4'b?010	:	RES <= {OPA[1:0],OPA[7:2]};
-										4'b?011	:	RES <= {OPA[2:0],OPA[7:3]};
-										4'b?100	:	RES <= {OPA[3:0],OPA[7:4]};
-										4'b?101	:	RES <= {OPA[4:0],OPA[7:5]};
-										4'b?110	:	RES <= {OPA[5:0],OPA[7:6]};
-										4'b?111	:	RES <= {OPA[6:0],OPA[7]};
-										default :	RES <= RES;
+										4'b?001	:	RES[A-1:0] <= {OPA[0],OPA[7:1]};
+										4'b?010	:	RES[A-1:0] <= {OPA[1:0],OPA[7:2]};
+										4'b?011	:	RES[A-1:0] <= {OPA[2:0],OPA[7:3]};
+										4'b?100	:	RES[A-1:0] <= {OPA[3:0],OPA[7:4]};
+										4'b?101	:	RES[A-1:0] <= {OPA[4:0],OPA[7:5]};
+										4'b?110	:	RES[A-1:0] <= {OPA[5:0],OPA[7:6]};
+										4'b?111	:	RES[A-1:0] <= {OPA[6:0],OPA[7]};
+										default :	RES[A-1:0] <= RES;
 							         endcase
 							     end
 							end
