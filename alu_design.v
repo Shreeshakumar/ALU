@@ -1,6 +1,13 @@
 // ALU_DESIGN
 
-module alu_design(
+module alu_design #(
+//PARAMETERS
+parameter A = 8,
+parameter B = 8,
+parameter C = 4
+)
+//INPUT OUTPUTS
+(
 	//Contoelpins
 	input wire CLK, RST,
 	input wire [1:0]INP_VALID,//00_no 01_A 10_B 11_AB VALID
@@ -19,11 +26,6 @@ module alu_design(
 	output reg OFLOW,COUT,G,L,E
 );
 
-//PARAMETERS
-parameter A = 8
-parameter B = 8
-parameter C = 4
-
 //Count reg
 reg cnt = 0;
 
@@ -33,7 +35,7 @@ begin
 	if (RST)				// 1st priority
 	begin
 		ERR <= 0;
-		RES <= ((A+B)-1)'d0;
+		RES <= 0;
 		OFLOW <= 0;
 		G <= 0;
 		L <= 0;
@@ -46,81 +48,80 @@ begin
 		// MODE HIGH ARITHMETIC
 		begin
 			case (CMD)
-				C'd0	:	begin	//ADD
+				4'd0	:	begin	//ADD
 								if (INP_VALID == 2'b11)
 									RES <= OPA + OPB;
 								else 
 									RES <= RES;
 							end
-				C'd1	:	begin	//SUB
+				4'd1	:	begin	//SUB
 								if (INP_VALID == 2'b11)
 									RES <= OPA - OPB;
 								else 
 									RES <= RES;
 							end
-				C'd2	:	begin 	//ADD_CIN
+				4'd2	:	begin 	//ADD_CIN
 								if (INP_VALID == 2'b11)
 									RES <= CIN + OPA + OPB;
 								else 
 									RES <= RES;
 							end
-				C'd3	:	begin	//SUB_CIN
+				4'd3	:	begin	//SUB_CIN
 								if (INP_VALID == 2'b11)
 									RES <= CIN - OPA - OPB;
 								else 
 									RES <= RES;
 							end
-				C'd4	:	begin 	//INC_A
+				4'd4	:	begin 	//INC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA + 1;
 								else 
 									RES <= RES;
 							end
-				C'd5	:	begin	//DEC_A
+				4'd5	:	begin	//DEC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA - 1;
 								else 
 									RES <= RES;
 							end
-				C'd6	:	begin 	//INC_B
+				4'd6	:	begin 	//INC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB + 1;
 								else 
 									RES <= RES;
 							end
-				C'd7	:	begin	//DEC_B
+				4'd7	:	begin	//DEC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB - 1;
 								else 
 									RES <= RES;
 							end
-				C'd8	:	begin	//CMP
+				4'd8	:	begin	//CMP
 								if (INP_VALID == 2'b11)
 								begin
 									if (OPA == OPB)
 										E <= 1;
 									else if (OPA < OPB)
 										L <= 1;
-									else (OPA > OPB)
-										E <= 1;
+									else 
+										G <= 1;
 								end
 								else 
 									RES <= RES;
 							end
-				C'd9	:	begin	// A+1 B+1 nA * nB
+				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
 								begin
 									RES <= (OPA + 1) * (OPB + 1);
 								end
 							end
-				C'd10	:	begin	// A<<1 nA * B
+				4'd10	:	begin	// A<<1 nA * B
 								if( INP_VALID == 2'b11)
-								begin,
 									RES <= (OPA <<< 1) * OPB;  
 							end
-				C'd11	:	begin	//A n B signed A+B
+				4'd11	:	begin	//A n B signed A+B
 							end
-				C'd12	:	begin	//A n B signed A-B
+				4'd12	:	begin	//A n B signed A-B
 							end	
 				default	:	RES = RES;
 			endcase
@@ -129,81 +130,81 @@ begin
 		// MODE LOW LOGICAL
 		begin
 			case (CMD)
-				C'd0	:	begin 	//AND
+				4'd0	:	begin 	//AND
 								if (INP_VALID == 2'b11)
 									RES <= OPA & OPB;
 								else 
 									RES <= RES;
 							end
-				C'd1	:	begin	//NAND
+				4'd1	:	begin	//NAND
 								if (INP_VALID == 2'b11)
-									RES <= OPA ~& OPB;
+									RES <= ~(OPA & OPB);
 								else
 									RES <= RES;
 							end
-				C'd2	:	begin	//OR
+				4'd2	:	begin	//OR
 								if (INP_VALID == 2'b11)
 									RES <= OPA | OPB;
 								else 
 									RES <= RES;
 							end
-				C'd3	:	begin 	//NOR
+				4'd3	:	begin 	//NOR
 								if (INP_VALID == 2'b11)
-									RES <= OPA ~| OPB;
+									RES <= ~(OPA | OPB);
 								else 
 									RES <= RES;
 							end
 								
-				C'd4	:	begin	//XOR
+				4'd4	:	begin	//XOR
 								if (INP_VALID == 2'b11)
 									RES <= OPA ^ OPB;
 								else 
 									RES <= RES;
 							end
-				C'd5	:	begin	//XNOR
+				4'd5	:	begin	//XNOR
 								if (INP_VALID == 2'b11)
 									RES <= OPA ~^ OPB;
 								else 
 									RES <= RES;
 							end
-				C'd6	:	begin	//NOT_A
+				4'd6	:	begin	//NOT_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= ~OPA;
 								else 
 									RES <= RES;
 							end
-				C'd7	:	begin 	//NOT_B
+				4'd7	:	begin 	//NOT_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= ~OPB;
 								else 
 									RES <= RES;
 							end
-				C'd8	:	begin	//SHR1_A
+				4'd8	:	begin	//SHR1_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA >> 1;
 								else 
 									RES <= RES;
 							end
 							
-				C'd9	:	begin	//SHL1_A
+				4'd9	:	begin	//SHL1_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA << 1;
 								else 
 									RES <= RES;
 							end
-				C'd10	:	begin	//SHR1_B
+				4'd10	:	begin	//SHR1_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB >> 1;
 								else 
 									RES <= RES;
 							end
-				C'd11	:	begin	//SHL1_B
+				4'd11	:	begin	//SHL1_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB << 1;
 								else 
 									RES <= RES;
 							end
-				C'd12	:	begin	//ROL_A_B
+				4'd12	:	begin	//ROL_A_B
 								if (INP_VALID == 2'b11)
 								begin
 									casez(OPB[3:0])
@@ -216,8 +217,10 @@ begin
 										4'b?110	:	RES <= {OPA[1:0],OPA[7:2]};
 										4'b?111	:	RES <= {OPA[0],OPA[7:1]};
 										default :	RES <= RES;
-							end
-				C'd13	:	begin	//ROR_A_B
+							         endcase
+							     end
+					       end
+				4'd13	:	begin	//ROR_A_B
 								if (INP_VALID == 2'b11)
 								begin
 									casez(OPB[3:0])
@@ -230,35 +233,12 @@ begin
 										4'b?110	:	RES <= {OPA[5:0],OPA[7:6]};
 										4'b?111	:	RES <= {OPA[6:0],OPA[7]};
 										default :	RES <= RES;
+							         endcase
+							     end
 							end
 				default	:	RES <= RES;
 			endcase	
 		end
-
-	end
-	
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+end
+endmodule
