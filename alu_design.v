@@ -29,6 +29,9 @@ parameter C = 4
 //Count reg
 reg [1:0]cnt = 0;
 
+//temp variables
+reg [A-1:0]OPA_1;
+reg [B-1:0]OPB_1;
 //signed reg
 reg signed [A-1:0]sOPA;
 reg signed [B-1:0]sOPB;
@@ -76,15 +79,18 @@ begin
 							end
 				4'd2	:	begin 	//ADD_CIN
 								if (INP_VALID == 2'b11)
-									{COUT,RES[A-1:0]} <= CIN + OPA + OPB;
+									{COUT,RES[A-1:0]} <= OPA + OPB + CIN;
 								else 
 									RES <= RES;
 							end
 				4'd3	:	begin	//SUB_CIN
 								if (INP_VALID == 2'b11)
-									RES[A-1:0] <= CIN - OPA - OPB;
-								else 
-									RES <= RES;
+								begin
+									if((OPB + CIN) > OPA)
+										OFLOW <= 1;
+									else
+										RES[A-1:0] <= OPA - OPB - CIN;
+								end							
 							end
 				4'd4	:	begin 	//INC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
@@ -139,11 +145,12 @@ begin
 								sOPA <= OPA;
 								sOPB <= OPB;
 								{COUT,RES[A-1:0]} <= sOPA + sOPB;
+								// msb opa = msb opb is not equal msb res then oflow high
 							end
 				4'd12	:	begin	//A n B signed A-B
 								sOPA <= OPA;
 								sOPB <= OPB;
-								{COUT,RES[A-1:0]} <= sOPA - sOPB;
+								RES[A-1:0] <= sOPA - sOPB;
 							end	
 				default	:	RES <= RES;
 			endcase
