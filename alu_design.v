@@ -67,9 +67,12 @@ begin
 							end
 				4'd1	:	begin	//SUB
 								if (INP_VALID == 2'b11)
-									RES[A-1:0] <= OPA - OPB;
-								else 
-									RES <= RES;
+								begin
+									if(OPB > OPA)
+										OFLOW <= 1;
+									else
+										RES[A-1:0] <= OPA - OPB;
+								end
 							end
 				4'd2	:	begin 	//ADD_CIN
 								if (INP_VALID == 2'b11)
@@ -148,6 +151,12 @@ begin
 		else
 		// MODE LOW LOGICAL
 		begin
+			OFLOW <= 0;
+			COUT <= 0;
+			G <= 0;
+			L <= 0;
+			E <= 0;
+
 			case (CMD)
 				4'd0	:	begin 	//AND
 								if (INP_VALID == 2'b11)
@@ -228,13 +237,13 @@ begin
 								begin
 									casez(OPB[3:0])
 										4'b?000	:	RES[A-1:0] <= OPA;
-										4'b?001	:	RES[A-1:0] <= {OPA[6:0],OPA[7]};
-										4'b?010	:	RES[A-1:0] <= {OPA[5:0],OPA[7:6]};
-										4'b?011	:	RES[A-1:0] <= {OPA[4:0],OPA[7:5]};
-										4'b?100	:	RES[A-1:0] <= {OPA[3:0],OPA[7:4]};
-										4'b?101	:	RES[A-1:0] <= {OPA[2:0],OPA[7:3]};
-										4'b?110	:	RES[A-1:0] <= {OPA[1:0],OPA[7:2]};
-										4'b?111	:	RES[A-1:0] <= {OPA[0],OPA[7:1]};
+										4'b?001	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1:A-1]};
+										4'b?010	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
+										4'b?011	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
+										4'b?100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
+										4'b?101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
+										4'b?110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
+										4'b?111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
 										default :	RES[A-1:0] <= RES;
 							         endcase
 							     end
@@ -244,13 +253,13 @@ begin
 								begin
 									casez(OPB[3:0])
 										4'b?000	:	RES[A-1:0] <= OPA;
-										4'b?001	:	RES[A-1:0] <= {OPA[0],OPA[7:1]};
-										4'b?010	:	RES[A-1:0] <= {OPA[1:0],OPA[7:2]};
-										4'b?011	:	RES[A-1:0] <= {OPA[2:0],OPA[7:3]};
-										4'b?100	:	RES[A-1:0] <= {OPA[3:0],OPA[7:4]};
-										4'b?101	:	RES[A-1:0] <= {OPA[4:0],OPA[7:5]};
-										4'b?110	:	RES[A-1:0] <= {OPA[5:0],OPA[7:6]};
-										4'b?111	:	RES[A-1:0] <= {OPA[6:0],OPA[7]};
+										4'b?001	:	RES[A-1:0] <= {OPA[A],OPA[A-1:A-7]};
+										4'b?010	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
+										4'b?011	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
+										4'b?100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
+										4'b?101	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
+										4'b?110	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
+										4'b?111	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1:A-1]};
 										default :	RES[A-1:0] <= RES;
 							         endcase
 							     end
