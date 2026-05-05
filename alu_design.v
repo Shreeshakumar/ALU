@@ -142,14 +142,14 @@ begin
 									RES <= (OPA <<< 1) * OPB;  
 							end
 				4'd11	:	begin	//A n B signed A+B
-								sOPA <= OPA;
-								sOPB <= OPB;
+								sOPA = OPA;
+								sOPB = OPB;
 								{COUT,RES[A-1:0]} <= sOPA + sOPB;
 								// msb opa = msb opb is not equal msb res then oflow high
 							end
 				4'd12	:	begin	//A n B signed A-B
-								sOPA <= OPA;
-								sOPB <= OPB;
+								sOPA = OPA;
+								sOPB = OPB;
 								RES[A-1:0] <= sOPA - sOPB;
 							end	
 				default	:	RES <= RES;
@@ -260,7 +260,7 @@ begin
 								begin
 									casez(OPB[3:0])
 										4'b?000	:	RES[A-1:0] <= OPA;
-										4'b?001	:	RES[A-1:0] <= {OPA[A],OPA[A-1:A-7]};
+										4'b?001	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7};
 										4'b?010	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
 										4'b?011	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
 										4'b?100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
