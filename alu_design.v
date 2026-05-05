@@ -10,7 +10,7 @@ parameter C = 4
 (
 	//Contoelpins
 	input wire CLK, RST,
-	input wire [1:0]INP_VALID,//00_no 01_A 10_B 11_AB VALID
+	input wire [1:0]INP_VALID,//00_no 01_A 10_B 11_AB VALIDD
 	input wire MODE,// 1 arithmetic 0 logical
 	input wire [C-1:0]CMD,
 	input wire CE,
