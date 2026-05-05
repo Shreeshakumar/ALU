@@ -47,52 +47,59 @@ begin
 		if (MODE)			// 3rd priority
 		// MODE HIGH ARITHMETIC
 		begin
+			G <= 0;
+			L <= 0;
+			E <= 0;
+			OFLOW <= 0;
+			COUT <= 0;
+			ERR <= 0;
+
 			case (CMD)
 				4'd0	:	begin	//ADD
 								if (INP_VALID == 2'b11)
-									RES <= OPA + OPB;
+									{COUT,RES[A-1:0]} <= OPA + OPB;
 								else 
 									RES <= RES;
 							end
 				4'd1	:	begin	//SUB
 								if (INP_VALID == 2'b11)
-									RES <= OPA - OPB;
+									RES[A-1:0] <= OPA - OPB;
 								else 
 									RES <= RES;
 							end
 				4'd2	:	begin 	//ADD_CIN
 								if (INP_VALID == 2'b11)
-									RES <= CIN + OPA + OPB;
+									{COUT,RES[A-1:0]} <= CIN + OPA + OPB;
 								else 
 									RES <= RES;
 							end
 				4'd3	:	begin	//SUB_CIN
 								if (INP_VALID == 2'b11)
-									RES <= CIN - OPA - OPB;
+									RES[A-1:0] <= CIN - OPA - OPB;
 								else 
 									RES <= RES;
 							end
 				4'd4	:	begin 	//INC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
-									RES <= OPA + 1;
+									RES[A-1:0] <= OPA + 1;
 								else 
 									RES <= RES;
 							end
 				4'd5	:	begin	//DEC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
-									RES <= OPA - 1;
+									RES[A-1:0] <= OPA - 1;
 								else 
 									RES <= RES;
 							end
 				4'd6	:	begin 	//INC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
-									RES <= OPB + 1;
+									RES[A-1:0] <= OPB + 1;
 								else 
 									RES <= RES;
 							end
 				4'd7	:	begin	//DEC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
-									RES <= OPB - 1;
+									RES[A-1:0] <= OPB - 1;
 								else 
 									RES <= RES;
 							end
@@ -123,7 +130,7 @@ begin
 							end
 				4'd12	:	begin	//A n B signed A-B
 							end	
-				default	:	RES = RES;
+				default	:	RES <= RES;
 			endcase
 		end
 		else
@@ -224,7 +231,7 @@ begin
 								if (INP_VALID == 2'b11)
 								begin
 									casez(OPB[3:0])
-										4'b?000	:	RES <= OPA;
+										4'b?000	:	RES[A-1:0] <= OPA;
 										4'b?001	:	RES <= {OPA[0],OPA[7:1]};
 										4'b?010	:	RES <= {OPA[1:0],OPA[7:2]};
 										4'b?011	:	RES <= {OPA[2:0],OPA[7:3]};
