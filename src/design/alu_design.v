@@ -154,7 +154,7 @@ begin
 								if( INP_VALID == 2'b11)
 									begin
 										RES[A-1:0] <= s_add;
-										OFLOW = ( (OPA[A-1] == OPB[A-1]) && (s_add[A-1] != OPA[A-1]) );
+										OFLOW <= ( (OPA[A-1] == OPB[A-1]) && (s_add[A-1] != OPA[A-1]) );
 									end// msb opa = msb opb msb opa is not equal msb res then oflow high
 								else	begin	ERR <= 1;	RES <= 0;	end
 							end
@@ -162,7 +162,7 @@ begin
 								if( INP_VALID == 2'b11)
 									begin
 										RES[A-1:0] <= s_sub;
-										OFLOW = ( (OPA[A-1] != OPB[A-1]) && (s_sub[A-1] != OPA[A-1]) );
+										OFLOW <= ( (OPA[A-1] != OPB[A-1]) && (s_sub[A-1] != OPA[A-1]) );
 									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 								else	begin	ERR <= 1;	RES <= 0;	end
 							end	
