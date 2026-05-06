@@ -27,7 +27,8 @@ parameter C = 4
 );
 
 //Count reg
-	reg [1:0]cnt =0;
+	reg [1:0]cnt_9 =0;
+	reg [1:0]cnt_10 =0;
 
 //temp variables
 reg [A-1:0]OPA_1;
@@ -135,20 +136,20 @@ begin
 				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
 								begin
-									if (cnt == 0) 	begin cnt <= cnt +1;	end
-									else if (cnt == 1)	begin	OPA_1 <= OPA + 1; OPB_1 <= OPB + 1; 	cnt <= cnt +1;	end
-									else if (cnt == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt <= 0;	end
-									else cnt <= 0;
+									if (cnt_9 == 0) 	begin cnt_9 <= cnt_9 +1;	end
+									else if (cnt_9 == 1)	begin	OPA_1 <= OPA + 1; OPB_1 <= OPB + 1; 	cnt_9 <= cnt_9 +1;	end
+									else if (cnt_9 == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt_9 <= 0;	end
+									else cnt_9 <= 0;
 								end
 								else begin 	ERR <= 1; 	RES <= 0;	end
 							end
 				4'd10	:	begin	// A<<1 nA * B
 								if (INP_VALID == 2'b11)
 								begin
-									if (cnt == 0) 	begin cnt <= cnt +1;	end
-									else if (cnt == 1)	begin	OPA_L1 <= OPA << 1; 	cnt <= cnt +1;	end
-									else if (cnt == 2)	begin	RES <= OPA_L1 * OPB; 	cnt <= 0;	end
-									else cnt <= 0;
+									if (cnt_10 == 0) 	begin cnt_10 <= cnt_10 +1;	end
+									else if (cnt_10 == 1)	begin	OPA_L1 <= OPA << 1; 	cnt_10 <= cnt_10 +1;	end
+									else if (cnt_10 == 2)	begin	RES <= OPA_L1 * OPB; 	cnt_10 <= 0;	end
+									else cnt_10 <= 0;
 								end
 								else begin	ERR <= 1;	RES <= 0;	end
 							end
