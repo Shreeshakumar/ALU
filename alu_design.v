@@ -52,37 +52,44 @@ begin
 	end
 	else if (CE)			// 2nd priority
 	begin
-		if (MODE)			// 3rd priority
-		// MODE HIGH ARITHMETIC
-		begin
 			G <= 0;
 			L <= 0;
 			E <= 0;
 			OFLOW <= 0;
 			COUT <= 0;
 			ERR <= 0;
-			cnt <= 0;
-
+		
+		if (MODE)			// 3rd priority
+		// MODE HIGH ARITHMETIC
+		begin
 			case (CMD)
 				4'd0	:	begin	//ADD
 								if (INP_VALID == 2'b11)
 									{COUT,RES[A-1:0]} <= OPA + OPB;
 								else 
-									RES <= RES;
+									RES <= 0;
+									ERR <= 1;
 							end
 				4'd1	:	begin	//SUB
 								if (INP_VALID == 2'b11)
 								begin
 									if(OPB > OPA)
 										OFLOW <= 1;
+										RES[A-1:0] <= OPA - OPB;
 									else
 										RES[A-1:0] <= OPA - OPB;
 								end
+								else
+									begin
+										ERR <= 1;
+										RES <= 0;
+									end
 							end
 				4'd2	:	begin 	//ADD_CIN
 								if (INP_VALID == 2'b11)
 									{COUT,RES[A-1:0]} <= OPA + OPB + CIN;
 								else 
+									ERR <= 1;
 									RES <= RES;
 							end
 				4'd3	:	begin	//SUB_CIN
@@ -91,6 +98,7 @@ begin
 									if((OPB + CIN) > OPA)
 										OFLOW <= 1;
 									else
+										ERR <= 1;
 										RES[A-1:0] <= OPA - OPB - CIN;
 								end							
 							end
@@ -98,38 +106,40 @@ begin
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES[A-1:0] <= OPA + 1;
 								else 
+									ERR <= 1;
 									RES <= RES;
 							end
 				4'd5	:	begin	//DEC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES[A-1:0] <= OPA - 1;
 								else 
+									ERR <= 1;
 									RES <= RES;
 							end
 				4'd6	:	begin 	//INC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES[A-1:0] <= OPB + 1;
 								else 
+									ERR <= 1;
 									RES <= RES;
 							end
 				4'd7	:	begin	//DEC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES[A-1:0] <= OPB - 1;
 								else 
+									ERR <= 1;
 									RES <= RES;
 							end
 				4'd8	:	begin	//CMP
 								if (INP_VALID == 2'b11)
 								begin
-									if (OPA == OPB)
-										E <= 1;
-									else if (OPA < OPB)
-										L <= 1;
-									else 
-										G <= 1;
+									E <= (OPA == OPB);
+									L <= (OPA < OPB);
+									G <= (OPA > OPB);
 								end
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
@@ -138,108 +148,139 @@ begin
 									else if (cnt == 1)	begin	OPB_1 <= OPB + 1; 	cnt <= cnt +1;	end
 									else if (cnt == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt <= 0;	end
 								end
+								else
+									begin
+										ERR <= 1;
+										RES <= 0;
+									end
 							end
 				4'd10	:	begin	// A<<1 nA * B
 								if( INP_VALID == 2'b11)
-									RES <= (OPA <<< 1) * OPB;  
+									RES <= (OPA <<< 1) * OPB; 
+								else
+									begin
+										ERR <= 1;
+										RES <= 0;
+									end
 							end
 				4'd11	:	begin	//A n B signed A+B
-								sOPA = OPA;
-								sOPB = OPB;
-								{COUT,RES[A-1:0]} <= sOPA + sOPB;
-								// msb opa = msb opb is not equal msb res then oflow high
+								if( INP_VALID == 2'b11)
+									begin
+										sOPA = OPA;
+										sOPB = OPB;
+										{COUT,RES[A-1:0]} <= sOPA + sOPB;
+									end// msb opa = msb opb is not equal msb res then oflow high
+								else
+									begin
+										ERR <= 1;
+										RES <= 0;
+									end
 							end
 				4'd12	:	begin	//A n B signed A-B
-								sOPA = OPA;
-								sOPB = OPB;
-								RES[A-1:0] <= sOPA - sOPB;
+								if( INP_VALID == 2'b11)
+									begin
+										sOPA = OPA;
+										sOPB = OPB;
+										RES[A-1:0] <= sOPA - sOPB;
+									end
+								else
+									begin
+										ERR <= 1;
+										RES <= 0;
+									end
 							end	
-				default	:	RES <= RES;
+				default	:	begin ERR <= 1; RES <= 0;	end
 			endcase
 		end
 		else
 		// MODE LOW LOGICAL
 		begin
-			OFLOW <= 0;
-			COUT <= 0;
-			G <= 0;
-			L <= 0;
-			E <= 0;
-
 			case (CMD)
 				4'd0	:	begin 	//AND
 								if (INP_VALID == 2'b11)
 									RES <= OPA & OPB;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd1	:	begin	//NAND
 								if (INP_VALID == 2'b11)
 									RES <= ~(OPA & OPB);
 								else
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd2	:	begin	//OR
 								if (INP_VALID == 2'b11)
 									RES <= OPA | OPB;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd3	:	begin 	//NOR
 								if (INP_VALID == 2'b11)
 									RES <= ~(OPA | OPB);
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 								
 				4'd4	:	begin	//XOR
 								if (INP_VALID == 2'b11)
 									RES <= OPA ^ OPB;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd5	:	begin	//XNOR
 								if (INP_VALID == 2'b11)
-									RES <= OPA ~^ OPB;
+									RES <= ~(OPA ^ OPB);
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd6	:	begin	//NOT_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= ~OPA;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd7	:	begin 	//NOT_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= ~OPB;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd8	:	begin	//SHR1_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA >> 1;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 							
 				4'd9	:	begin	//SHL1_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES <= OPA << 1;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd10	:	begin	//SHR1_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB >> 1;
 								else 
-									RES <= RES;
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd11	:	begin	//SHL1_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES <= OPB << 1;
-								else 
-									RES <= RES;
+								else
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd12	:	begin	//ROL_A_B
 								if (INP_VALID == 2'b11)
@@ -253,9 +294,10 @@ begin
 										4'b?101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
 										4'b?110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
 										4'b?111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
-										default :	RES[A-1:0] <= RES;
+										default :	RES[A-1:0] <= 0;
 							         endcase
 							     end
+								else	begin	ERR <= 1; RES <= 0; end
 					       end
 				4'd13	:	begin	//ROR_A_B
 								if (INP_VALID == 2'b11)
@@ -269,11 +311,12 @@ begin
 										4'b?101 : RES[A-1:0] <= {OPA[4:0], OPA[A-1:5]};
 										4'b?110 : RES[A-1:0] <= {OPA[5:0], OPA[A-1:6]};
 										4'b?111 : RES[A-1:0] <= {OPA[6:0], OPA[A-1:7]};
-										default :	RES[A-1:0] <= RES;
+										default :	RES[A-1:0] <= 0;
 							         endcase
 							     end
+								else	begin	ERR <= 1; RES <= 0; end
 							end
-				default	:	RES <= RES;
+				default	:	begin 	ERR <= 1; RES <= 0;	end
 			endcase	
 		end
 end
