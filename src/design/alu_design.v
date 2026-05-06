@@ -27,7 +27,7 @@ parameter C = 4
 );
 
 //Count reg
-reg [1:0]cnt = 0;
+	reg [1:0]cnt =0;
 
 //temp variables
 reg [A-1:0]OPA_1;
@@ -36,10 +36,10 @@ reg [A-1:0]OPA_L1;
 
 	//signed reg
 	wire signed [A-1:0]sOPA = OPA;
-	wire signed [B-1:0]sOPB = OPB;
+	wire signed [A-1:0]sOPB = OPB;
 	//signes calculus
-	wire [A-1:0] s_add = sOPA + sOPB;
-	wire [B-1:0] s_sub = sOPA - sOPB;
+	wire signed [A-1:0] s_add = sOPA + sOPB;
+	wire signed [B-1:0] s_sub = sOPA - sOPB;
 
 always@(posedge CLK or posedge RST)
 begin
@@ -59,6 +59,7 @@ begin
 			OFLOW <= 0;
 			COUT <= 0;
 			ERR <= 0;
+			RES <= 0;
 		
 		if (MODE)			// 3rd priority
 		// MODE HIGH ARITHMETIC
@@ -127,6 +128,7 @@ begin
 										E <= (OPA == OPB);
 										L <= (OPA < OPB);
 										G <= (OPA > OPB);
+										RES <= 0;
 									end
 								else begin	ERR <= 1;	RES <= 0;	end
 							end
