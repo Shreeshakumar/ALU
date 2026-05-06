@@ -38,8 +38,8 @@ reg [A-1:0]OPA_L1;
 	wire signed [A-1:0]sOPA = OPA;
 	wire signed [B-1:0]sOPB = OPB;
 	//signes calculus
-	wire signed s_add[A-1:0] <= sOPA + sOPB;
-	wire signed s_sub[A-1:0] <= sOPA - sOPB;
+	wire [A-1:0] s_add = sOPA + sOPB;
+	wire [B-1:0] s_sub = sOPA - sOPB;
 
 always@(posedge CLK or posedge RST)
 begin
@@ -73,8 +73,10 @@ begin
 								if (INP_VALID == 2'b11)
 								begin
 									if(OPB > OPA)
+									begin
 										OFLOW <= 1;
 										RES[A-1:0] <= OPA - OPB;
+									end
 									else
 										RES[A-1:0] <= OPA - OPB;
 								end
@@ -85,12 +87,15 @@ begin
 								if (INP_VALID == 2'b11)
 									{COUT,RES[A-1:0]} <= OPA + OPB + CIN;
 								else begin	ERR <= 1;	RES <= 0;	end
+							end
 				4'd3	:	begin	//SUB_CIN
 								if (INP_VALID == 2'b11)
 								begin
 									if((OPB + CIN) > OPA)
+									begin
 										OFLOW <= 1;
 										RES[A-1:0] <= OPA - OPB - CIN;
+									end
 									else
 										RES[A-1:0] <= OPA - OPB - CIN;
 								end	
