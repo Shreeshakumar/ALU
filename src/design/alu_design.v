@@ -36,10 +36,10 @@ reg [A-1:0]OPA_L1;
 
 	//signed reg
 	wire signed [A-1:0]sOPA = OPA;
-	wire signed [A-1:0]sOPB = OPB;
+	wire signed [B-1:0]sOPB = OPB;
 	//signes calculus
 	wire signed [A-1:0] s_add = sOPA + sOPB;
-	wire signed [B-1:0] s_sub = sOPA - sOPB;
+	wire signed [A-1:0] s_sub = sOPA - sOPB;
 
 always@(posedge CLK or posedge RST)
 begin
