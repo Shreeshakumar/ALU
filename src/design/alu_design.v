@@ -237,34 +237,36 @@ begin
 				4'd12	:	begin	//ROL_A_B
 								if (INP_VALID == 2'b11)
 								begin
-									casez(OPB[3:0])
-										4'b?000	:	RES[A-1:0] <= OPA;
-										4'b?001	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1]};
-										4'b?010	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
-										4'b?011	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
-										4'b?100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
-										4'b?101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
-										4'b?110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
-										4'b?111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
+									casez(OPB[2:0])
+										'b000	:	RES[A-1:0] <= OPA;
+										'b001	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1]};
+										'b010	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
+										'b011	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
+										'b100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
+										'b101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
+										'b110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
+										'b111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
 										default :	RES[A-1:0] <= 0;
 							         endcase
+									ERR <= (OPB[7:4])?1:0;
 							     end
 								else	begin	ERR <= 1; RES <= 0; end
 					       end
 				4'd13	:	begin	//ROR_A_B
 								if (INP_VALID == 2'b11)
 								begin
-									casez(OPB[3:0])
-										4'b?000	:	RES[A-1:0] <= OPA;										
-										4'b?001 : RES[A-1:0] <= {OPA[0],   OPA[A-1:1]};
-										4'b?010 : RES[A-1:0] <= {OPA[1:0], OPA[A-1:2]};
-										4'b?011 : RES[A-1:0] <= {OPA[2:0], OPA[A-1:3]};
-										4'b?100 : RES[A-1:0] <= {OPA[3:0], OPA[A-1:4]};
-										4'b?101 : RES[A-1:0] <= {OPA[4:0], OPA[A-1:5]};
-										4'b?110 : RES[A-1:0] <= {OPA[5:0], OPA[A-1:6]};
-										4'b?111 : RES[A-1:0] <= {OPA[6:0], OPA[A-1:7]};
+									casez(OPB[2:0])
+										'b000	:	RES[A-1:0] <= OPA;										
+										'b001 : RES[A-1:0] <= {OPA[0],   OPA[A-1:1]};
+										'b010 : RES[A-1:0] <= {OPA[1:0], OPA[A-1:2]};
+										'b011 : RES[A-1:0] <= {OPA[2:0], OPA[A-1:3]};
+										'b100 : RES[A-1:0] <= {OPA[3:0], OPA[A-1:4]};
+										'b101 : RES[A-1:0] <= {OPA[4:0], OPA[A-1:5]};
+										'b110 : RES[A-1:0] <= {OPA[5:0], OPA[A-1:6]};
+										'b111 : RES[A-1:0] <= {OPA[6:0], OPA[A-1:7]};
 										default :	RES[A-1:0] <= 0;
 							         endcase
+									ERR <= (OPB[7:4])?1:0;
 							     end
 								else	begin	ERR <= 1; RES <= 0; end
 							end
