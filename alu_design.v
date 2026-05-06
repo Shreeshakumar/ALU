@@ -32,9 +32,14 @@ reg [1:0]cnt = 0;
 //temp variables
 reg [A-1:0]OPA_1;
 reg [B-1:0]OPB_1;
-//signed reg
-reg signed [A-1:0]sOPA;
-reg signed [B-1:0]sOPB;
+reg [A-1:0]OPA_L1;
+
+	//signed reg
+	wire signed [A-1:0]sOPA = OPA;
+	wire signed [B-1:0]sOPB = OPB;
+
+	wire signed s_add[A-1:0] <= sOPA + sOPB;
+	wire signed s_sub[A-1:0] <= sOPA - sOPB;
 
 always@(posedge CLK or posedge RST)
 begin
@@ -90,45 +95,48 @@ begin
 									{COUT,RES[A-1:0]} <= OPA + OPB + CIN;
 								else 
 									ERR <= 1;
-									RES <= RES;
+									RES <= 0;
 							end
 				4'd3	:	begin	//SUB_CIN
 								if (INP_VALID == 2'b11)
 								begin
 									if((OPB + CIN) > OPA)
 										OFLOW <= 1;
-									else
-										ERR <= 1;
 										RES[A-1:0] <= OPA - OPB - CIN;
-								end							
+									else
+										RES[A-1:0] <= OPA - OPB - CIN;
+								end	
+								else 
+									ERR <= 1;
+									RES <= 0;
 							end
 				4'd4	:	begin 	//INC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES[A-1:0] <= OPA + 1;
 								else 
 									ERR <= 1;
-									RES <= RES;
+									RES <= 0;
 							end
 				4'd5	:	begin	//DEC_A
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b01)
 									RES[A-1:0] <= OPA - 1;
 								else 
 									ERR <= 1;
-									RES <= RES;
+									RES <= 0;
 							end
 				4'd6	:	begin 	//INC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES[A-1:0] <= OPB + 1;
 								else 
 									ERR <= 1;
-									RES <= RES;
+									RES <= 0;
 							end
 				4'd7	:	begin	//DEC_B
 								if (INP_VALID == 2'b11 || INP_VALID == 2'b10)
 									RES[A-1:0] <= OPB - 1;
 								else 
 									ERR <= 1;
-									RES <= RES;
+									RES <= 0;
 							end
 				4'd8	:	begin	//CMP
 								if (INP_VALID == 2'b11)
@@ -144,9 +152,10 @@ begin
 				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
 								begin
-									if (cnt == 0) 	begin	OPA_1 <= OPA + 1; 	cnt <= cnt +1;	end
-									else if (cnt == 1)	begin	OPB_1 <= OPB + 1; 	cnt <= cnt +1;	end
+									if (cnt == 0) 	begin cnt <= cnt +1;	end
+									else if (cnt == 1)	begin	OPA_1 <= OPA + 1; OPB_1 <= OPB + 1; 	cnt <= cnt +1;	end
 									else if (cnt == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt <= 0;	end
+									else cnt <= 0;
 								end
 								else
 									begin
@@ -155,8 +164,13 @@ begin
 									end
 							end
 				4'd10	:	begin	// A<<1 nA * B
-								if( INP_VALID == 2'b11)
-									RES <= (OPA <<< 1) * OPB; 
+								if (INP_VALID == 2'b11)
+								begin
+									if (cnt == 0) 	begin cnt <= cnt +1;	end
+									else if (cnt == 1)	begin	OPA_L1 <= OPA << 1; 	cnt <= cnt +1;	end
+									else if (cnt == 2)	begin	RES <= OPA_L1 * OPB; 	cnt <= 0;	end
+									else cnt <= 0;
+								end
 								else
 									begin
 										ERR <= 1;
@@ -166,10 +180,9 @@ begin
 				4'd11	:	begin	//A n B signed A+B
 								if( INP_VALID == 2'b11)
 									begin
-										sOPA = OPA;
-										sOPB = OPB;
-										{COUT,RES[A-1:0]} <= sOPA + sOPB;
-									end// msb opa = msb opb is not equal msb res then oflow high
+										RES[A-1:0] <= s_add;
+										OFLOW = ( (OPA[A-1] == OPB[A-1]) && (s_add[A-1] != OPA[A-1]) );
+									end// msb opa = msb opb msb opa is not equal msb res then oflow high
 								else
 									begin
 										ERR <= 1;
@@ -179,10 +192,9 @@ begin
 				4'd12	:	begin	//A n B signed A-B
 								if( INP_VALID == 2'b11)
 									begin
-										sOPA = OPA;
-										sOPB = OPB;
-										RES[A-1:0] <= sOPA - sOPB;
-									end
+										RES[A-1:0] <= s_sub;
+										OFLOW = ( (OPA[A-1] != OPB[A-1]) && (s_sub[A-1] != OPA[A-1]) );
+									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 								else
 									begin
 										ERR <= 1;
