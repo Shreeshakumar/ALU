@@ -52,7 +52,8 @@ begin
 		COUT <= 0;
 		OFLOW <= 0;
 		G <= 0;	L <= 0;	E <= 0;
-		cnt <= 0;
+		cnt_9 <= 0;
+		cnt_10 <= 0;
 	end
 	else if (CE)			// 2nd priority
 	begin
