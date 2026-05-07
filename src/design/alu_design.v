@@ -137,8 +137,8 @@ begin
 				4'd9	:	begin	// A+1 B+1 nA * nB
 								if (INP_VALID == 2'b11)
 								begin
-									if (cnt_9 == 0) 	begin cnt_9 <= cnt_9 +1;	end
-									else if (cnt_9 == 1)	begin	OPA_1 <= OPA + 1; OPB_1 <= OPB + 1; 	cnt_9 <= cnt_9 +1;	end
+									if (cnt_9 == 0) 	begin cnt_9 <= cnt_9 +1;	RES <= RES;	end
+									else if (cnt_9 == 1)	begin	OPA_1 <= OPA + 1; OPB_1 <= OPB + 1; RES <= RES;	cnt_9 <= cnt_9 +1;	end
 									else if (cnt_9 == 2)	begin	RES <= OPA_1 * OPB_1; 	cnt_9 <= 0;	end
 									else cnt_9 <= 0;
 								end
@@ -147,8 +147,8 @@ begin
 				4'd10	:	begin	// A<<1 nA * B
 								if (INP_VALID == 2'b11)
 								begin
-									if (cnt_10 == 0) 	begin cnt_10 <= cnt_10 +1;	end
-									else if (cnt_10 == 1)	begin	OPA_L1 <= OPA << 1; 	cnt_10 <= cnt_10 +1;	end
+									if (cnt_10 == 0) 	begin cnt_10 <= cnt_10 +1;	RES <= 0;	end
+									else if (cnt_10 == 1)	begin	OPA_L1 <= OPA << 1; RES <= 0;	cnt_10 <= cnt_10 +1;	end
 									else if (cnt_10 == 2)	begin	RES <= OPA_L1 * OPB; 	cnt_10 <= 0;	end
 									else cnt_10 <= 0;
 								end
