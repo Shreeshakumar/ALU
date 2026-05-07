@@ -242,24 +242,6 @@ begin
 								if (INP_VALID == 2'b11)
 								begin
 									casez(OPB[2:0])
-										'b000	:	RES[A-1:0] <= OPA;
-										'b001	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1]};
-										'b010	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
-										'b011	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
-										'b100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
-										'b101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
-										'b110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
-										'b111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
-										default :	RES[A-1:0] <= 0;
-							         endcase
-									ERR <= (OPB[7:4])?1:0;
-							     end
-								else	begin	ERR <= 1; RES <= 0; end
-					       end
-				4'd13	:	begin	//ROR_A_B
-								if (INP_VALID == 2'b11)
-								begin
-									casez(OPB[2:0])
 										'b000	:	RES[A-1:0] <= OPA;										
 										'b001 : RES[A-1:0] <= {OPA[0],   OPA[A-1:1]};
 										'b010 : RES[A-1:0] <= {OPA[1:0], OPA[A-1:2]};
@@ -274,6 +256,24 @@ begin
 							     end
 								else	begin	ERR <= 1; RES <= 0; end
 							end
+				4'd13	:	begin	//ROR_A_B
+								if (INP_VALID == 2'b11)
+								begin
+									casez(OPB[2:0])
+										'b000	:	RES[A-1:0] <= OPA;
+										'b001	:	RES[A-1:0] <= {OPA[A-2:0],OPA[A-1]};
+										'b010	:	RES[A-1:0] <= {OPA[A-3:0],OPA[A-1:A-2]};
+										'b011	:	RES[A-1:0] <= {OPA[A-4:0],OPA[A-1:A-3]};
+										'b100	:	RES[A-1:0] <= {OPA[A-5:0],OPA[A-1:A-4]};
+										'b101	:	RES[A-1:0] <= {OPA[A-6:0],OPA[A-1:A-5]};
+										'b110	:	RES[A-1:0] <= {OPA[A-7:0],OPA[A-1:A-6]};
+										'b111	:	RES[A-1:0] <= {OPA[A-8:0],OPA[A-1:A-7]};
+										default :	RES[A-1:0] <= 0;
+							         endcase
+									ERR <= (OPB[7:4])?1:0;
+							     end
+								else	begin	ERR <= 1; RES <= 0; end
+					       end
 				default	:	begin 	ERR <= 1; RES <= 0;	end
 			endcase	
 		end
