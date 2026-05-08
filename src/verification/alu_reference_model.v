@@ -11,11 +11,11 @@ module alu_reference_model(
 	reg [7:0] OPA_1, OPB_1, OPA_L1;
 
 	//signed reg
-	wire signed [A-1:0]sOPA = OPA;
-	wire signed [B-1:0]sOPB = OPB;
+	wire signed [7:0]sOPA = OPA;
+	wire signed [7:0]sOPB = OPB;
 	//signes calculus
-	wire signed [A-1:0] s_add = sOPA + sOPB;
-	wire signed [A-1:0] s_sub = sOPA - sOPB;
+	wire signed [7:0] s_add = sOPA + sOPB;
+	wire signed [7:0] s_sub = sOPA - sOPB;
 	
 	integer i;
 
