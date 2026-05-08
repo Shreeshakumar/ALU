@@ -9,6 +9,7 @@ module alu_reference_model(
 );
 
     reg [7:0] OPA_1, OPB_1;
+	integer i;
 
     always @(*) begin
         // Default values
@@ -84,12 +85,12 @@ module alu_reference_model(
                 		4'b0101: RES[7:0] = ~(OPA ^ OPB);    // XNOR
 						4'b1100: begin  // ROL_A_B
 									ERR = (OPB[7:4])?1:0;
-                    				for(integer i = 0; i < 8; i = i + 1)
+                    				for( i = 0; i < 8; i = i + 1)
 										RES[i] = OPA[(i - OPB[2:0] + 8) % 8];
                 				end
                 		4'b1101: begin  // ROR_A_B
 									ERR = (OPB[7:4])?1:0;
-									for(integer i = 0; i < 8; i = i + 1)
+									for( i = 0; i < 8; i = i + 1)
         								RES[i] = OPA[(i + OPB[2:0]) % 8];
                 				end
 					endcase
