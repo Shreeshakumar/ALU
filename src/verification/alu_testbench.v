@@ -136,10 +136,25 @@ module alu_testbench;
             CIN = 1;
             apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
             CIN = 0;
+
+			// SUB_CIN
+            CIN = 1;
+			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
+            CIN = 0;
+			
+			// SUB_CIN b greater overflow
+            CIN = 1;
+			apply_test(8'h10, 8'h20, 4'b0011, "SUB_CIN");
+            CIN = 0;
             
             // INC_A, DEC_A
             apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
             apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
+
+	
+            // INC_B, DEC_B
+			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
+			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
             
             // CMP
             apply_test(8'h10, 8'h10, 4'b1000, "CMP (equal)");
@@ -161,6 +176,8 @@ module alu_testbench;
             apply_test(8'h00, 8'hF0, 4'b0111, "NOT_B");
             apply_test(8'hAA, 8'h00, 4'b1000, "SHR1_A");
             apply_test(8'h55, 8'h00, 4'b1001, "SHL1_A");
+			apply_test(8'hAA, 8'h00, 4'b1010, "SHR1_B");
+			apply_test(8'h55, 8'h00, 4'b1011, "SHL1_B");
             apply_test(8'hAA, 8'h03, 4'b1100, "ROL_A_B");
             apply_test(8'hAA, 8'h02, 4'b1101, "ROR_A_B");
         end
