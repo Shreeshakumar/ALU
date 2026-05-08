@@ -111,6 +111,7 @@ module alu_reference_model(
                 		4'b1011: RES = {8'b0, OPB << 1};        // SHL1_B
 					endcase
 				end
+			else begin	RES = 0;	ERR = 1;	end
 			end
 		end
 	end
