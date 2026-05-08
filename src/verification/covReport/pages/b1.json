@@ -1,47 +1,47 @@
 var g_data = {
 b179:[{dummy:0},
 {anchor:'cvg180',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',h:'21',c:'g'}
-,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'207',h:'35',c:'g'}
+,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',h:'45',c:'g'}
+,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'207',h:'11',c:'g'}
 ]}],
 b181:[{dummy:0},
 {anchor:'cvg182',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'29',c:'g'}
-,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'27',c:'g'}
+,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'11',c:'g'}
+,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'45',c:'g'}
 ]},
 {anchor:'cvg183',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'29',c:'g'}
+,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'11',c:'g'}
 ,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'0',c:'r'}
 ]},
-{anchor:'cvg184',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'55',c:'g'}
+{anchor:'cvg184',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'56',c:'g'}
 ]},
-{anchor:'cvg185',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'2',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'54',c:'g'}
+{anchor:'cvg185',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'56',c:'g'}
 ]},
-{anchor:'cvg186',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'55',c:'g'}
+{anchor:'cvg186',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'56',c:'g'}
 ]},
-{anchor:'cvg187',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'55',c:'g'}
+{anchor:'cvg187',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'56',c:'g'}
 ]},
-{anchor:'cvg188',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'55',c:'g'}
+{anchor:'cvg188',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'56',c:'g'}
 ]},
-{anchor:'cvg189',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'28',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'28',c:'g'}
+{anchor:'cvg189',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'56',c:'g'}
 ]}],
 b192:[{dummy:0},
-{anchor:'cvg193',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',c:'Y',p:'66.66'}
-,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',h:'302',c:'g'}
+{anchor:'cvg193',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',h:'336',c:'g'}
 ,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'244',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'246',h:'34',c:'g'}
+,{cr:'m',t:'E',z:'            else',f:'alu_testbench.v',l:'246',h:'0',c:'r'}
 ]}],
 b3:[{dummy:0},
 {anchor:'cvg198',items:[{z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',c:'G',p:'100.00'}
@@ -428,140 +428,160 @@ b197:[{dummy:0},
 ,{cr:'m',t:'E',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'0',c:'r'}
 ]}],
 b4:[{dummy:0},
-{anchor:'cvg425',items:[{z:'		if (RST)',f:'alu_reference_model.v',l:'24',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (RST)',f:'alu_reference_model.v',l:'24',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'		if (CE)',f:'alu_reference_model.v',l:'35',h:'66',c:'g'}
-,{cr:'c',t:'A',z:'		if (RST)',f:'alu_reference_model.v',l:'24',h:'1',c:'g'}
+{anchor:'cvg425',items:[{z:'		if (CE)',f:'alu_reference_model.v',l:'24',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'24',h:'68',c:'g'}
+,{cr:'c',t:'A',z:'		if (CE)',f:'alu_reference_model.v',l:'24',h:'2',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'        if (MODE) begin  // Arithmetic Mode',f:'alu_reference_model.v',l:'37',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) begin  // Arithmetic Mode',f:'alu_reference_model.v',l:'37',h:'34',c:'g'}
-,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'69',h:'32',c:'g'}
+{anchor:'cvg426',items:[{z:'        if (MODE) ',f:'alu_reference_model.v',l:'26',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'26',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'73',h:'34',c:'g'}
 ]},
-{anchor:'cvg427',items:[{z:'            case(CMD)',f:'alu_reference_model.v',l:'38',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: begin  // ADD',f:'alu_reference_model.v',l:'39',h:'5',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: begin  // SUB',f:'alu_reference_model.v',l:'42',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: begin  // ADD_CIN',f:'alu_reference_model.v',l:'46',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: begin  // SUB_CIN',f:'alu_reference_model.v',l:'49',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: RES = OPA + 1;  // INC_A',f:'alu_reference_model.v',l:'53',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: RES = OPA - 1;  // DEC_A',f:'alu_reference_model.v',l:'54',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: RES = OPB + 1;  // INC_B',f:'alu_reference_model.v',l:'55',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: RES = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'56',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: begin  // CMP',f:'alu_reference_model.v',l:'57',h:'6',c:'g'}
-,{cr:'c',t:'A',z:'            case(CMD)',f:'alu_reference_model.v',l:'38',h:'1',c:'g'}
+{anchor:'cvg427',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'28',c:'R',p:'40.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'28',h:'17',c:'g'}
+,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'31',h:'17',c:'g'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'56',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'63',h:'0',c:'r'}
+,{cr:'m',t:'E',z:'			else begin	RES = 0;	ERR = 1;	end',f:'alu_reference_model.v',l:'70',h:'0',c:'r'}
 ]},
-{anchor:'cvg428',items:[{z:'                    if (OPA == OPB) begin',f:'alu_reference_model.v',l:'59',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                    if (OPA == OPB) begin',f:'alu_reference_model.v',l:'59',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                    end else if (OPA > OPB) begin',f:'alu_reference_model.v',l:'61',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                    end else begin',f:'alu_reference_model.v',l:'63',h:'2',c:'g'}
+{anchor:'cvg428',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'33',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                	4\'b0000: 	begin  // ADD',f:'alu_reference_model.v',l:'34',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0001: 	begin  // SUB',f:'alu_reference_model.v',l:'37',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0010: 	begin  // ADD_CIN',f:'alu_reference_model.v',l:'41',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0011:	begin  // SUB_CIN',f:'alu_reference_model.v',l:'44',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b1000: 	begin  // CMP                    			',f:'alu_reference_model.v',l:'48',h:'3',c:'g'}
+,{cr:'c',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'33',h:'4',c:'g'}
 ]},
-{anchor:'cvg429',items:[{z:'            case(CMD)',f:'alu_reference_model.v',l:'70',c:'G',p:'93.33'}
-,{cr:'c',t:'T',z:'                4\'b0000: RES = {8\'b0, OPA & OPB};       // AND',f:'alu_reference_model.v',l:'71',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: RES = {8\'b0, ~(OPA & OPB)};    // NAND',f:'alu_reference_model.v',l:'72',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: RES = {8\'b0, OPA | OPB};       // OR',f:'alu_reference_model.v',l:'73',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: RES = {8\'b0, ~(OPA | OPB)};    // NOR',f:'alu_reference_model.v',l:'74',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: RES = {8\'b0, OPA ^ OPB};       // XOR',f:'alu_reference_model.v',l:'75',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: RES = {8\'b0, ~(OPA ^ OPB)};    // XNOR',f:'alu_reference_model.v',l:'76',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: RES = {8\'b0, ~OPA};            // NOT_A',f:'alu_reference_model.v',l:'77',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: RES = {8\'b0, ~OPB};            // NOT_B',f:'alu_reference_model.v',l:'78',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: RES = {8\'b0, OPA >> 1};        // SHR1_A',f:'alu_reference_model.v',l:'79',h:'4',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: RES = {8\'b0, OPA << 1};        // SHL1_A',f:'alu_reference_model.v',l:'80',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: RES = {8\'b0, OPB >> 1};        // SHR1_B',f:'alu_reference_model.v',l:'81',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: RES = {8\'b0, OPB << 1};        // SHL1_B',f:'alu_reference_model.v',l:'82',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: begin  // ROL_A_B',f:'alu_reference_model.v',l:'83',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1101: begin  // ROR_A_B',f:'alu_reference_model.v',l:'89',h:'3',c:'g'}
-,{cr:'m',t:'A',z:'            case(CMD)',f:'alu_reference_model.v',l:'70',h:'0',c:'r'}
+{anchor:'cvg429',items:[{z:'								if (OPA == OPB) begin	E = 1\'b1; G = 1\'b0; L = 1\'b0;	end ',f:'alu_reference_model.v',l:'49',c:'Y',p:'75.00'}
+,{cr:'c',t:'I',z:'								if (OPA == OPB) begin	E = 1\'b1; G = 1\'b0; L = 1\'b0;	end ',f:'alu_reference_model.v',l:'49',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'								else if (OPA > OPB) begin	E = 1\'b0; G = 1\'b1; L = 1\'b0;end ',f:'alu_reference_model.v',l:'50',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'								else if (OPA < OPB) begin	E = 1\'b0; G = 1\'b0; L = 1\'b1;	end',f:'alu_reference_model.v',l:'51',h:'1',c:'g'}
+,{cr:'m',t:'E',z:'								else begin	E = 1\'b0; G = 1\'b0; L = 1\'b0;	end',f:'alu_reference_model.v',l:'52',h:'0',c:'r'}
 ]},
-{anchor:'cvg430',items:[{z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',h:'2',c:'g'}
-,{cr:'m',t:'E',z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',h:'0',c:'r'}
+{anchor:'cvg430',items:[{z:'				case(CMD)',f:'alu_reference_model.v',l:'58',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'					4\'b0100: 	RES[7:0] = OPA + 1;  // INC_A',f:'alu_reference_model.v',l:'59',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                	4\'b0101: 	RES[7:0] = OPA - 1;  // DEC_A',f:'alu_reference_model.v',l:'60',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'				case(CMD)',f:'alu_reference_model.v',l:'58',h:'0',c:'r'}
 ]},
-{anchor:'cvg431',items:[{z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',h:'2',c:'g'}
-,{cr:'m',t:'E',z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',h:'0',c:'r'}
+{anchor:'cvg431',items:[{z:'				case(CMD)',f:'alu_reference_model.v',l:'65',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'					4\'b0110: 	RES[7:0] = OPB + 1;  // INC_B',f:'alu_reference_model.v',l:'66',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'					4\'b0111: 	RES[7:0] = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'67',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'				case(CMD)',f:'alu_reference_model.v',l:'65',h:'0',c:'r'}
 ]},
-{anchor:'cvg432',items:[{z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',h:'2',c:'g'}
+{anchor:'cvg432',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',c:'R',p:'40.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',h:'17',c:'g'}
+,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'77',h:'17',c:'g'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'98',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'106',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',h:'0',c:'r'}
 ]},
-{anchor:'cvg433',items:[{z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',h:'3',c:'g'}
+{anchor:'cvg433',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'79',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'						4\'b0000: RES[7:0] = OPA & OPB;       // AND',f:'alu_reference_model.v',l:'80',h:'2',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0001: RES[7:0] = ~(OPA & OPB);    // NAND',f:'alu_reference_model.v',l:'81',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'		                4\'b0010: RES[7:0] = OPA | OPB;       // OR',f:'alu_reference_model.v',l:'82',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0011: RES[7:0] = ~(OPA | OPB);    // NOR',f:'alu_reference_model.v',l:'83',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'						4\'b0100: RES[7:0] = OPA ^ OPB;       // XOR',f:'alu_reference_model.v',l:'84',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0101: RES[7:0] = ~(OPA ^ OPB);    // XNOR',f:'alu_reference_model.v',l:'85',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'						4\'b1100: begin  // ROL_A_B',f:'alu_reference_model.v',l:'86',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b1101: begin  // ROR_A_B',f:'alu_reference_model.v',l:'91',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'79',h:'7',c:'g'}
 ]},
-{anchor:'cvg434',items:[{z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',h:'3',c:'g'}
-,{cr:'m',t:'E',z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',h:'0',c:'r'}
+{anchor:'cvg434',items:[{z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',h:'1',c:'g'}
 ]},
-{anchor:'cvg435',items:[{z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',h:'3',c:'g'}
+{anchor:'cvg435',items:[{z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',h:'2',c:'g'}
+]},
+{anchor:'cvg436',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'100',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'						4\'b0110: RES[7:0] = ~OPA;            // NOT_A',f:'alu_reference_model.v',l:'101',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'						4\'b1000: RES[7:0] = OPA >> 1;        // SHR1_A',f:'alu_reference_model.v',l:'102',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'						4\'b1001: RES[7:0] = OPA << 1;        // SHL1_A',f:'alu_reference_model.v',l:'103',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'100',h:'0',c:'r'}
+]},
+{anchor:'cvg437',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'108',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'						4\'b0111: RES = {8\'b0, ~OPB};            // NOT_B',f:'alu_reference_model.v',l:'109',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                		4\'b1010: RES = {8\'b0, OPB >> 1};        // SHR1_B',f:'alu_reference_model.v',l:'110',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                		4\'b1011: RES = {8\'b0, OPB << 1};        // SHL1_B',f:'alu_reference_model.v',l:'111',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'108',h:'0',c:'r'}
 ]}],
 b424:[{dummy:0},
-{anchor:'cvg425',items:[{z:'		if (RST)',f:'alu_reference_model.v',l:'24',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (RST)',f:'alu_reference_model.v',l:'24',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'		if (CE)',f:'alu_reference_model.v',l:'35',h:'66',c:'g'}
-,{cr:'c',t:'A',z:'		if (RST)',f:'alu_reference_model.v',l:'24',h:'1',c:'g'}
+{anchor:'cvg425',items:[{z:'		if (CE)',f:'alu_reference_model.v',l:'24',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'24',h:'68',c:'g'}
+,{cr:'c',t:'A',z:'		if (CE)',f:'alu_reference_model.v',l:'24',h:'2',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'        if (MODE) begin  // Arithmetic Mode',f:'alu_reference_model.v',l:'37',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) begin  // Arithmetic Mode',f:'alu_reference_model.v',l:'37',h:'34',c:'g'}
-,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'69',h:'32',c:'g'}
+{anchor:'cvg426',items:[{z:'        if (MODE) ',f:'alu_reference_model.v',l:'26',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'26',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'73',h:'34',c:'g'}
 ]},
-{anchor:'cvg427',items:[{z:'            case(CMD)',f:'alu_reference_model.v',l:'38',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: begin  // ADD',f:'alu_reference_model.v',l:'39',h:'5',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: begin  // SUB',f:'alu_reference_model.v',l:'42',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: begin  // ADD_CIN',f:'alu_reference_model.v',l:'46',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: begin  // SUB_CIN',f:'alu_reference_model.v',l:'49',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: RES = OPA + 1;  // INC_A',f:'alu_reference_model.v',l:'53',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: RES = OPA - 1;  // DEC_A',f:'alu_reference_model.v',l:'54',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: RES = OPB + 1;  // INC_B',f:'alu_reference_model.v',l:'55',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: RES = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'56',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: begin  // CMP',f:'alu_reference_model.v',l:'57',h:'6',c:'g'}
-,{cr:'c',t:'A',z:'            case(CMD)',f:'alu_reference_model.v',l:'38',h:'1',c:'g'}
+{anchor:'cvg427',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'28',c:'R',p:'40.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'28',h:'17',c:'g'}
+,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'31',h:'17',c:'g'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'56',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'63',h:'0',c:'r'}
+,{cr:'m',t:'E',z:'			else begin	RES = 0;	ERR = 1;	end',f:'alu_reference_model.v',l:'70',h:'0',c:'r'}
 ]},
-{anchor:'cvg428',items:[{z:'                    if (OPA == OPB) begin',f:'alu_reference_model.v',l:'59',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                    if (OPA == OPB) begin',f:'alu_reference_model.v',l:'59',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                    end else if (OPA > OPB) begin',f:'alu_reference_model.v',l:'61',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                    end else begin',f:'alu_reference_model.v',l:'63',h:'2',c:'g'}
+{anchor:'cvg428',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'33',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                	4\'b0000: 	begin  // ADD',f:'alu_reference_model.v',l:'34',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0001: 	begin  // SUB',f:'alu_reference_model.v',l:'37',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0010: 	begin  // ADD_CIN',f:'alu_reference_model.v',l:'41',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b0011:	begin  // SUB_CIN',f:'alu_reference_model.v',l:'44',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					4\'b1000: 	begin  // CMP                    			',f:'alu_reference_model.v',l:'48',h:'3',c:'g'}
+,{cr:'c',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'33',h:'4',c:'g'}
 ]},
-{anchor:'cvg429',items:[{z:'            case(CMD)',f:'alu_reference_model.v',l:'70',c:'G',p:'93.33'}
-,{cr:'c',t:'T',z:'                4\'b0000: RES = {8\'b0, OPA & OPB};       // AND',f:'alu_reference_model.v',l:'71',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: RES = {8\'b0, ~(OPA & OPB)};    // NAND',f:'alu_reference_model.v',l:'72',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: RES = {8\'b0, OPA | OPB};       // OR',f:'alu_reference_model.v',l:'73',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: RES = {8\'b0, ~(OPA | OPB)};    // NOR',f:'alu_reference_model.v',l:'74',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: RES = {8\'b0, OPA ^ OPB};       // XOR',f:'alu_reference_model.v',l:'75',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: RES = {8\'b0, ~(OPA ^ OPB)};    // XNOR',f:'alu_reference_model.v',l:'76',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: RES = {8\'b0, ~OPA};            // NOT_A',f:'alu_reference_model.v',l:'77',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: RES = {8\'b0, ~OPB};            // NOT_B',f:'alu_reference_model.v',l:'78',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: RES = {8\'b0, OPA >> 1};        // SHR1_A',f:'alu_reference_model.v',l:'79',h:'4',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: RES = {8\'b0, OPA << 1};        // SHL1_A',f:'alu_reference_model.v',l:'80',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: RES = {8\'b0, OPB >> 1};        // SHR1_B',f:'alu_reference_model.v',l:'81',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: RES = {8\'b0, OPB << 1};        // SHL1_B',f:'alu_reference_model.v',l:'82',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: begin  // ROL_A_B',f:'alu_reference_model.v',l:'83',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1101: begin  // ROR_A_B',f:'alu_reference_model.v',l:'89',h:'3',c:'g'}
-,{cr:'m',t:'A',z:'            case(CMD)',f:'alu_reference_model.v',l:'70',h:'0',c:'r'}
+{anchor:'cvg429',items:[{z:'								if (OPA == OPB) begin	E = 1\'b1; G = 1\'b0; L = 1\'b0;	end ',f:'alu_reference_model.v',l:'49',c:'Y',p:'75.00'}
+,{cr:'c',t:'I',z:'								if (OPA == OPB) begin	E = 1\'b1; G = 1\'b0; L = 1\'b0;	end ',f:'alu_reference_model.v',l:'49',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'								else if (OPA > OPB) begin	E = 1\'b0; G = 1\'b1; L = 1\'b0;end ',f:'alu_reference_model.v',l:'50',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'								else if (OPA < OPB) begin	E = 1\'b0; G = 1\'b0; L = 1\'b1;	end',f:'alu_reference_model.v',l:'51',h:'1',c:'g'}
+,{cr:'m',t:'E',z:'								else begin	E = 1\'b0; G = 1\'b0; L = 1\'b0;	end',f:'alu_reference_model.v',l:'52',h:'0',c:'r'}
 ]},
-{anchor:'cvg430',items:[{z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',h:'2',c:'g'}
-,{cr:'m',t:'E',z:'                    OPA_1 = OPB[0] ? {OPA[6:0], OPA[7]} : OPA;',f:'alu_reference_model.v',l:'84',h:'0',c:'r'}
+{anchor:'cvg430',items:[{z:'				case(CMD)',f:'alu_reference_model.v',l:'58',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'					4\'b0100: 	RES[7:0] = OPA + 1;  // INC_A',f:'alu_reference_model.v',l:'59',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                	4\'b0101: 	RES[7:0] = OPA - 1;  // DEC_A',f:'alu_reference_model.v',l:'60',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'				case(CMD)',f:'alu_reference_model.v',l:'58',h:'0',c:'r'}
 ]},
-{anchor:'cvg431',items:[{z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',h:'2',c:'g'}
-,{cr:'m',t:'E',z:'                    OPB_1 = OPB[1] ? {OPA_1[5:0], OPA_1[7:6]} : OPA_1;',f:'alu_reference_model.v',l:'85',h:'0',c:'r'}
+{anchor:'cvg431',items:[{z:'				case(CMD)',f:'alu_reference_model.v',l:'65',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'					4\'b0110: 	RES[7:0] = OPB + 1;  // INC_B',f:'alu_reference_model.v',l:'66',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'					4\'b0111: 	RES[7:0] = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'67',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'				case(CMD)',f:'alu_reference_model.v',l:'65',h:'0',c:'r'}
 ]},
-{anchor:'cvg432',items:[{z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'86',h:'2',c:'g'}
+{anchor:'cvg432',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',c:'R',p:'40.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',h:'17',c:'g'}
+,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'77',h:'17',c:'g'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'98',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'106',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'74',h:'0',c:'r'}
 ]},
-{anchor:'cvg433',items:[{z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    OPA_1 = OPB[0] ? {OPA[0], OPA[7:1]} : OPA;',f:'alu_reference_model.v',l:'90',h:'3',c:'g'}
+{anchor:'cvg433',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'79',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'						4\'b0000: RES[7:0] = OPA & OPB;       // AND',f:'alu_reference_model.v',l:'80',h:'2',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0001: RES[7:0] = ~(OPA & OPB);    // NAND',f:'alu_reference_model.v',l:'81',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'		                4\'b0010: RES[7:0] = OPA | OPB;       // OR',f:'alu_reference_model.v',l:'82',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0011: RES[7:0] = ~(OPA | OPB);    // NOR',f:'alu_reference_model.v',l:'83',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'						4\'b0100: RES[7:0] = OPA ^ OPB;       // XOR',f:'alu_reference_model.v',l:'84',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b0101: RES[7:0] = ~(OPA ^ OPB);    // XNOR',f:'alu_reference_model.v',l:'85',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'						4\'b1100: begin  // ROL_A_B',f:'alu_reference_model.v',l:'86',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'                		4\'b1101: begin  // ROR_A_B',f:'alu_reference_model.v',l:'91',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'79',h:'7',c:'g'}
 ]},
-{anchor:'cvg434',items:[{z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',h:'3',c:'g'}
-,{cr:'m',t:'E',z:'                    OPB_1 = OPB[1] ? {OPA_1[1:0], OPA_1[7:2]} : OPA_1;',f:'alu_reference_model.v',l:'91',h:'0',c:'r'}
+{anchor:'cvg434',items:[{z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'87',h:'1',c:'g'}
 ]},
-{anchor:'cvg435',items:[{z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                    RES = OPB[2] ? {OPB_1[3:0], OPB_1[7:4]} : OPB_1;',f:'alu_reference_model.v',l:'92',h:'3',c:'g'}
+{anchor:'cvg435',items:[{z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'									ERR = (OPB[7:4])?1:0;',f:'alu_reference_model.v',l:'92',h:'2',c:'g'}
+]},
+{anchor:'cvg436',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'100',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'						4\'b0110: RES[7:0] = ~OPA;            // NOT_A',f:'alu_reference_model.v',l:'101',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'						4\'b1000: RES[7:0] = OPA >> 1;        // SHR1_A',f:'alu_reference_model.v',l:'102',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'						4\'b1001: RES[7:0] = OPA << 1;        // SHL1_A',f:'alu_reference_model.v',l:'103',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'100',h:'0',c:'r'}
+]},
+{anchor:'cvg437',items:[{z:'					case(CMD)',f:'alu_reference_model.v',l:'108',c:'R',p:'0.00'}
+,{cr:'m',t:'T',z:'						4\'b0111: RES = {8\'b0, ~OPB};            // NOT_B',f:'alu_reference_model.v',l:'109',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                		4\'b1010: RES = {8\'b0, OPB >> 1};        // SHR1_B',f:'alu_reference_model.v',l:'110',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'                		4\'b1011: RES = {8\'b0, OPB << 1};        // SHL1_B',f:'alu_reference_model.v',l:'111',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'					case(CMD)',f:'alu_reference_model.v',l:'108',h:'0',c:'r'}
 ]}],
 b5:[{dummy:0},
 {anchor:'cvg6',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'83',c:'Y',p:'50.00'}
@@ -572,56 +592,56 @@ b5:[{dummy:0},
 ,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'115',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'117',h:'1',c:'g'}
 ]}],
-b687:[{dummy:0},
-{anchor:'cvg688',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',h:'21',c:'g'}
-,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'207',h:'35',c:'g'}
+b724:[{dummy:0},
+{anchor:'cvg725',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'203',h:'45',c:'g'}
+,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'207',h:'11',c:'g'}
 ]}],
-b689:[{dummy:0},
-{anchor:'cvg690',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'29',c:'g'}
-,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'27',c:'g'}
+b726:[{dummy:0},
+{anchor:'cvg727',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'11',c:'g'}
+,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'223',h:'45',c:'g'}
 ]},
-{anchor:'cvg691',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'29',c:'g'}
+{anchor:'cvg728',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'11',c:'g'}
 ,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'224',h:'0',c:'r'}
 ]},
-{anchor:'cvg692',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'55',c:'g'}
+{anchor:'cvg729',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'229',h:'56',c:'g'}
 ]},
-{anchor:'cvg693',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'2',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'54',c:'g'}
+{anchor:'cvg730',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'230',h:'56',c:'g'}
 ]},
-{anchor:'cvg694',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'55',c:'g'}
+{anchor:'cvg731',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'231',h:'56',c:'g'}
 ]},
-{anchor:'cvg695',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'55',c:'g'}
+{anchor:'cvg732',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'232',h:'56',c:'g'}
 ]},
-{anchor:'cvg696',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'55',c:'g'}
+{anchor:'cvg733',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'233',h:'56',c:'g'}
 ]},
-{anchor:'cvg697',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'28',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'28',c:'g'}
+{anchor:'cvg734',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'234',h:'56',c:'g'}
 ]}],
-b700:[{dummy:0},
-{anchor:'cvg701',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',c:'Y',p:'66.66'}
-,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',h:'302',c:'g'}
+b737:[{dummy:0},
+{anchor:'cvg738',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'242',h:'336',c:'g'}
 ,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'244',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'246',h:'34',c:'g'}
+,{cr:'m',t:'E',z:'            else',f:'alu_testbench.v',l:'246',h:'0',c:'r'}
 ]}],
 b2:[{dummy:0},
-{anchor:'cvg514',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'83',c:'Y',p:'50.00'}
+{anchor:'cvg551',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'83',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'83',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'85',h:'1',c:'g'}
 ]},
-{anchor:'cvg515',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'115',c:'Y',p:'50.00'}
+{anchor:'cvg552',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'115',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'115',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'117',h:'1',c:'g'}
 ]}],

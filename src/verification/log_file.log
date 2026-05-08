@@ -1,5 +1,5 @@
 # vsim work.alu_testbench -l log_file.log -coverage -c -do "coverage save -onexit -codeAll coverage_file.ucdb; run -all; exit" 
-# Start time: 14:22:34 on May 08,2026
+# Start time: 15:39:24 on May 08,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -18,7 +18,7 @@
 # Loading work.alu_testbench(fast)
 # Loading work.Eight_bit_ALU_rtl_design(fast)
 # Loading work.alu_reference_model(fast)
-# ** Warning: (vsim-3015) alu_testbench.v(35): [PCDPC] - Port size (17) does not match connection size (9) for port 'RES'. The port definition is at: alu_reference_model.v(8).
+# ** Warning: (vsim-3015) alu_testbench.v(35): [PCDPC] - Port size (17) does not match connection size (9) for port 'RES'. The port definition is at: alu_reference_model.v(7).
 #    Time: 0 ps  Iteration: 0  Instance: /alu_testbench/ref File: alu_reference_model.v
 # coverage save -onexit -codeAll coverage_file.ucdb
 #  run -all
@@ -31,27 +31,75 @@
 # [PASS]                                                                              SUB: OPA=0x20 OPB=0x10 CMD=0x1
 # [FAIL]                                                                  SUB (underflow): OPA=0x10 OPB=0x20 CMD=0x1
 #   DUT: RES=0xfff0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
-#   REF: RES=0x1f0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x0f0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
 # [PASS]                                                                          ADD_CIN: OPA=0x10 OPB=0x20 CMD=0x2
 # [PASS]                                                                          SUB_CIN: OPA=0x20 OPB=0x10 CMD=0x3
 # [FAIL]                                                                          SUB_CIN: OPA=0x10 OPB=0x20 CMD=0x3
 #   DUT: RES=0xffef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
-#   REF: RES=0x1ef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x0ef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            INC_A: OPA=0x0a OPB=0x00 CMD=0x4
+#   DUT: RES=0x000b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            DEC_A: OPA=0x0a OPB=0x00 CMD=0x5
+#   DUT: RES=0x0009 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            INC_B: OPA=0x0a OPB=0x00 CMD=0x6
+#   DUT: RES=0x0001 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
+#   DUT: RES=0xffff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
+# [PASS]                                                                    CMP (greater): OPA=0x20 OPB=0x10 CMD=0x8
+# [PASS]                                                                       CMP (less): OPA=0x10 OPB=0x20 CMD=0x8
+# 
+# === Testing Logical Operations (MODE=0) ===
+# [PASS]                                                                              AND: OPA=0xf0 OPB=0x0f CMD=0x0
+# [PASS]                                                                             NAND: OPA=0xf0 OPB=0x0f CMD=0x1
+# [PASS]                                                                               OR: OPA=0xf0 OPB=0x0f CMD=0x2
+# [PASS]                                                                              NOR: OPA=0xf0 OPB=0x0f CMD=0x3
+# [PASS]                                                                              XOR: OPA=0xaa OPB=0x55 CMD=0x4
+# [PASS]                                                                             XNOR: OPA=0xaa OPB=0x55 CMD=0x5
+# [FAIL]                                                                            NOT_A: OPA=0xf0 OPB=0x00 CMD=0x6
+#   DUT: RES=0x000f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            NOT_B: OPA=0x00 OPB=0xf0 CMD=0x7
+#   DUT: RES=0x000f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           SHR1_A: OPA=0xaa OPB=0x00 CMD=0x8
+#   DUT: RES=0x0055 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           SHL1_A: OPA=0x55 OPB=0x00 CMD=0x9
+#   DUT: RES=0x00aa COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                           SHR1_B: OPA=0xaa OPB=0x00 CMD=0xa
+# [PASS]                                                                           SHL1_B: OPA=0x55 OPB=0x00 CMD=0xb
+# [PASS]                                                                          ROL_A_B: OPA=0xaa OPB=0x03 CMD=0xc
+# [PASS]                                                                          ROR_A_B: OPA=0xaa OPB=0x02 CMD=0xd
+# 
+# === TEST SUMMARY ===
+# Total Tests: 28
+# PASS: 17
+# FAIL: 11
+# 
+# *** SOME TESTS FAILED ***
+# 
+# 
+# === Testing Arithmetic Operations (MODE=1) ===
+# [PASS]                                                                              ADD: OPA=0x0f OPB=0x11 CMD=0x0
+# [PASS]                                                                   ADD (overflow): OPA=0xff OPB=0x01 CMD=0x0
+# [PASS]                                                                              SUB: OPA=0x20 OPB=0x10 CMD=0x1
+# [PASS]                                                                  SUB (underflow): OPA=0x10 OPB=0x20 CMD=0x1
+# [PASS]                                                                          ADD_CIN: OPA=0x10 OPB=0x20 CMD=0x2
+# [PASS]                                                                          SUB_CIN: OPA=0x20 OPB=0x10 CMD=0x3
+# [PASS]                                                                          SUB_CIN: OPA=0x10 OPB=0x20 CMD=0x3
 # [PASS]                                                                            INC_A: OPA=0x0a OPB=0x00 CMD=0x4
 # [PASS]                                                                            DEC_A: OPA=0x0a OPB=0x00 CMD=0x5
 # [PASS]                                                                            INC_B: OPA=0x0a OPB=0x00 CMD=0x6
-# [FAIL]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
-#   DUT: RES=0xffff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-#   REF: RES=0x1ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
-# [FAIL]                                                                    CMP (greater): OPA=0x20 OPB=0x10 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
-# [FAIL]                                                                       CMP (less): OPA=0x10 OPB=0x20 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
+# [PASS]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
+# [PASS]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
+# [PASS]                                                                    CMP (greater): OPA=0x20 OPB=0x10 CMD=0x8
+# [PASS]                                                                       CMP (less): OPA=0x10 OPB=0x20 CMD=0x8
 # 
 # === Testing Logical Operations (MODE=0) ===
 # [PASS]                                                                              AND: OPA=0xf0 OPB=0x0f CMD=0x0
@@ -70,110 +118,14 @@
 # [PASS]                                                                          ROR_A_B: OPA=0xaa OPB=0x02 CMD=0xd
 # 
 # === TEST SUMMARY ===
-# Total Tests: 28
-# PASS: 21
-# FAIL: 7
-# 
-# *** SOME TESTS FAILED ***
-# 
-# 
-# === Testing Arithmetic Operations (MODE=1) ===
-# [FAIL]                                                                              ADD: OPA=0x0f OPB=0x11 CMD=0x0
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x020 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                   ADD (overflow): OPA=0xff OPB=0x01 CMD=0x0
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                              SUB: OPA=0x20 OPB=0x10 CMD=0x1
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x010 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                  SUB (underflow): OPA=0x10 OPB=0x20 CMD=0x1
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x1f0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                          ADD_CIN: OPA=0x10 OPB=0x20 CMD=0x2
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x031 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                          SUB_CIN: OPA=0x20 OPB=0x10 CMD=0x3
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x00f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                          SUB_CIN: OPA=0x10 OPB=0x20 CMD=0x3
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x1ef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            INC_A: OPA=0x0a OPB=0x00 CMD=0x4
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x00b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            DEC_A: OPA=0x0a OPB=0x00 CMD=0x5
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x009 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            INC_B: OPA=0x0a OPB=0x00 CMD=0x6
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x001 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x1ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
-# [FAIL]                                                                    CMP (greater): OPA=0x20 OPB=0x10 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
-# [FAIL]                                                                       CMP (less): OPA=0x10 OPB=0x20 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
-# 
-# === Testing Logical Operations (MODE=0) ===
-# [FAIL]                                                                              AND: OPA=0xf0 OPB=0x0f CMD=0x0
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                             NAND: OPA=0xf0 OPB=0x0f CMD=0x1
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x0ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                               OR: OPA=0xf0 OPB=0x0f CMD=0x2
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x0ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                              NOR: OPA=0xf0 OPB=0x0f CMD=0x3
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                              XOR: OPA=0xaa OPB=0x55 CMD=0x4
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x0ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                             XNOR: OPA=0xaa OPB=0x55 CMD=0x5
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            NOT_A: OPA=0xf0 OPB=0x00 CMD=0x6
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x00f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                            NOT_B: OPA=0x00 OPB=0xf0 CMD=0x7
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x00f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                           SHR1_A: OPA=0xaa OPB=0x00 CMD=0x8
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x055 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                           SHL1_A: OPA=0x55 OPB=0x00 CMD=0x9
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x0aa COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                           SHR1_B: OPA=0xaa OPB=0x00 CMD=0xa
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                           SHL1_B: OPA=0x55 OPB=0x00 CMD=0xb
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                          ROL_A_B: OPA=0xaa OPB=0x03 CMD=0xc
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x055 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# [FAIL]                                                                          ROR_A_B: OPA=0xaa OPB=0x02 CMD=0xd
-#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
-#   REF: RES=0x0aa COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
-# 
-# === TEST SUMMARY ===
 # Total Tests: 56
-# PASS: 21
-# FAIL: 35
+# PASS: 45
+# FAIL: 11
 # 
 # *** SOME TESTS FAILED ***
 # 
 # ** Note: $finish    : alu_testbench.v(121)
 #    Time: 1945 ns  Iteration: 0  Instance: /alu_testbench
 # Saving coverage database on exit...
-# End time: 14:22:35 on May 08,2026, Elapsed time: 0:00:01
+# End time: 15:39:25 on May 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
