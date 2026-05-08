@@ -8,7 +8,15 @@ module alu_reference_model(
     output reg COUT, OFLOW, G, E, L, ERR
 );
 
-    reg [7:0] OPA_1, OPB_1;
+	reg [7:0] OPA_1, OPB_1, OPA_L1;
+
+	//signed reg
+	wire signed [A-1:0]sOPA = OPA;
+	wire signed [B-1:0]sOPB = OPB;
+	//signes calculus
+	wire signed [A-1:0] s_add = sOPA + sOPB;
+	wire signed [A-1:0] s_sub = sOPA - sOPB;
+	
 	integer i;
 
     always @(*) begin
@@ -51,6 +59,22 @@ module alu_reference_model(
 								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
 								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
+					4'd9	:	begin	// A+1 B+1 nA * nB
+									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
+									RES = OPA_1 * OPB_1; 
+								end
+					4'd10	:	begin	// A<<1 nA * B
+									OPA_L1 = OPA << 1;
+									RES = OPA_L1 * OPB; 
+								end
+					4'd11	:	begin	//A n B signed A+B
+										RES[A-1:0] = s_add;
+										OFLOW = ( (OPA[A-1] == OPB[A-1]) && (s_add[A-1] != OPA[A-1]) );
+									end// msb opa = msb opb msb opa is not equal msb res then oflow high
+					4'd12	:	begin	//A n B signed A-B
+										RES[A-1:0] = s_sub;
+										OFLOW = ( (OPA[A-1] != OPB[A-1]) && (s_sub[A-1] != OPA[A-1]) );
+									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 					endcase
 				end
 			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
