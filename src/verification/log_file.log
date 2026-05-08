@@ -1,5 +1,5 @@
 # vsim work.alu_testbench -l log_file.log -coverage -c -do "coverage save -onexit -codeAll coverage_file.ucdb; run -all; exit" 
-# Start time: 12:30:01 on May 08,2026
+# Start time: 14:22:34 on May 08,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -33,8 +33,16 @@
 #   DUT: RES=0xfff0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
 #   REF: RES=0x1f0 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
 # [PASS]                                                                          ADD_CIN: OPA=0x10 OPB=0x20 CMD=0x2
+# [PASS]                                                                          SUB_CIN: OPA=0x20 OPB=0x10 CMD=0x3
+# [FAIL]                                                                          SUB_CIN: OPA=0x10 OPB=0x20 CMD=0x3
+#   DUT: RES=0xffef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x1ef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
 # [PASS]                                                                            INC_A: OPA=0x0a OPB=0x00 CMD=0x4
 # [PASS]                                                                            DEC_A: OPA=0x0a OPB=0x00 CMD=0x5
+# [PASS]                                                                            INC_B: OPA=0x0a OPB=0x00 CMD=0x6
+# [FAIL]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
+#   DUT: RES=0xffff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF: RES=0x1ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 #   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
@@ -56,13 +64,15 @@
 # [PASS]                                                                            NOT_B: OPA=0x00 OPB=0xf0 CMD=0x7
 # [PASS]                                                                           SHR1_A: OPA=0xaa OPB=0x00 CMD=0x8
 # [PASS]                                                                           SHL1_A: OPA=0x55 OPB=0x00 CMD=0x9
+# [PASS]                                                                           SHR1_B: OPA=0xaa OPB=0x00 CMD=0xa
+# [PASS]                                                                           SHL1_B: OPA=0x55 OPB=0x00 CMD=0xb
 # [PASS]                                                                          ROL_A_B: OPA=0xaa OPB=0x03 CMD=0xc
 # [PASS]                                                                          ROR_A_B: OPA=0xaa OPB=0x02 CMD=0xd
 # 
 # === TEST SUMMARY ===
-# Total Tests: 22
-# PASS: 17
-# FAIL: 5
+# Total Tests: 28
+# PASS: 21
+# FAIL: 7
 # 
 # *** SOME TESTS FAILED ***
 # 
@@ -83,12 +93,24 @@
 # [FAIL]                                                                          ADD_CIN: OPA=0x10 OPB=0x20 CMD=0x2
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x031 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          SUB_CIN: OPA=0x20 OPB=0x10 CMD=0x3
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x00f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          SUB_CIN: OPA=0x10 OPB=0x20 CMD=0x3
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x1ef COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                            INC_A: OPA=0x0a OPB=0x00 CMD=0x4
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x00b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                            DEC_A: OPA=0x0a OPB=0x00 CMD=0x5
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x009 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            INC_B: OPA=0x0a OPB=0x00 CMD=0x6
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x001 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                            DEC_B: OPA=0x0a OPB=0x00 CMD=0x7
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x1ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                      CMP (equal): OPA=0x10 OPB=0x10 CMD=0x8
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0xzzz COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
@@ -130,6 +152,12 @@
 # [FAIL]                                                                           SHL1_A: OPA=0x55 OPB=0x00 CMD=0x9
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x0aa COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           SHR1_B: OPA=0xaa OPB=0x00 CMD=0xa
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           SHL1_B: OPA=0x55 OPB=0x00 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                          ROL_A_B: OPA=0xaa OPB=0x03 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x055 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
@@ -138,14 +166,14 @@
 #   REF: RES=0x0aa COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # 
 # === TEST SUMMARY ===
-# Total Tests: 44
-# PASS: 17
-# FAIL: 27
+# Total Tests: 56
+# PASS: 21
+# FAIL: 35
 # 
 # *** SOME TESTS FAILED ***
 # 
 # ** Note: $finish    : alu_testbench.v(121)
-#    Time: 1585 ns  Iteration: 0  Instance: /alu_testbench
+#    Time: 1945 ns  Iteration: 0  Instance: /alu_testbench
 # Saving coverage database on exit...
-# End time: 12:30:02 on May 08,2026, Elapsed time: 0:00:01
+# End time: 14:22:35 on May 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
