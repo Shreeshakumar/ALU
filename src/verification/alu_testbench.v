@@ -6,6 +6,7 @@ module alu_testbench;
     reg [7:0] OPA, OPB;
     reg CLK, RST, CE, MODE, CIN;
     reg [3:0] CMD;
+	reg INP_VALID;
     wire [15:0] RES_dut;
     wire COUT_dut, OFLOW_dut, G_dut, E_dut, L_dut, ERR_dut;
 
@@ -56,7 +57,7 @@ module alu_testbench;
         OPA = 0; OPB = 0; MODE = 0; CMD = 0;
         
         @(posedge CLK);
-		begin	RST = 0; 	CE = 1;	end  // Release reset
+		begin	RST = 0; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
         
 		@(posedge CLK);
 
