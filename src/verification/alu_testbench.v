@@ -51,13 +51,37 @@ module alu_testbench;
 
     // Test stimulus
     initial begin
-        // Initialize
-
-        RST = 1; CE = 0; CIN = 0;
+        // all 0
+        RST = 0; CE = 0; CIN = 0;
         OPA = 0; OPB = 0; MODE = 0; CMD = 0;
-        
+        //rst 
         @(posedge CLK);
-		begin	RST = 0; 	CE = 1; INP_VALID = 2'b00;	end  // Release reset
+		RST = 1; CE = 0; CIN = 0;
+        OPA = 0; OPB = 0; MODE = 0; CMD = 0;
+		//rst low and clock enable
+        @(posedge CLK);
+		RST = 0; CE = 1; CIN = 0;
+        OPA = 0; OPB = 0; MODE = 0; CMD = 0;
+		//rst low and clock disable
+        @(posedge CLK);
+		RST = 0; CE = 0; CIN = 0;
+        OPA = 0; OPB = 0; MODE = 0; CMD = 0;
+		//mode 1
+        @(posedge CLK);
+		RST = 0; CE = 1; CIN = 0;
+        OPA = 1; OPB = 1; MODE = 1; CMD = 0;
+		//mode 0
+        @(posedge CLK);
+		RST = 0; CE = 1; CIN = 0;
+        OPA = 1; OPB = 1; MODE = 0; CMD = 0;
+		//cmd invalid arithmetic
+        @(posedge CLK);
+		RST = 0; CE = 1; CIN = 0;
+        OPA = 1; OPB = 1; MODE = 1; CMD = 4'b1111;
+		//cmd invalid logical
+        @(posedge CLK);
+		RST = 0; CE = 1; CIN = 0;
+        OPA = 1; OPB = 1; MODE = 0; CMD = 4'b1111;
         
         @(posedge CLK);
 		begin	RST = 0; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
