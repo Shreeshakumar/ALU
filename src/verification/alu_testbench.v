@@ -1,7 +1,3 @@
-//==============================================
-// Simple ALU Testbench
-//==============================================
-
 `timescale 1ns/1ps
 
 module alu_testbench;
@@ -10,7 +6,7 @@ module alu_testbench;
     reg [7:0] OPA, OPB;
     reg CLK, RST, CE, MODE, CIN;
     reg [3:0] CMD;
-    wire [8:0] RES_dut;
+    wire [15:0] RES_dut;
     wire COUT_dut, OFLOW_dut, G_dut, E_dut, L_dut, ERR_dut;
 
     // Reference model signals
@@ -27,6 +23,7 @@ module alu_testbench;
         .OPA(OPA), .OPB(OPB), .CIN(CIN),
         .CLK(CLK), .RST(RST), .CMD(CMD),
         .CE(CE), .MODE(MODE),
+		.inp_valid(INP_VALID),
         .COUT(COUT_dut), .OFLOW(OFLOW_dut),
         .RES(RES_dut),
         .G(G_dut), .E(E_dut), .L(L_dut),
@@ -35,8 +32,10 @@ module alu_testbench;
 
     // Reference model instantiation
     alu_reference_model ref (
+		.CLK(CLK), .RST(RST), .CE(CE),
         .OPA(OPA), .OPB(OPB), .CIN(CIN),
         .MODE(MODE), .CMD(CMD),
+		.INP_VALID(INP_VALID),
         .RES(RES_ref),
         .COUT(COUT_ref), .OFLOW(OFLOW_ref),
         .G(G_ref), .E(E_ref), .L(L_ref),
@@ -52,12 +51,14 @@ module alu_testbench;
     // Test stimulus
     initial begin
         // Initialize
-        RST = 1; CE = 1; CIN = 0;
+
+        RST = 1; CE = 0; CIN = 0;
         OPA = 0; OPB = 0; MODE = 0; CMD = 0;
         
         @(posedge CLK);
-        RST = 0;  // Release reset
-        @(posedge CLK);
+		begin	RST = 0; 	CE = 1;	end  // Release reset
+        
+		@(posedge CLK);
 
         // Test Arithmetic Operations
         $display("\n=== Testing Arithmetic Operations (MODE=1) ===");
@@ -80,7 +81,7 @@ module alu_testbench;
         else
             $display("\n*** SOME TESTS FAILED ***\n");
 
-        #100;
+        #200;
         $finish;
     end
 
@@ -146,7 +147,7 @@ module alu_testbench;
             
             test_count = test_count + 1;
             
-            if (compare_outputs()) begin
+            if (compare_outputs(1'b0)) begin
                 $display("[PASS] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
                          test_name, a, b, cmd);
                 pass_count = pass_count + 1;
@@ -160,7 +161,8 @@ module alu_testbench;
     endtask
 
     // Compare DUT vs Reference
-    function compare_outputs();
+    function compare_outputs;
+		input dummy;
         begin
             compare_outputs = 1;
             
@@ -181,7 +183,8 @@ module alu_testbench;
     endfunction
 
     // Compare single bit (handle Z)
-    function compare_bit(input dut, ref);
+    function compare_bit;
+		input dut, ref;
         begin
             if (dut === ref)
                 compare_bit = 1;

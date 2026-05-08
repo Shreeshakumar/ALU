@@ -1,5 +1,6 @@
 module alu_reference_model(
 	input CLK, RST,
+	input CE,
 	input [1:0]INP_VALID,
     input [7:0] OPA, OPB,
     input CIN, MODE,
