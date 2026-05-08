@@ -1,5 +1,4 @@
 module alu_reference_model(
-	input CLK, RST,
 	input CE,
 	input [1:0]INP_VALID,
     input [7:0] OPA, OPB,
@@ -21,52 +20,80 @@ module alu_reference_model(
         L = 1'b0;
         ERR = 1'b0;
 
-		if (RST)
-		begin
-        	RES = 9'b0;
-        	COUT = 1'b0;
-        	OFLOW = 1'b0;
-        	G = 1'b0;
-        	E = 1'b0;
-        	L = 1'b0;
-        	ERR = 1'b0;
-		end
-		else
 		if (CE)
 		begin
-        if (MODE) begin  // Arithmetic Mode
-            case(CMD)
-                4'b0000: begin  // ADD
-                    {COUT,RES[7:0]} = OPA + OPB;
-                end
-                4'b0001: begin  // SUB
-                    OFLOW = (OPA < OPB);
-                    RES = OPA - OPB;
-                end
-                4'b0010: begin  // ADD_CIN
-                    {COUT,RES[7:0]} = OPA + OPB + CIN;
-                end
-                4'b0011: begin  // SUB_CIN
-                    OFLOW = (OPA < OPB);
-                    RES = OPA - OPB - CIN;
-                end
-                4'b0100: RES = OPA + 1;  // INC_A
-                4'b0101: RES = OPA - 1;  // DEC_A
-                4'b0110: RES = OPB + 1;  // INC_B
-                4'b0111: RES = OPB - 1;  // DEC_B
-                4'b1000: begin  // CMP
-                    RES = 9'bz;
-                    if (OPA == OPB) begin
-                        E = 1'b1; G = 1'b0; L = 1'b0;
-                    end else if (OPA > OPB) begin
-                        E = 1'b0; G = 1'b1; L = 1'b0;
-                    end else begin
-                        E = 1'b0; G = 1'b0; L = 1'b1;
-                    end
-                end
+        if (MODE) 
+		begin  // Arithmetic Mode
+			if (INP_VALID == 2'b00)	//both invalid
+				begin ERR = 1;	end
+			if (INP_VALID == 2'b11)
+				begin
+
+				end
+
+			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
+				begin
+
+				end
+
+			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
+				begin
+
+				end
+		end
+
+			
+            
+			case(CMD)
+                4'b0000: 	begin  // ADD
+                    			{COUT,RES[7:0]} = OPA + OPB;
+                			end
+                4'b0001: 	begin  // SUB
+                    			OFLOW = (OPA < OPB);
+                    			RES = OPA - OPB;
+                			end
+                4'b0010: 	begin  // ADD_CIN
+                    			{COUT,RES[7:0]} = OPA + OPB + CIN;
+                			end
+                4'b0011:	begin  // SUB_CIN
+                    			OFLOW = (OPA < OPB);
+                    			RES = OPA - OPB - CIN;
+                			end
+                4'b0100: 	RES = OPA + 1;  // INC_A
+                4'b0101: 	RES = OPA - 1;  // DEC_A
+                4'b0110: 	RES = OPB + 1;  // INC_B
+                4'b0111: 	RES = OPB - 1;  // DEC_B
+                4'b1000: 	begin  // CMP
+                    			RES = 9'bz;
+                    			
+								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
+								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
+								else begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+                			end
             endcase
         end 
+		
+
+
+
+
+
         else begin  // Logical Mode
+			if (INP_VALID == 2'b00)	//both invalid
+				begin ERR = 1;	end
+			if (INP_VALID == 2'b11)
+				begin
+
+				end
+
+			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
+				begin
+
+				end
+
+			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
+				begin
+
             case(CMD)
                 4'b0000: RES = {8'b0, OPA & OPB};       // AND
                 4'b0001: RES = {8'b0, ~(OPA & OPB)};    // NAND
