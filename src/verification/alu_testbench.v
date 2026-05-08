@@ -6,7 +6,7 @@ module alu_testbench;
     reg [7:0] OPA, OPB;
     reg CLK, RST, CE, MODE, CIN;
     reg [3:0] CMD;
-	reg INP_VALID;
+	reg [1:0]INP_VALID;
     wire [15:0] RES_dut;
     wire COUT_dut, OFLOW_dut, G_dut, E_dut, L_dut, ERR_dut;
 
