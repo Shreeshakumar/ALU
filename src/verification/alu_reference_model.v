@@ -61,19 +61,19 @@ module alu_reference_model(
                 				end
 					4'd9	:	begin	// A+1 B+1 nA * nB
 									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
-									RES = OPA_1 * OPB_1; 
+									RES[7:0] = OPA_1 * OPB_1; 
 								end
 					4'd10	:	begin	// A<<1 nA * B
 									OPA_L1 = OPA << 1;
-									RES = OPA_L1 * OPB; 
+									RES[7:0] = OPA_L1 * OPB; 
 								end
 					4'd11	:	begin	//A n B signed A+B
-										RES[A-1:0] = s_add;
-										OFLOW = ( (OPA[A-1] == OPB[A-1]) && (s_add[A-1] != OPA[A-1]) );
+										RES[7:0] = s_add;
+										OFLOW = ( (OPA[7] == OPB[7]) && (s_add[7] != OPA[7]) );
 									end// msb opa = msb opb msb opa is not equal msb res then oflow high
 					4'd12	:	begin	//A n B signed A-B
-										RES[A-1:0] = s_sub;
-										OFLOW = ( (OPA[A-1] != OPB[A-1]) && (s_sub[A-1] != OPA[A-1]) );
+										RES[7:0] = s_sub;
+										OFLOW = ( (OPA[7] != OPB[7]) && (s_sub[7] != OPA[7]) );
 									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 					endcase
 				end
