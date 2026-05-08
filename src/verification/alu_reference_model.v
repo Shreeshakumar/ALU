@@ -50,18 +50,21 @@ module alu_reference_model(
 								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
 								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
+					endcase
 				end
 			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
 				begin
 				case(CMD)
 					4'b0100: 	RES[7:0] = OPA + 1;  // INC_A
                 	4'b0101: 	RES[7:0] = OPA - 1;  // DEC_A
+				endcase
 				end
 			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
 				begin
 				case(CMD)
 					4'b0110: 	RES[7:0] = OPB + 1;  // INC_B
 					4'b0111: 	RES[7:0] = OPB - 1;  // DEC_B
+				endcase
 				end
 			else begin	RES = 0;	ERR = 1;	end
 		end
@@ -89,6 +92,7 @@ module alu_reference_model(
 									for(integer i = 0; i < 8; i = i + 1)
         								RES[i] = OPA[(i + OPB[2:0]) % 8];
                 				end
+					endcase
 				end
 			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
 				begin
@@ -96,6 +100,7 @@ module alu_reference_model(
 						4'b0110: RES[7:0] = ~OPA;            // NOT_A
 						4'b1000: RES[7:0] = OPA >> 1;        // SHR1_A
 						4'b1001: RES[7:0] = OPA << 1;        // SHL1_A
+					endcase
 				end
 			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
 				begin
