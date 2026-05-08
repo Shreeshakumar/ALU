@@ -82,6 +82,38 @@ module alu_testbench;
         else
             $display("\n*** SOME TESTS FAILED ***\n");
 
+        @(posedge CLK);
+		begin	RST = 0; 	CE = 0; INP_VALID = 2'b11;	end  // Release reset
+        
+        @(posedge CLK);
+		begin	RST = 1; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
+
+        @(posedge CLK);
+		begin	RST = 0; 	CE = 1; INP_VALID = 2'b01;	end  // Release reset
+        
+		@(posedge CLK);
+
+        // Test Arithmetic Operations
+        $display("\n=== Testing Arithmetic Operations (MODE=1) ===");
+        MODE = 1;
+        test_arithmetic();
+
+        // Test Logical Operations
+        $display("\n=== Testing Logical Operations (MODE=0) ===");
+        MODE = 0;
+        test_logical();
+
+        // Summary
+        $display("\n=== TEST SUMMARY ===");
+        $display("Total Tests: %0d", test_count);
+        $display("PASS: %0d", pass_count);
+        $display("FAIL: %0d", fail_count);
+        
+        if (fail_count == 0)
+            $display("\n*** ALL TESTS PASSED ***\n");
+        else
+            $display("\n*** SOME TESTS FAILED ***\n");
+
         #200;
         $finish;
     end
