@@ -57,8 +57,11 @@ module alu_testbench;
         OPA = 0; OPB = 0; MODE = 0; CMD = 0;
         
         @(posedge CLK);
-		begin	RST = 0; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
+		begin	RST = 0; 	CE = 1; INP_VALID = 2'b00;	end  // Release reset
         
+        @(posedge CLK);
+		begin	RST = 0; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
+
 		@(posedge CLK);
 
         // Test Arithmetic Operations
@@ -89,7 +92,7 @@ module alu_testbench;
 		begin	RST = 1; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
 
         @(posedge CLK);
-		begin	RST = 0; 	CE = 1; INP_VALID = 2'b01;	end  // Release reset
+		begin	RST = 0; 	CE = 1; INP_VALID = 2'b00;	end  // Release reset
         
 		@(posedge CLK);
 
