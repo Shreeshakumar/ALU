@@ -33,7 +33,7 @@ module alu_testbench;
 
     // Reference model instantiation
     alu_reference_model ref (
-		.CLK(CLK), .RST(RST), .CE(CE),
+		.CE(CE),
         .OPA(OPA), .OPB(OPB), .CIN(CIN),
         .MODE(MODE), .CMD(CMD),
 		.INP_VALID(INP_VALID),
