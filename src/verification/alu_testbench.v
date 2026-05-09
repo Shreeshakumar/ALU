@@ -97,13 +97,11 @@ module alu_testbench;
 					apply_test(8'h01, 8'h01, 4'b0000, "ADD");
 					apply_test(8'h0F, 8'h01, 4'b0000, "ADD");
 					apply_test(8'h00, 8'h00, 4'b0000, "ADD");
-					apply_test(8'h0F, 8'h0F, 4'b0000, "ADD");
             
             // SUB
 					apply_test(8'h01, 8'h01, 4'b0001, "SUB");
 					apply_test(8'h00, 8'h01, 4'b0001, "SUB");
 					apply_test(8'h05, 8'h05, 4'b0001, "SUB");
-					apply_test(8'h0A, 8'h05, 4'b0001, "SUB");
             
             // ADD_CIN
             CIN = 1;
@@ -111,7 +109,6 @@ module alu_testbench;
 					CIN = 0:
 					apply_test(8'h0F, 8'h00, 4'b0010, "ADD_CIN");
 					CIN = 1;
-					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
 					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
             CIN = 0;
 
@@ -122,7 +119,6 @@ module alu_testbench;
 					CIN = 0;
 					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
 					CIN = 1;
-					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
 					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
             CIN = 0;
 			
@@ -140,36 +136,57 @@ module alu_testbench;
             // INC_B
 					apply_test(8'h00, 8'd50, 4'b0110, "INC_B");
 					apply_test(8'h00, 8'dFF, 4'b0110, "INC_B");
-					apply_test(8'h0A, 8'd00, 4'b0110, "INC_B");
 
             // INC_B
 					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
 					apply_test(8'h00, 8'd00, 4'b0111, "DEC_B");
-					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
             
             // CMP
 					apply_test(8'd200, 8'd100, 4'b1000, "CMP (equal)");
 					apply_test(8'd50, 8'd200, 4'b1000, "CMP (greater)");
 					apply_test(8'd128, 8'd128, 4'b1000, "CMP (less)");
-					apply_test(8'd10, 8'd20, 4'b1000, "CMP (less)");
 
             // MUL_AB
 					apply_test(8'h03, 8'h04, 4'b1001, "MUL_AB");
 					apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");
 					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
-					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
 
             // SHIFT_MUL
 					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
 					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
-					apply_test(8'h0A, 8'h00, 4'b1010, "SHIFT_MUL");
 
             // S_ADD
-					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
 					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
 
             // S_SUB
 					apply_test(8'd50, 8'd30, 4'b1100, "S_SUB");
+
+			// INVALID 01
+			inP_VALID = 2'b01;
+					apply_test(8'h0F, 8'h0F, 4'b0000, "ADD");
+					apply_test(8'h0A, 8'h05, 4'b0001, "SUB");
+					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
+					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
+					apply_test(8'h0A, 8'd00, 4'b0110, "INC_B");
+					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
+					apply_test(8'd10, 8'd20, 4'b1000, "CMP (less)");
+					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
+					apply_test(8'h0A, 8'h00, 4'b1010, "SHIFT_MUL");
+					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
+					apply_test(8'h0A, 8'h00, 4'b1100, "S_SUB");
+
+			// INVALID 10
+			inP_VALID = 2'b10;
+					apply_test(8'h0F, 8'h0F, 4'b0000, "ADD");
+					apply_test(8'h0A, 8'h05, 4'b0001, "SUB");
+					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
+					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
+					apply_test(8'h0A, 8'd00, 4'b0110, "INC_B");
+					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
+					apply_test(8'd10, 8'd20, 4'b1000, "CMP (less)");
+					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
+					apply_test(8'h0A, 8'h00, 4'b1010, "SHIFT_MUL");
+					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
 					apply_test(8'h0A, 8'h00, 4'b1100, "S_SUB");
         end
 
