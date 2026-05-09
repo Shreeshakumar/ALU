@@ -91,7 +91,45 @@ module alu_testbench;
         // Test Arithmetic Operations
         $display("\n=== Testing Arithmetic Operations (MODE=1) ===");
         MODE = 1;
-        test_arithmetic();
+        //test_arithmetic();
+		        begin
+            // ADD
+            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
+            apply_test(8'hFF, 8'h01, 4'b0000, "ADD (overflow)");
+            
+            // SUB
+            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
+            apply_test(8'h10, 8'h20, 4'b0001, "SUB (underflow)");
+            
+            // ADD_CIN
+            CIN = 1;
+            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
+            CIN = 0;
+
+			// SUB_CIN
+            CIN = 1;
+			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
+            CIN = 0;
+			
+			// SUB_CIN b greater overflow
+            CIN = 1;
+			apply_test(8'h10, 8'h20, 4'b0011, "SUB_CIN");
+            CIN = 0;
+            
+            // INC_A, DEC_A
+            apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
+            apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
+
+	
+            // INC_B, DEC_B
+			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
+			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+            
+            // CMP
+            apply_test(8'h10, 8'h10, 4'b1000, "CMP (equal)");
+            apply_test(8'h20, 8'h10, 4'b1000, "CMP (greater)");
+            apply_test(8'h10, 8'h20, 4'b1000, "CMP (less)");
+        end
 
         // Test Logical Operations
         $display("\n=== Testing Logical Operations (MODE=0) ===");
@@ -146,46 +184,8 @@ module alu_testbench;
     end
 
     // Test arithmetic operations
-    task test_arithmetic();
-        begin
-            // ADD
-            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
-            apply_test(8'hFF, 8'h01, 4'b0000, "ADD (overflow)");
-            
-            // SUB
-            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
-            apply_test(8'h10, 8'h20, 4'b0001, "SUB (underflow)");
-            
-            // ADD_CIN
-            CIN = 1;
-            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
-            CIN = 0;
-
-			// SUB_CIN
-            CIN = 1;
-			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
-            CIN = 0;
-			
-			// SUB_CIN b greater overflow
-            CIN = 1;
-			apply_test(8'h10, 8'h20, 4'b0011, "SUB_CIN");
-            CIN = 0;
-            
-            // INC_A, DEC_A
-            apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
-            apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
-
-	
-            // INC_B, DEC_B
-			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-            
-            // CMP
-            apply_test(8'h10, 8'h10, 4'b1000, "CMP (equal)");
-            apply_test(8'h20, 8'h10, 4'b1000, "CMP (greater)");
-            apply_test(8'h10, 8'h20, 4'b1000, "CMP (less)");
-        end
-    endtask
+    //task test_arithmetic();
+    //endtask
 
     // Test logical operations
     task test_logical();
