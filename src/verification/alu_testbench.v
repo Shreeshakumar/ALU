@@ -143,7 +143,7 @@ module alu_testbench;
             // ADD_CIN
             CIN = 1;
 					apply_test(8'hFF, 8'h00, 4'b0010, "ADD_CIN");
-					CIN = 0:
+					CIN = 0;
 					apply_test(8'hFF, 8'h00, 4'b0010, "ADD_CIN");
 					CIN = 1;
 					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
