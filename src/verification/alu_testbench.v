@@ -94,118 +94,105 @@ module alu_testbench;
         //test_arithmetic();
 		        begin
             // ADD
-            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
-            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
-            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
-            apply_test(8'h0F, 8'h11, 4'b0000, "ADD");
+					apply_test(8'h01, 8'h01, 4'b0000, "ADD");
+					apply_test(8'h0F, 8'h01, 4'b0000, "ADD");
+					apply_test(8'h00, 8'h00, 4'b0000, "ADD");
+					apply_test(8'h0F, 8'h0F, 4'b0000, "ADD");
             
             // SUB
-            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
-            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
-            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
-            apply_test(8'h20, 8'h10, 4'b0001, "SUB");
+					apply_test(8'h01, 8'h01, 4'b0001, "SUB");
+					apply_test(8'h00, 8'h01, 4'b0001, "SUB");
+					apply_test(8'h05, 8'h05, 4'b0001, "SUB");
+					apply_test(8'h0A, 8'h05, 4'b0001, "SUB");
             
             // ADD_CIN
             CIN = 1;
-            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
-            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
-            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
-            apply_test(8'h10, 8'h20, 4'b0010, "ADD_CIN");
+					apply_test(8'h0F, 8'h00, 4'b0010, "ADD_CIN");
+					CIN = 0:
+					apply_test(8'h0F, 8'h00, 4'b0010, "ADD_CIN");
+					CIN = 1;
+					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
+					apply_test(8'h01, 8'h01, 4'b0010, "ADD_CIN");
             CIN = 0;
 
 			// SUB_CIN
             CIN = 1;
-			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
-			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
-			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
-			apply_test(8'h20, 8'h10, 4'b0011, "SUB_CIN");
+					apply_test(8'h0A, 8'h03, 4'b0011, "SUB_CIN");
+					apply_test(8'h00, 8'h00, 4'b0011, "SUB_CIN");
+					CIN = 0;
+					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
+					CIN = 1;
+					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
+					apply_test(8'h01, 8'h01, 4'b0011, "SUB_CIN");
             CIN = 0;
 			
             // INC_A
-            apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
-            apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
-            apply_test(8'h0A, 8'h00, 4'b0100, "INC_A");
+					apply_test(8'd50, 8'h00, 4'b0100, "INC_A");
+					apply_test(8'dFF, 8'h00, 4'b0100, "INC_A");
+					apply_test(8'd0A, 8'h00, 4'b0100, "INC_A");
 
-            // INC_B
-            apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
-            apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
-            apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
+            // DEC_A
+					apply_test(8'd49, 8'h00, 4'b0101, "DEC_A");
+					apply_test(8'd00, 8'h00, 4'b0101, "DEC_A");
+					apply_test(8'd0A, 8'h00, 4'b0101, "DEC_A");
 
 	
             // INC_B
-			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
-			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
-			apply_test(8'h0A, 8'h00, 4'b0110, "INC_B");
+					apply_test(8'h00, 8'd50, 4'b0110, "INC_B");
+					apply_test(8'h00, 8'dFF, 4'b0110, "INC_B");
+					apply_test(8'h0A, 8'd00, 4'b0110, "INC_B");
 
             // INC_B
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
+					apply_test(8'h00, 8'd00, 4'b0111, "DEC_B");
+					apply_test(8'h00, 8'd49, 4'b0111, "DEC_B");
             
             // CMP
-            apply_test(8'h10, 8'h10, 4'b1000, "CMP (equal)");
-            apply_test(8'h20, 8'h10, 4'b1000, "CMP (greater)");
-            apply_test(8'h10, 8'h20, 4'b1000, "CMP (less)");
-            apply_test(8'h10, 8'h20, 4'b1000, "CMP (less)");
+					apply_test(8'd200, 8'd100, 4'b1000, "CMP (equal)");
+					apply_test(8'd50, 8'd200, 4'b1000, "CMP (greater)");
+					apply_test(8'd128, 8'd128, 4'b1000, "CMP (less)");
+					apply_test(8'd10, 8'd20, 4'b1000, "CMP (less)");
 
             // MUL_AB
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+					apply_test(8'h03, 8'h04, 4'b1001, "MUL_AB");
+					apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");
+					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
+					apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
 
             // SHIFT_MUL
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
+					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
+					apply_test(8'h0A, 8'h00, 4'b1010, "SHIFT_MUL");
 
             // S_ADD
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
+					apply_test(8'h0A, 8'd20, 4'b1011, "S_ADD");
 
             // S_SUB
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
-			apply_test(8'h0A, 8'h00, 4'b0111, "DEC_B");
+					apply_test(8'd50, 8'd30, 4'b1100, "S_SUB");
+					apply_test(8'h0A, 8'h00, 4'b1100, "S_SUB");
         end
 
         // Test Logical Operations
         $display("\n=== Testing Logical Operations (MODE=0) ===");
-        MODE = 0;
-        test_logical();
-
-        // Summary
-        $display("\n=== TEST SUMMARY ===");
-        $display("Total Tests: %0d", test_count);
-        $display("PASS: %0d", pass_count);
-        $display("FAIL: %0d", fail_count);
-        
-        if (fail_count == 0)
-            $display("\n*** ALL TESTS PASSED ***\n");
-        else
-            $display("\n*** SOME TESTS FAILED ***\n");
-
-        @(posedge CLK);
-		begin	RST = 0; 	CE = 0; INP_VALID = 2'b11;	end  // Release reset
-        
-        @(posedge CLK);
-		begin	RST = 1; 	CE = 1; INP_VALID = 2'b11;	end  // Release reset
-
-        @(posedge CLK);
-		begin	RST = 0; 	CE = 1; INP_VALID = 2'b00;	end  // Release reset
-        
-		@(posedge CLK);
-
-        // Test Arithmetic Operations
-        $display("\n=== Testing Arithmetic Operations (MODE=1) ===");
-        MODE = 1;
-        test_arithmetic();
-
-        // Test Logical Operations
-        $display("\n=== Testing Logical Operations (MODE=0) ===");
-        MODE = 0;
-        test_logical();
-
+        //MODE = 0;
+        //test_logical();
+		begin
+            apply_test(8'hF0, 8'h0F, 4'b0000, "AND");
+            apply_test(8'hF0, 8'h0F, 4'b0001, "NAND");
+            apply_test(8'hF0, 8'h0F, 4'b0010, "OR");
+            apply_test(8'hF0, 8'h0F, 4'b0011, "NOR");
+            apply_test(8'hAA, 8'h55, 4'b0100, "XOR");
+            apply_test(8'hAA, 8'h55, 4'b0101, "XNOR");
+            apply_test(8'hF0, 8'h00, 4'b0110, "NOT_A");
+            apply_test(8'h00, 8'hF0, 4'b0111, "NOT_B");
+            apply_test(8'hAA, 8'h00, 4'b1000, "SHR1_A");
+            apply_test(8'h55, 8'h00, 4'b1001, "SHL1_A");
+			apply_test(8'hAA, 8'h00, 4'b1010, "SHR1_B");
+			apply_test(8'h55, 8'h00, 4'b1011, "SHL1_B");
+            apply_test(8'hAA, 8'h03, 4'b1100, "ROL_A_B");
+            apply_test(8'hAA, 8'h02, 4'b1101, "ROR_A_B");
+        end
         // Summary
         $display("\n=== TEST SUMMARY ===");
         $display("Total Tests: %0d", test_count);
@@ -226,24 +213,8 @@ module alu_testbench;
     //endtask
 
     // Test logical operations
-    task test_logical();
-        begin
-            apply_test(8'hF0, 8'h0F, 4'b0000, "AND");
-            apply_test(8'hF0, 8'h0F, 4'b0001, "NAND");
-            apply_test(8'hF0, 8'h0F, 4'b0010, "OR");
-            apply_test(8'hF0, 8'h0F, 4'b0011, "NOR");
-            apply_test(8'hAA, 8'h55, 4'b0100, "XOR");
-            apply_test(8'hAA, 8'h55, 4'b0101, "XNOR");
-            apply_test(8'hF0, 8'h00, 4'b0110, "NOT_A");
-            apply_test(8'h00, 8'hF0, 4'b0111, "NOT_B");
-            apply_test(8'hAA, 8'h00, 4'b1000, "SHR1_A");
-            apply_test(8'h55, 8'h00, 4'b1001, "SHL1_A");
-			apply_test(8'hAA, 8'h00, 4'b1010, "SHR1_B");
-			apply_test(8'h55, 8'h00, 4'b1011, "SHL1_B");
-            apply_test(8'hAA, 8'h03, 4'b1100, "ROL_A_B");
-            apply_test(8'hAA, 8'h02, 4'b1101, "ROR_A_B");
-        end
-    endtask
+    //task test_logical();
+    //endtask
 
     // Apply test and check
     task apply_test(
