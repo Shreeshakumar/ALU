@@ -270,7 +270,7 @@ module alu_testbench;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
 				begin
-				#1;#1;	
+				#1;#1;#1;	
 					
 					if (RES_dut !== RES_ref) begin
                 		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
