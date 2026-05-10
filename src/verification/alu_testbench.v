@@ -198,15 +198,21 @@ module alu_testbench;
 					apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");
 					apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
 					
-apply_test(8'h00, 8'h00, 4'b1001, "MUL_AB");
-apply_test(8'h01, 8'h01, 4'b1001, "MUL_AB");
-apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
-apply_test(8'h7F, 8'h7F, 4'b1001, "MUL_AB");
-apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
+			apply_test(8'h60, 8'h60, 4'b1001, "MUL_AB");
+			apply_test(8'h7E, 8'h7E, 4'b1001, "MUL_AB");
+			apply_test(8'h08, 8'h08, 4'b1001, "MUL_AB");
+			apply_test(8'h03, 8'h03, 4'b1001, "MUL_AB");
+			apply_test(8'h07, 8'h07, 4'b1001, "MUL_AB");
 
             // SHIFT_MUL
 					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
 					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
+
+			apply_test(8'h7E, 8'h01, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h55, 8'h01, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h04, 8'h02, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h02, 8'h02, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h01, 8'h04, 4'b1010, "SHIFT_MUL");
 
             // S_ADD
 			apply_test(8'h10, 8'h20, 4'b1011, "S_ADD");
