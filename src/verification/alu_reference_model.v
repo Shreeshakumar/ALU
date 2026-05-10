@@ -17,8 +17,6 @@ module alu_reference_model(
 	wire signed [7:0] s_add = sOPA + sOPB;
 	wire signed [7:0] s_sub = sOPA - sOPB;
 	
-	reg [3:0]i;
-
     always @(*) begin
         // Default values
         RES = 16'b0;
@@ -140,15 +138,33 @@ module alu_reference_model(
 						4'b1010: RES = OPB >> 1;   // SHR1_B
                 		4'b1011: RES = OPB << 1;   // SHL1_B
 						4'b1100: begin  // ROL_A_B
+									casez(OPB[2:0])
+										'b000	:	RES[7:0] = OPA;
+										'b001	:	RES[7:0] = {OPA[6:0],OPA[7]};
+										'b010	:	RES[7:0] = {OPA[5:0],OPA[7:6]};
+										'b011	:	RES[7:0] = {OPA[4:0],OPA[7:5]};
+										'b100	:	RES[7:0] = {OPA[3:0],OPA[7:4]};
+										'b101	:	RES[7:0] = {OPA[2:0],OPA[7:3]};
+										'b110	:	RES[7:0] = {OPA[1:0],OPA[7:2]};
+										'b111	:	RES[7:0] = {OPA[0],OPA[7:1]};
+										default :	RES[7:0] = 0;
+							         endcase
 									ERR = (OPB[7:4])?1:0;
-							for( i = 1'd0; i < 4'd8; i = i + 1'd1)
-										RES[i] = OPA[(i - OPB[2:0] + 8) % 8];
-                				end
+							     end
                 		4'b1101: begin  // ROR_A_B
+									casez(OPB[2:0])
+										'b000	:	RES[7:0] = OPA;										
+										'b001 : RES[7:0] = {OPA[0],   OPA[7:1]};
+										'b010 : RES[7:0] = {OPA[1:0], OPA[7:2]};
+										'b011 : RES[7:0] = {OPA[2:0], OPA[7:3]};
+										'b100 : RES[7:0] = {OPA[3:0], OPA[7:4]};
+										'b101 : RES[7:0] = {OPA[4:0], OPA[7:5]};
+										'b110 : RES[7:0] = {OPA[5:0], OPA[7:6]};
+										'b111 : RES[7:0] = {OPA[6:0], OPA[7:7]};
+										default :	RES[7:0] = 0;
+							         endcase
 									ERR = (OPB[7:4])?1:0;
-							for( i = 1'd0; i < 4'd8; i = i + 1'd1)
-        								RES[i] = OPA[(i + OPB[2:0]) % 8];
-                				end
+							     end
 						default	:	begin	RES = 0;	ERR = 1;	end
 					endcase 
 				end
