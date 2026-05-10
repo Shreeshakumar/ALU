@@ -40,18 +40,20 @@ module alu_reference_model(
 				begin
 					case(CMD)
                 	4'b0000: 	begin  // ADD
-                    			{COUT,RES[7:0]} = OPA + OPB;
+                    			RES = OPA + OPB;
+								COUT = RES[8];
                 				end
 					4'b0001: 	begin  // SUB
                     			OFLOW = (OPA < OPB);
 								RES[7:0] = OPA - OPB;
                 				end
 					4'b0010: 	begin  // ADD_CIN
-                    			{COUT,RES[7:0]} = OPA + OPB + CIN;
+                    			RES = OPA + OPB + CIN;
+								COUT = RES[8];
                 				end
 					4'b0011:	begin  // SUB_CIN
                     			OFLOW = (OPA < OPB);
-								RES[7:0] = OPA - OPB - CIN;
+								RES = OPA - OPB - CIN;
                 				end
 					4'b1000: 	begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
@@ -61,18 +63,18 @@ module alu_reference_model(
                 				end
 					4'd9	:	begin	// A+1 B+1 nA * nB
 									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
-									RES[7:0] = OPA_1 * OPB_1; 
+									RES = OPA_1 * OPB_1; 
 								end
 					4'd10	:	begin	// A<<1 nA * B
 									OPA_L1 = OPA << 1;
-									RES[7:0] = OPA_L1 * OPB; 
+									RES = OPA_L1 * OPB; 
 								end
 					4'd11	:	begin	//A n B signed A+B
-										RES[7:0] = s_add;
+										RES = s_add;
 										OFLOW = ( (OPA[7] == OPB[7]) && (s_add[7] != OPA[7]) );
 									end// msb opa = msb opb msb opa is not equal msb res then oflow high
 					4'd12	:	begin	//A n B signed A-B
-										RES[7:0] = s_sub;
+										RES = s_sub;
 										OFLOW = ( (OPA[7] != OPB[7]) && (s_sub[7] != OPA[7]) );
 									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 					endcase
@@ -80,15 +82,15 @@ module alu_reference_model(
 			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
 				begin
 				case(CMD)
-					4'b0100: 	RES[7:0] = OPA + 1;  // INC_A
-                	4'b0101: 	RES[7:0] = OPA - 1;  // DEC_A
+					4'b0100: 	RES = OPA + 1;  // INC_A
+                	4'b0101: 	RES = OPA - 1;  // DEC_A
 				endcase
 				end
 			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
 				begin
 				case(CMD)
-					4'b0110: 	RES[7:0] = OPB + 1;  // INC_B
-					4'b0111: 	RES[7:0] = OPB - 1;  // DEC_B
+					4'b0110: 	RES = OPB + 1;  // INC_B
+					4'b0111: 	RES = OPB - 1;  // DEC_B
 				endcase
 				end
 			else begin	RES = 0;	ERR = 1;	end
@@ -101,12 +103,12 @@ module alu_reference_model(
 			if (INP_VALID == 2'b11)
 				begin
 					case(CMD)
-						4'b0000: RES[7:0] = OPA & OPB;       // AND
-                		4'b0001: RES[7:0] = ~(OPA & OPB);    // NAND
-		                4'b0010: RES[7:0] = OPA | OPB;       // OR
-                		4'b0011: RES[7:0] = ~(OPA | OPB);    // NOR
-						4'b0100: RES[7:0] = OPA ^ OPB;       // XOR
-                		4'b0101: RES[7:0] = ~(OPA ^ OPB);    // XNOR
+						4'b0000: RES = OPA & OPB;       // AND
+                		4'b0001: RES = ~(OPA & OPB);    // NAND
+		                4'b0010: RES = OPA | OPB;       // OR
+                		4'b0011: RES = ~(OPA | OPB);    // NOR
+						4'b0100: RES = OPA ^ OPB;       // XOR
+                		4'b0101: RES = ~(OPA ^ OPB);    // XNOR
 						4'b1100: begin  // ROL_A_B
 									ERR = (OPB[7:4])?1:0;
                     				for( i = 0; i < 8; i = i + 1)
