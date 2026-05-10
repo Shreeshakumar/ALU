@@ -68,18 +68,51 @@ module alu_reference_model(
 					4'd9	:	begin	// A+1 B+1 nA * nB
 									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
 									RES = OPA_1 * OPB_1; 
+
+								begin  // CMP                    			
+								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
+								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
+								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+                				end
+						
 								end
 					4'd10	:	begin	// A<<1 nA * B
 									OPA_L1 = OPA << 1;
 									RES = OPA_L1 * OPB; 
+						
+								begin  // CMP                    			
+								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
+								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
+								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+                				end
+						
 								end
 					4'd11	:	begin	//A n B signed A+B
 										RES = s_add;
 										OFLOW = ( (OPA[7] == OPB[7]) && (s_add[7] != OPA[7]) );
+
+								begin  // CMP                    			
+								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
+								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
+								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+                				end
+
 									end// msb opa = msb opb msb opa is not equal msb res then oflow high
+						
 					4'd12	:	begin	//A n B signed A-B
 										RES = s_sub;
 										OFLOW = ( (OPA[7] != OPB[7]) && (s_sub[7] != OPA[7]) );
+
+								begin  // CMP                    			
+								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
+								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
+								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+                				end
+						
 									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
 					default	:	begin	RES = 0;	ERR = 1;	end
 					endcase	
