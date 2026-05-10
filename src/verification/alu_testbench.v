@@ -268,8 +268,28 @@ module alu_testbench;
 			apply_test(8'h00, 8'b01010101, 4'b1011, "SHL1_B");
 			apply_test(8'hCC, 8'h0B, 4'b1100, "ROL_A_B");
 			apply_test(8'hCC, 8'h6B, 4'b1100, "ROL_A_B");
+
+			apply_test(8'hC1, 8'h60, 4'b1100, "ROL_A_B");
+			apply_test(8'hC2, 8'h61, 4'b1100, "ROL_A_B");
+			apply_test(8'hC3, 8'h62, 4'b1100, "ROL_A_B");
+			apply_test(8'hC4, 8'h63, 4'b1100, "ROL_A_B");
+			apply_test(8'hC5, 8'h64, 4'b1100, "ROL_A_B");
+			apply_test(8'hC6, 8'h65, 4'b1100, "ROL_A_B");
+			apply_test(8'hC6, 8'h66, 4'b1100, "ROL_A_B");
+			apply_test(8'hC6, 8'h67, 4'b1100, "ROL_A_B");
+
 			apply_test(8'hCC, 8'h0B, 4'b1101, "ROR_A_B");
 			apply_test(8'hCC, 8'h6B, 4'b1101, "ROR_A_B");
+
+			apply_test(8'hCC, 8'h00, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h01, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h02, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h03, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h04, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h05, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h06, 4'b1101, "ROR_A_B");
+			apply_test(8'hCC, 8'h07, 4'b1101, "ROR_A_B");
+			
         end
     endtask
 
