@@ -62,8 +62,8 @@ module alu_reference_model(
 					4'b1000: 	begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
 								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
-								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
-								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+								else  (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								//else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
 					4'd9	:	begin	// A+1 B+1 nA * nB
 									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
@@ -80,8 +80,8 @@ module alu_reference_model(
 								begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
 								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
-								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
-								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+								else  (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								//else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
 
 									end// msb opa = msb opb msb opa is not equal msb res then oflow high
@@ -93,8 +93,8 @@ module alu_reference_model(
 								begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
 								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
-								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
-								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
+								else  (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
+								//else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
 						
 									end// msb opa ~= msb opb msb opa is not equal msb res then oflow high
