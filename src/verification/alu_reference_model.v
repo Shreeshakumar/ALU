@@ -147,7 +147,7 @@ module alu_reference_model(
 										'b101	:	RES[7:0] = {OPA[2:0],OPA[7:3]};
 										'b110	:	RES[7:0] = {OPA[1:0],OPA[7:2]};
 										'b111	:	RES[7:0] = {OPA[0],OPA[7:1]};
-										//default :	RES[7:0] = 0;
+										default :	RES[7:0] = 0;
 							         endcase
 									ERR = (OPB[7:4])?1:0;
 							     end
@@ -161,7 +161,7 @@ module alu_reference_model(
 										'b101 : RES[7:0] = {OPA[4:0], OPA[7:5]};
 										'b110 : RES[7:0] = {OPA[5:0], OPA[7:6]};
 										'b111 : RES[7:0] = {OPA[6:0], OPA[7:7]};
-										//default :	RES[7:0] = 0;
+										default :	RES[7:0] = 0;
 							         endcase
 									ERR = (OPB[7:4])?1:0;
 							     end
