@@ -1,209 +1,209 @@
 var g_data = {
 b178:[{dummy:0},
-{anchor:'cvg179',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'242',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'242',h:'125',c:'g'}
-,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'246',h:'22',c:'g'}
+{anchor:'cvg179',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'251',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'251',h:'174',c:'g'}
+,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'255',h:'22',c:'g'}
 ]}],
 b180:[{dummy:0},
-{anchor:'cvg181',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',h:'20',c:'g'}
-,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',h:'127',c:'g'}
+{anchor:'cvg181',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',h:'20',c:'g'}
+,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',h:'176',c:'g'}
 ]},
-{anchor:'cvg182',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',h:'20',c:'g'}
-,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',h:'0',c:'r'}
+{anchor:'cvg182',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',h:'20',c:'g'}
+,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',h:'0',c:'r'}
 ]},
-{anchor:'cvg183',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',h:'147',c:'g'}
+{anchor:'cvg183',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',h:'196',c:'g'}
 ]},
-{anchor:'cvg184',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',h:'2',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',h:'145',c:'g'}
+{anchor:'cvg184',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',h:'194',c:'g'}
 ]},
-{anchor:'cvg185',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',h:'146',c:'g'}
+{anchor:'cvg185',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',h:'1',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',h:'195',c:'g'}
 ]},
-{anchor:'cvg186',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',h:'142',c:'g'}
+{anchor:'cvg186',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',h:'191',c:'g'}
 ]},
-{anchor:'cvg187',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',h:'146',c:'g'}
+{anchor:'cvg187',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',h:'1',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',h:'195',c:'g'}
 ]},
-{anchor:'cvg188',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',h:'10',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',h:'137',c:'g'}
+{anchor:'cvg188',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',h:'10',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',h:'186',c:'g'}
 ]}],
 b191:[{dummy:0},
-{anchor:'cvg192',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'281',c:'Y',p:'66.66'}
-,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'281',h:'863',c:'g'}
-,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'283',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'285',h:'19',c:'g'}
+{anchor:'cvg192',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'290',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'290',h:'1157',c:'g'}
+,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'292',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'294',h:'19',c:'g'}
 ]}],
 b3:[{dummy:0},
 {anchor:'cvg197',items:[{z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        end else if (CE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'28',h:'253',c:'g'}
+,{cr:'c',t:'T',z:'        end else if (CE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'28',h:'318',c:'g'}
 ,{cr:'c',t:'A',z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',h:'2',c:'g'}
 ]},
 {anchor:'cvg198',items:[{z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',h:'27',c:'g'}
-,{cr:'c',t:'T',z:'            else if (MODE && (CMD == 4\'b1010)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'36',h:'18',c:'g'}
-,{cr:'c',t:'E',z:'            else begin',f:'Eight_bit_ALU_rtl_design.v',l:'44',h:'208',c:'g'}
+,{cr:'c',t:'I',z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',h:'36',c:'g'}
+,{cr:'c',t:'T',z:'            else if (MODE && (CMD == 4\'b1010)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'36',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'            else begin',f:'Eight_bit_ALU_rtl_design.v',l:'44',h:'258',c:'g'}
 ]},
 {anchor:'cvg199',items:[{z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                else if(count == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'33',h:'9',c:'g'}
-,{cr:'c',t:'A',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'9',c:'g'}
+,{cr:'c',t:'I',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                else if(count == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'33',h:'12',c:'g'}
+,{cr:'c',t:'A',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'12',c:'g'}
 ]},
 {anchor:'cvg200',items:[{z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                else if(count1 == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'40',h:'6',c:'g'}
-,{cr:'c',t:'A',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'6',c:'g'}
+,{cr:'c',t:'I',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                else if(count1 == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'40',h:'8',c:'g'}
+,{cr:'c',t:'A',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'8',c:'g'}
 ]},
 {anchor:'cvg201',items:[{z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',h:'116',c:'g'}
-,{cr:'c',t:'E',z:'        else begin',f:'Eight_bit_ALU_rtl_design.v',l:'155',h:'55',c:'g'}
+,{cr:'c',t:'I',z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',h:'154',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'Eight_bit_ALU_rtl_design.v',l:'155',h:'72',c:'g'}
 ]},
 {anchor:'cvg202',items:[{z:'            case (CMD)',f:'Eight_bit_ALU_rtl_design.v',l:'69',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: begin // CMD 0: ADD',f:'Eight_bit_ALU_rtl_design.v',l:'70',h:'10',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: begin // CMD 1: SUB',f:'Eight_bit_ALU_rtl_design.v',l:'77',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: begin // CMD 2: ADD_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'84',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: begin // CMD 3: SUB_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'91',h:'18',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'5',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0000: begin // CMD 0: ADD',f:'Eight_bit_ALU_rtl_design.v',l:'70',h:'13',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0001: begin // CMD 1: SUB',f:'Eight_bit_ALU_rtl_design.v',l:'77',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0010: begin // CMD 2: ADD_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'84',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0011: begin // CMD 3: SUB_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'91',h:'24',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'7',c:'g'}
 ,{cr:'c',t:'T',z:'                default: temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'152',h:'2',c:'g'}
 ]},
 {anchor:'cvg203',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'71',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'71',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'74',h:'7',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'74',h:'10',c:'g'}
 ]},
 {anchor:'cvg204',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'78',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'78',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'81',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'81',h:'12',c:'g'}
 ]},
 {anchor:'cvg205',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'85',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'85',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'88',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'88',h:'12',c:'g'}
 ]},
 {anchor:'cvg206',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'92',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'92',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'95',h:'12',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'95',h:'18',c:'g'}
 ]},
 {anchor:'cvg207',items:[{z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                        else ',f:'Eight_bit_ALU_rtl_design.v',l:'99',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                        else ',f:'Eight_bit_ALU_rtl_design.v',l:'99',h:'6',c:'g'}
 ]},
 {anchor:'cvg208',items:[{z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'103',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'103',h:'6',c:'g'}
 ]},
 {anchor:'cvg209',items:[{z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'107',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'107',h:'4',c:'g'}
 ]},
 {anchor:'cvg210',items:[{z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'111',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'111',h:'4',c:'g'}
 ]},
 {anchor:'cvg211',items:[{z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'118',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'118',h:'9',c:'g'}
 ]},
 {anchor:'cvg212',items:[{z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'122',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'122',h:'9',c:'g'}
 ]},
 {anchor:'cvg213',items:[{z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'126',h:'4',c:'g'}
+,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'126',h:'6',c:'g'}
 ]},
 {anchor:'cvg214',items:[{z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'138',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'138',h:'3',c:'g'}
 ]},
 {anchor:'cvg215',items:[{z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                          else ',f:'Eight_bit_ALU_rtl_design.v',l:'150',h:'4',c:'g'}
+,{cr:'c',t:'E',z:'                          else ',f:'Eight_bit_ALU_rtl_design.v',l:'150',h:'6',c:'g'}
 ]},
 {anchor:'cvg216',items:[{z:'            case (CMD)',f:'Eight_bit_ALU_rtl_design.v',l:'156',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'5',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'7',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'6',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'9',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'11',c:'g'}
 ,{cr:'c',t:'T',z:'                default: temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'213',h:'2',c:'g'}
 ]},
 {anchor:'cvg217',items:[{z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'159',h:'5',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'159',h:'6',c:'g'}
 ]},
 {anchor:'cvg218',items:[{z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'163',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'163',h:'4',c:'g'}
 ]},
 {anchor:'cvg219',items:[{z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'167',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'167',h:'4',c:'g'}
 ]},
 {anchor:'cvg220',items:[{z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'171',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'171',h:'4',c:'g'}
 ]},
 {anchor:'cvg221',items:[{z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'175',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'175',h:'4',c:'g'}
 ]},
 {anchor:'cvg222',items:[{z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'179',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'179',h:'4',c:'g'}
 ]},
 {anchor:'cvg223',items:[{z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'183',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'183',h:'3',c:'g'}
 ]},
 {anchor:'cvg224',items:[{z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'187',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'187',h:'2',c:'g'}
 ]},
 {anchor:'cvg225',items:[{z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'191',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'191',h:'3',c:'g'}
 ]},
 {anchor:'cvg226',items:[{z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'195',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'195',h:'3',c:'g'}
 ]},
 {anchor:'cvg227',items:[{z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'199',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'199',h:'2',c:'g'}
 ]},
 {anchor:'cvg228',items:[{z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                        else    ',f:'Eight_bit_ALU_rtl_design.v',l:'203',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                        else    ',f:'Eight_bit_ALU_rtl_design.v',l:'203',h:'2',c:'g'}
 ]},
 {anchor:'cvg229',items:[{z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'208',h:'7',c:'g'}
+,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'208',h:'9',c:'g'}
 ]},
 {anchor:'cvg230',items:[{z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'206',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'206',h:'0',c:'r'}
@@ -211,7 +211,7 @@ b3:[{dummy:0},
 ]},
 {anchor:'cvg231',items:[{z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'212',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'212',h:'11',c:'g'}
 ]},
 {anchor:'cvg232',items:[{z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'210',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'210',h:'0',c:'r'}
@@ -219,183 +219,183 @@ b3:[{dummy:0},
 ]},
 {anchor:'cvg233',items:[{z:'        if (RST) count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'219',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'219',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1001)',f:'Eight_bit_ALU_rtl_design.v',l:'220',h:'27',c:'g'}
-,{cr:'c',t:'E',z:'        else count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'222',h:'87',c:'g'}
+,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1001)',f:'Eight_bit_ALU_rtl_design.v',l:'220',h:'36',c:'g'}
+,{cr:'c',t:'E',z:'        else count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'222',h:'113',c:'g'}
 ]},
 {anchor:'cvg234',items:[{z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'9',c:'g'}
-,{cr:'c',t:'E',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'18',c:'g'}
+,{cr:'c',t:'I',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'12',c:'g'}
+,{cr:'c',t:'E',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'24',c:'g'}
 ]},
 {anchor:'cvg235',items:[{z:'        if (RST) count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'226',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'226',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1010)',f:'Eight_bit_ALU_rtl_design.v',l:'227',h:'18',c:'g'}
-,{cr:'c',t:'E',z:'        else count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'229',h:'87',c:'g'}
+,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1010)',f:'Eight_bit_ALU_rtl_design.v',l:'227',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'        else count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'229',h:'113',c:'g'}
 ]},
 {anchor:'cvg236',items:[{z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'12',c:'g'}
+,{cr:'c',t:'I',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'16',c:'g'}
 ]}],
 b196:[{dummy:0},
 {anchor:'cvg197',items:[{z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        end else if (CE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'28',h:'253',c:'g'}
+,{cr:'c',t:'T',z:'        end else if (CE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'28',h:'318',c:'g'}
 ,{cr:'c',t:'A',z:'        if (RST) begin',f:'Eight_bit_ALU_rtl_design.v',l:'26',h:'2',c:'g'}
 ]},
 {anchor:'cvg198',items:[{z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',h:'27',c:'g'}
-,{cr:'c',t:'T',z:'            else if (MODE && (CMD == 4\'b1010)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'36',h:'18',c:'g'}
-,{cr:'c',t:'E',z:'            else begin',f:'Eight_bit_ALU_rtl_design.v',l:'44',h:'208',c:'g'}
+,{cr:'c',t:'I',z:'            if (MODE && (CMD == 4\'b1001)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'29',h:'36',c:'g'}
+,{cr:'c',t:'T',z:'            else if (MODE && (CMD == 4\'b1010)) begin',f:'Eight_bit_ALU_rtl_design.v',l:'36',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'            else begin',f:'Eight_bit_ALU_rtl_design.v',l:'44',h:'258',c:'g'}
 ]},
 {anchor:'cvg199',items:[{z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                else if(count == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'33',h:'9',c:'g'}
-,{cr:'c',t:'A',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'9',c:'g'}
+,{cr:'c',t:'I',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                else if(count == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'33',h:'12',c:'g'}
+,{cr:'c',t:'A',z:'                if (count == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'30',h:'12',c:'g'}
 ]},
 {anchor:'cvg200',items:[{z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                else if(count1 == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'40',h:'6',c:'g'}
-,{cr:'c',t:'A',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'6',c:'g'}
+,{cr:'c',t:'I',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                else if(count1 == 2) ',f:'Eight_bit_ALU_rtl_design.v',l:'40',h:'8',c:'g'}
+,{cr:'c',t:'A',z:'                if (count1 == 3) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'37',h:'8',c:'g'}
 ]},
 {anchor:'cvg201',items:[{z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',h:'116',c:'g'}
-,{cr:'c',t:'E',z:'        else begin',f:'Eight_bit_ALU_rtl_design.v',l:'155',h:'55',c:'g'}
+,{cr:'c',t:'I',z:'        if (MODE) begin',f:'Eight_bit_ALU_rtl_design.v',l:'68',h:'154',c:'g'}
+,{cr:'c',t:'E',z:'        else begin',f:'Eight_bit_ALU_rtl_design.v',l:'155',h:'72',c:'g'}
 ]},
 {anchor:'cvg202',items:[{z:'            case (CMD)',f:'Eight_bit_ALU_rtl_design.v',l:'69',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: begin // CMD 0: ADD',f:'Eight_bit_ALU_rtl_design.v',l:'70',h:'10',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: begin // CMD 1: SUB',f:'Eight_bit_ALU_rtl_design.v',l:'77',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: begin // CMD 2: ADD_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'84',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: begin // CMD 3: SUB_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'91',h:'18',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'6',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'5',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0000: begin // CMD 0: ADD',f:'Eight_bit_ALU_rtl_design.v',l:'70',h:'13',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0001: begin // CMD 1: SUB',f:'Eight_bit_ALU_rtl_design.v',l:'77',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0010: begin // CMD 2: ADD_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'84',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0011: begin // CMD 3: SUB_CIN',f:'Eight_bit_ALU_rtl_design.v',l:'91',h:'24',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'7',c:'g'}
 ,{cr:'c',t:'T',z:'                default: temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'152',h:'2',c:'g'}
 ]},
 {anchor:'cvg203',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'71',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'71',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'74',h:'7',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'74',h:'10',c:'g'}
 ]},
 {anchor:'cvg204',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'78',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'78',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'81',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'81',h:'12',c:'g'}
 ]},
 {anchor:'cvg205',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'85',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'85',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'88',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'88',h:'12',c:'g'}
 ]},
 {anchor:'cvg206',items:[{z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'92',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                    if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'92',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'95',h:'12',c:'g'}
+,{cr:'c',t:'E',z:'                    end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'95',h:'18',c:'g'}
 ]},
 {anchor:'cvg207',items:[{z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0100: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'97',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                        else ',f:'Eight_bit_ALU_rtl_design.v',l:'99',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                        else ',f:'Eight_bit_ALU_rtl_design.v',l:'99',h:'6',c:'g'}
 ]},
 {anchor:'cvg208',items:[{z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0101: if(inp_valid[0]) ',f:'Eight_bit_ALU_rtl_design.v',l:'101',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'103',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'103',h:'6',c:'g'}
 ]},
 {anchor:'cvg209',items:[{z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0110: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'105',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'107',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'107',h:'4',c:'g'}
 ]},
 {anchor:'cvg210',items:[{z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'109',h:'4',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'111',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'111',h:'4',c:'g'}
 ]},
 {anchor:'cvg211',items:[{z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1000: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'113',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'118',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'118',h:'9',c:'g'}
 ]},
 {anchor:'cvg212',items:[{z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1001: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'120',h:'3',c:'g'}
-,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'122',h:'6',c:'g'}
+,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'122',h:'9',c:'g'}
 ]},
 {anchor:'cvg213',items:[{z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1010: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'124',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'126',h:'4',c:'g'}
+,{cr:'c',t:'E',z:'                            else',f:'Eight_bit_ALU_rtl_design.v',l:'126',h:'6',c:'g'}
 ]},
 {anchor:'cvg214',items:[{z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1011: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'128',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'138',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'138',h:'3',c:'g'}
 ]},
 {anchor:'cvg215',items:[{z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1100: if(inp_valid == 2\'b11) begin ',f:'Eight_bit_ALU_rtl_design.v',l:'140',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                          else ',f:'Eight_bit_ALU_rtl_design.v',l:'150',h:'4',c:'g'}
+,{cr:'c',t:'E',z:'                          else ',f:'Eight_bit_ALU_rtl_design.v',l:'150',h:'6',c:'g'}
 ]},
 {anchor:'cvg216',items:[{z:'            case (CMD)',f:'Eight_bit_ALU_rtl_design.v',l:'156',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'5',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'7',c:'g'}
-,{cr:'c',t:'T',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'6',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'9',c:'g'}
+,{cr:'c',t:'T',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'11',c:'g'}
 ,{cr:'c',t:'T',z:'                default: temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'213',h:'2',c:'g'}
 ]},
 {anchor:'cvg217',items:[{z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0000: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'157',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'159',h:'5',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'159',h:'6',c:'g'}
 ]},
 {anchor:'cvg218',items:[{z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0001: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'161',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'163',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'163',h:'4',c:'g'}
 ]},
 {anchor:'cvg219',items:[{z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0010: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'165',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'167',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'167',h:'4',c:'g'}
 ]},
 {anchor:'cvg220',items:[{z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0011: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'169',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'171',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'171',h:'4',c:'g'}
 ]},
 {anchor:'cvg221',items:[{z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0100: if(inp_valid == 2\'b11) ',f:'Eight_bit_ALU_rtl_design.v',l:'173',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'175',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'175',h:'4',c:'g'}
 ]},
 {anchor:'cvg222',items:[{z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b0101: if(inp_valid == 2\'b11)',f:'Eight_bit_ALU_rtl_design.v',l:'177',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'179',h:'3',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'179',h:'4',c:'g'}
 ]},
 {anchor:'cvg223',items:[{z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0110: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'181',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'183',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else   ',f:'Eight_bit_ALU_rtl_design.v',l:'183',h:'3',c:'g'}
 ]},
 {anchor:'cvg224',items:[{z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b0111: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'185',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'187',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'187',h:'2',c:'g'}
 ]},
 {anchor:'cvg225',items:[{z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1000: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'189',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'191',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                         else',f:'Eight_bit_ALU_rtl_design.v',l:'191',h:'3',c:'g'}
 ]},
 {anchor:'cvg226',items:[{z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1001: if(inp_valid[0])',f:'Eight_bit_ALU_rtl_design.v',l:'193',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'195',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'195',h:'3',c:'g'}
 ]},
 {anchor:'cvg227',items:[{z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1010: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'197',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'199',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                        else',f:'Eight_bit_ALU_rtl_design.v',l:'199',h:'2',c:'g'}
 ]},
 {anchor:'cvg228',items:[{z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'                4\'b1011: if(inp_valid[1])',f:'Eight_bit_ALU_rtl_design.v',l:'201',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'                        else    ',f:'Eight_bit_ALU_rtl_design.v',l:'203',h:'1',c:'g'}
+,{cr:'c',t:'E',z:'                        else    ',f:'Eight_bit_ALU_rtl_design.v',l:'203',h:'2',c:'g'}
 ]},
 {anchor:'cvg229',items:[{z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b1100: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'205',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'208',h:'7',c:'g'}
+,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'208',h:'9',c:'g'}
 ]},
 {anchor:'cvg230',items:[{z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'206',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'206',h:'0',c:'r'}
@@ -403,7 +403,7 @@ b196:[{dummy:0},
 ]},
 {anchor:'cvg231',items:[{z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'                4\'b1101: if(inp_valid == 2\'b11) begin',f:'Eight_bit_ALU_rtl_design.v',l:'209',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'212',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'                         end else temp_err = 1\'b1;',f:'Eight_bit_ALU_rtl_design.v',l:'212',h:'11',c:'g'}
 ]},
 {anchor:'cvg232',items:[{z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'210',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'                            if (|OPB[(width-1):3]) temp_err = 1\'b1; ',f:'Eight_bit_ALU_rtl_design.v',l:'210',h:'0',c:'r'}
@@ -411,33 +411,33 @@ b196:[{dummy:0},
 ]},
 {anchor:'cvg233',items:[{z:'        if (RST) count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'219',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'219',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1001)',f:'Eight_bit_ALU_rtl_design.v',l:'220',h:'27',c:'g'}
-,{cr:'c',t:'E',z:'        else count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'222',h:'87',c:'g'}
+,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1001)',f:'Eight_bit_ALU_rtl_design.v',l:'220',h:'36',c:'g'}
+,{cr:'c',t:'E',z:'        else count <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'222',h:'113',c:'g'}
 ]},
 {anchor:'cvg234',items:[{z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'9',c:'g'}
-,{cr:'c',t:'E',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'18',c:'g'}
+,{cr:'c',t:'I',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'12',c:'g'}
+,{cr:'c',t:'E',z:'             count <= (count >= 3) ? 1 : count + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'221',h:'24',c:'g'}
 ]},
 {anchor:'cvg235',items:[{z:'        if (RST) count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'226',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'        if (RST) count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'226',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1010)',f:'Eight_bit_ALU_rtl_design.v',l:'227',h:'18',c:'g'}
-,{cr:'c',t:'E',z:'        else count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'229',h:'87',c:'g'}
+,{cr:'c',t:'T',z:'        else if (CE && MODE && CMD == 4\'b1010)',f:'Eight_bit_ALU_rtl_design.v',l:'227',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'        else count1 <= 1;',f:'Eight_bit_ALU_rtl_design.v',l:'229',h:'113',c:'g'}
 ]},
 {anchor:'cvg236',items:[{z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'6',c:'g'}
-,{cr:'c',t:'E',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'12',c:'g'}
+,{cr:'c',t:'I',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'             count1 <= (count1 >= 3) ? 1 : count1 + 1;',f:'Eight_bit_ALU_rtl_design.v',l:'228',h:'16',c:'g'}
 ]}],
 b4:[{dummy:0},
 {anchor:'cvg424',items:[{z:'		if (CE)',f:'alu_reference_model.v',l:'32',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'171',c:'g'}
+,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'226',c:'g'}
 ,{cr:'c',t:'A',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'2',c:'g'}
 ]},
 {anchor:'cvg425',items:[{z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',h:'116',c:'g'}
-,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'102',h:'55',c:'g'}
+,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',h:'154',c:'g'}
+,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'102',h:'72',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',c:'Y',p:'80.00'}
-,{cr:'m',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',h:'0',c:'r'}
+{anchor:'cvg426',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'39',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'83',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'91',h:'38',c:'g'}
@@ -471,8 +471,8 @@ b4:[{dummy:0},
 ,{cr:'c',t:'T',z:'					4\'b0111: 	RES = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'95',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					default	:	begin	RES = 0;	ERR = 1;	end',f:'alu_reference_model.v',l:'96',h:'34',c:'g'}
 ]},
-{anchor:'cvg431',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',c:'Y',p:'80.00'}
-,{cr:'m',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',h:'0',c:'r'}
+{anchor:'cvg431',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',h:'17',c:'g'}
 ,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'106',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'128',h:'17',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'137',h:'34',c:'g'}
@@ -511,15 +511,15 @@ b4:[{dummy:0},
 ]}],
 b423:[{dummy:0},
 {anchor:'cvg424',items:[{z:'		if (CE)',f:'alu_reference_model.v',l:'32',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'171',c:'g'}
+,{cr:'c',t:'I',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'226',c:'g'}
 ,{cr:'c',t:'A',z:'		if (CE)',f:'alu_reference_model.v',l:'32',h:'2',c:'g'}
 ]},
 {anchor:'cvg425',items:[{z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',h:'116',c:'g'}
-,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'102',h:'55',c:'g'}
+,{cr:'c',t:'I',z:'        if (MODE) ',f:'alu_reference_model.v',l:'34',h:'154',c:'g'}
+,{cr:'c',t:'E',z:'        else begin  // Logical Mode',f:'alu_reference_model.v',l:'102',h:'72',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',c:'Y',p:'80.00'}
-,{cr:'m',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',h:'0',c:'r'}
+{anchor:'cvg426',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'36',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'39',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'83',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'91',h:'38',c:'g'}
@@ -553,8 +553,8 @@ b423:[{dummy:0},
 ,{cr:'c',t:'T',z:'					4\'b0111: 	RES = OPB - 1;  // DEC_B',f:'alu_reference_model.v',l:'95',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					default	:	begin	RES = 0;	ERR = 1;	end',f:'alu_reference_model.v',l:'96',h:'34',c:'g'}
 ]},
-{anchor:'cvg431',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',c:'Y',p:'80.00'}
-,{cr:'m',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',h:'0',c:'r'}
+{anchor:'cvg431',items:[{z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (INP_VALID == 2\'b00)	//both invalid',f:'alu_reference_model.v',l:'103',h:'17',c:'g'}
 ,{cr:'c',t:'T',z:'			if (INP_VALID == 2\'b11)',f:'alu_reference_model.v',l:'106',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b01 || INP_VALID == 2\'b11)	//only a or ab vali...',f:'alu_reference_model.v',l:'128',h:'17',c:'g'}
 ,{cr:'c',t:'T',z:'			else if (INP_VALID == 2\'b10 || INP_VALID == 2\'b11)	//only b or ab vali...',f:'alu_reference_model.v',l:'137',h:'34',c:'g'}
@@ -592,58 +592,58 @@ b423:[{dummy:0},
 ,{cr:'c',t:'T',z:'						default	:	begin	RES = 0;	ERR = 1;	end',f:'alu_reference_model.v',l:'143',h:'28',c:'g'}
 ]}],
 b5:[{dummy:0},
-{anchor:'cvg6',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'121',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'121',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'123',h:'1',c:'g'}
+{anchor:'cvg6',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'130',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'130',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'132',h:'1',c:'g'}
 ]}],
 b771:[{dummy:0},
-{anchor:'cvg772',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'242',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'242',h:'125',c:'g'}
-,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'246',h:'22',c:'g'}
+{anchor:'cvg772',items:[{z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'251',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (compare_outputs(1\'b0)) begin',f:'alu_testbench.v',l:'251',h:'174',c:'g'}
+,{cr:'c',t:'E',z:'            end else begin',f:'alu_testbench.v',l:'255',h:'22',c:'g'}
 ]}],
 b773:[{dummy:0},
-{anchor:'cvg774',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',h:'20',c:'g'}
-,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'262',h:'127',c:'g'}
+{anchor:'cvg774',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',h:'20',c:'g'}
+,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'271',h:'176',c:'g'}
 ]},
-{anchor:'cvg775',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',h:'20',c:'g'}
-,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'263',h:'0',c:'r'}
+{anchor:'cvg775',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',h:'20',c:'g'}
+,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'272',h:'0',c:'r'}
 ]},
-{anchor:'cvg776',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'268',h:'147',c:'g'}
+{anchor:'cvg776',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'277',h:'196',c:'g'}
 ]},
-{anchor:'cvg777',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',h:'2',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'269',h:'145',c:'g'}
+{anchor:'cvg777',items:[{z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'278',h:'194',c:'g'}
 ]},
-{anchor:'cvg778',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'270',h:'146',c:'g'}
+{anchor:'cvg778',items:[{z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',h:'1',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'279',h:'195',c:'g'}
 ]},
-{anchor:'cvg779',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'271',h:'142',c:'g'}
+{anchor:'cvg779',items:[{z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'280',h:'191',c:'g'}
 ]},
-{anchor:'cvg780',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'272',h:'146',c:'g'}
+{anchor:'cvg780',items:[{z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',h:'1',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'281',h:'195',c:'g'}
 ]},
-{anchor:'cvg781',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',h:'10',c:'g'}
-,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'273',h:'137',c:'g'}
+{anchor:'cvg781',items:[{z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',h:'10',c:'g'}
+,{cr:'c',t:'A',z:'            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;',f:'alu_testbench.v',l:'282',h:'186',c:'g'}
 ]}],
 b784:[{dummy:0},
-{anchor:'cvg785',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'281',c:'Y',p:'66.66'}
-,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'281',h:'863',c:'g'}
-,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'283',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'285',h:'19',c:'g'}
+{anchor:'cvg785',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'290',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'290',h:'1157',c:'g'}
+,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'292',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'294',h:'19',c:'g'}
 ]}],
 b2:[{dummy:0},
-{anchor:'cvg599',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'121',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'121',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'123',h:'1',c:'g'}
+{anchor:'cvg599',items:[{z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'130',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'        if (fail_count == 0)',f:'alu_testbench.v',l:'130',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'        else',f:'alu_testbench.v',l:'132',h:'1',c:'g'}
 ]}],
 dummyEnd:0
 };
