@@ -18,6 +18,7 @@ module alu_testbench;
     integer pass_count = 0;
     integer fail_count = 0;
     integer test_count = 0;
+	reg cmp;
 
     // DUT instantiation
     Eight_bit_ALU_rtl_design dut (
@@ -223,7 +224,7 @@ module alu_testbench;
 			apply_test(8'b10101010, 8'd0, 4'b1000, "SHR1_A");
 			apply_test(8'b01010101, 8'h00, 4'b1001, "SHL1_A");
 			apply_test(8'h00, 8'b10101010, 4'b1010, "SHR1_B");
-			apply_test(8'h00, 8'h01010101, 4'b1011, "SHL1_B");
+			apply_test(8'h00, 8'b01010101, 4'b1011, "SHL1_B");
 			apply_test(8'hCC, 8'h0B, 4'b1100, "ROL_A_B");
 			apply_test(8'hCC, 8'h6B, 4'b1100, "ROL_A_B");
 			apply_test(8'hCC, 8'h0B, 4'b1101, "ROR_A_B");
@@ -247,8 +248,8 @@ module alu_testbench;
             @(posedge CLK);
             
             test_count = test_count + 1;
-            
-            if (compare_outputs(1'b0)) begin
+            compare_outputs(cmp);
+            if (cmp) begin
                 $display("[PASS] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
                          test_name, a, b, cmd);
                 pass_count = pass_count + 1;
@@ -262,38 +263,37 @@ module alu_testbench;
     endtask
 
     // Compare DUT vs Reference
-    function compare_outputs;
-		input dummy;
+    task compare_outputs;
+		output reg compare__outputs;
         begin
-            compare_outputs = 1;
+            compare__outputs = 1;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
 				begin
-					@(posedge CLK);
-					@(posedge CLK);
+				#1;#1;	
 					
 					if (RES_dut !== RES_ref) begin
                 		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
-                    	compare_outputs = 0;
+                    	compare__outputs = 0;
             		end
 				end
 			else	begin
             // Compare RES (handle Z values)
             if (RES_dut !== RES_ref) begin
                 if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
-                    compare_outputs = 0;
+                    compare__outputs = 0;
             end
 			end
 			
             // Compare flags (handle Z values)
-            if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;
-            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;
-            if (!compare_bit(G_dut, G_ref)) compare_outputs = 0;
-            if (!compare_bit(E_dut, E_ref)) compare_outputs = 0;
-            if (!compare_bit(L_dut, L_ref)) compare_outputs = 0;
-            if (!compare_bit(ERR_dut, ERR_ref)) compare_outputs = 0;
+            if (!compare_bit(COUT_dut, COUT_ref)) compare__outputs = 0;
+            if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare__outputs = 0;
+            if (!compare_bit(G_dut, G_ref)) compare__outputs = 0;
+            if (!compare_bit(E_dut, E_ref)) compare__outputs = 0;
+            if (!compare_bit(L_dut, L_ref)) compare__outputs = 0;
+            if (!compare_bit(ERR_dut, ERR_ref)) compare__outputs = 0;
         end
-    endfunction
+endtask
 
     // Compare single bit (handle Z)
     function compare_bit;

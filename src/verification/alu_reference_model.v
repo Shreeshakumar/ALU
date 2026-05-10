@@ -116,12 +116,12 @@ module alu_reference_model(
                 		4'b0011: RES = ~(OPA | OPB);    // NOR
 						4'b0100: RES = OPA ^ OPB;       // XOR
                 		4'b0101: RES = ~(OPA ^ OPB);    // XNOR
-						4'b0110: RES[7:0] = ~OPA;       // NOT_A
-						4'b0111: RES = {8'b0, ~OPB};    // NOT_B
-						4'b1000: RES[7:0] = OPA >> 1;      // SHR1_A
-						4'b1001: RES[7:0] = OPA << 1;      // SHL1_A
-						4'b1010: RES = {8'b0, OPB >> 1};   // SHR1_B
-                		4'b1011: RES = {8'b0, OPB << 1};   // SHL1_B
+						4'b0110: RES = ~OPA;       // NOT_A
+						4'b0111: RES = ~OPB;    // NOT_B
+						4'b1000: RES = OPA >> 1;      // SHR1_A
+						4'b1001: RES = OPA << 1;      // SHL1_A
+						4'b1010: RES = OPB >> 1;   // SHR1_B
+                		4'b1011: RES = OPB << 1;   // SHL1_B
 						4'b1100: begin  // ROL_A_B
 									ERR = (OPB[7:4])?1:0;
                     				for( i = 0; i < 8; i = i + 1)
