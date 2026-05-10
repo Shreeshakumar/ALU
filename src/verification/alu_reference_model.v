@@ -138,7 +138,7 @@ module alu_reference_model(
 						4'b1010: RES = OPB >> 1;   // SHR1_B
                 		4'b1011: RES = OPB << 1;   // SHL1_B
 						4'b1100: begin  // ROL_A_B
-									casez(OPB[2:0])
+									case(OPB[2:0])
 										'b000	:	RES[7:0] = OPA;
 										'b001	:	RES[7:0] = {OPA[6:0],OPA[7]};
 										'b010	:	RES[7:0] = {OPA[5:0],OPA[7:6]};
@@ -147,12 +147,12 @@ module alu_reference_model(
 										'b101	:	RES[7:0] = {OPA[2:0],OPA[7:3]};
 										'b110	:	RES[7:0] = {OPA[1:0],OPA[7:2]};
 										'b111	:	RES[7:0] = {OPA[0],OPA[7:1]};
-										default :	RES[7:0] = 0;
+										//default :	RES[7:0] = 0;
 							         endcase
 									ERR = (OPB[7:4])?1:0;
 							     end
                 		4'b1101: begin  // ROR_A_B
-									casez(OPB[2:0])
+									case(OPB[2:0])
 										'b000	:	RES[7:0] = OPA;										
 										'b001 : RES[7:0] = {OPA[0],   OPA[7:1]};
 										'b010 : RES[7:0] = {OPA[1:0], OPA[7:2]};
@@ -161,7 +161,7 @@ module alu_reference_model(
 										'b101 : RES[7:0] = {OPA[4:0], OPA[7:5]};
 										'b110 : RES[7:0] = {OPA[5:0], OPA[7:6]};
 										'b111 : RES[7:0] = {OPA[6:0], OPA[7:7]};
-										default :	RES[7:0] = 0;
+										//default :	RES[7:0] = 0;
 							         endcase
 									ERR = (OPB[7:4])?1:0;
 							     end
