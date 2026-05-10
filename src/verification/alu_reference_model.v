@@ -101,7 +101,7 @@ module alu_reference_model(
 					default	:	begin	RES = 0;	ERR = 1;	end
 					endcase	
 				end
-			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
+			else if (INP_VALID == 2'b01)	//only a or ab valid
 				begin 
 				case(CMD)
 					4'b0100: 	RES = OPA + 1;  // INC_A
@@ -109,7 +109,7 @@ module alu_reference_model(
 					default	:	begin	RES = 0;	ERR = 1;	end
 				endcase 
 				end
-			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
+			else if (INP_VALID == 2'b10 )	//only b or ab valid
 				begin 
 				case(CMD)
 					4'b0110: 	RES = OPB + 1;  // INC_B
@@ -152,7 +152,7 @@ module alu_reference_model(
 						default	:	begin	RES = 0;	ERR = 1;	end
 					endcase 
 				end
-			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
+			else if (INP_VALID == 2'b01 )	//only a or ab valid
 				begin 
 					case(CMD)
 						4'b0110: RES[7:0] = ~OPA;            // NOT_A
@@ -161,7 +161,7 @@ module alu_reference_model(
 						default	:	begin	RES = 0;	ERR = 1;	end
 					endcase 
 				end
-			else if (INP_VALID == 2'b10 || INP_VALID == 2'b11)	//only b or ab valid
+			else if (INP_VALID == 2'b10 )	//only b or ab valid
 				begin 
 					case(CMD)
 						4'b0111: RES = {8'b0, ~OPB};            // NOT_B
