@@ -257,6 +257,7 @@ module alu_testbench;
             if (cmp) begin
                 $display("[PASS] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
                          test_name, a, b, cmd);
+                display_mismatch();
                 pass_count = pass_count + 1;
             end else begin
                 $display("[FAIL] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
