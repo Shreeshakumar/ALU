@@ -1,9 +1,10 @@
 var g_data = {
 t3:{items:[{dummy:0}
 ,{id:'cvg254',s:'2',cr:'c',z:'A_signed[7-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg258',s:'2',cr:'m',z:'A_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg263',s:'2',cr:'c',z:'B_signed[7-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg267',s:'2',cr:'m',z:'B_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg258',s:'2',cr:'m',z:'A_signed[3-2]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg260',s:'2',cr:'c',z:'A_signed[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg261',s:'2',cr:'m',z:'A_signed[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg263',s:'2',cr:'c',z:'B_signed[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg271',s:'2',cr:'c',z:'CE',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg272',s:'2',cr:'c',z:'CIN',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg273',s:'2',cr:'c',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
@@ -32,14 +33,16 @@ t3:{items:[{dummy:0}
 ,{id:'cvg396',s:'2',cr:'c',z:'temp_oflow',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg398',s:'2',cr:'c',z:'temp_res[15-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg415',s:'2',cr:'c',z:'temp_signed[15-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg427',s:'2',cr:'m',z:'temp_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg427',s:'2',cr:'m',z:'temp_signed[3-2]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg429',s:'2',cr:'c',z:'temp_signed[1-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t204:{items:[{dummy:0}
 ,{id:'cvg254',s:'2',cr:'c',z:'A_signed[7-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg258',s:'2',cr:'m',z:'A_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg263',s:'2',cr:'c',z:'B_signed[7-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg267',s:'2',cr:'m',z:'B_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg258',s:'2',cr:'m',z:'A_signed[3-2]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg260',s:'2',cr:'c',z:'A_signed[1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg261',s:'2',cr:'m',z:'A_signed[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg263',s:'2',cr:'c',z:'B_signed[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg271',s:'2',cr:'c',z:'CE',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg272',s:'2',cr:'c',z:'CIN',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg273',s:'2',cr:'c',z:'CLK',h1:'1',h2:'1',c:'G',p:'100.00'}
@@ -68,7 +71,8 @@ t204:{items:[{dummy:0}
 ,{id:'cvg396',s:'2',cr:'c',z:'temp_oflow',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg398',s:'2',cr:'c',z:'temp_res[15-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg415',s:'2',cr:'c',z:'temp_signed[15-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg427',s:'2',cr:'m',z:'temp_signed[3-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg427',s:'2',cr:'m',z:'temp_signed[3-2]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg429',s:'2',cr:'c',z:'temp_signed[1-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t4:{items:[{dummy:0}
