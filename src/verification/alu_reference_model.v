@@ -55,10 +55,10 @@ module alu_reference_model(
                     			OFLOW = (OPA < OPB);
 								RES = OPA - OPB - CIN;
                 				end
-					4'b0100: 	RES = OPA + 1;  // INC_A
-                	4'b0101: 	RES = OPA - 1;  // DEC_A
-					4'b0110: 	RES = OPB + 1;  // INC_B
-					4'b0111: 	RES = OPB - 1;  // DEC_B
+					4'b0100: 	RES = OPA + 8'd1;  // INC_A
+                	4'b0101: 	RES = OPA - 8'd1;  // DEC_A
+					4'b0110: 	RES = OPB + 8'd1;  // INC_B
+					4'b0111: 	RES = OPB - 8'd1;  // DEC_B
 					4'b1000: 	begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
 								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
