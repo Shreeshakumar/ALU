@@ -1,5 +1,5 @@
 $date
-	Sun May 10 22:58:55 2026
+	Sun May 10 23:21:43 2026
 $end
 $version
 	QuestaSim Version 10.6c
@@ -205,7 +205,6 @@ $var wire 1 l! s_sub [3] $end
 $var wire 1 m! s_sub [2] $end
 $var wire 1 n! s_sub [1] $end
 $var wire 1 o! s_sub [0] $end
-$var reg 4 p! i [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -247,7 +246,6 @@ b0 G!
 0M!
 bx N!
 bx O!
-bx p!
 bx S
 bx T
 bx U
@@ -24682,17 +24680,8 @@ b10000010100111001000100 V
 1t
 1s
 0M!
-1M!
-b0 p!
-b1 p!
-b10 p!
-b11 p!
-b100 p!
 b10000 G!
-b101 p!
-b110 p!
-b111 p!
-b1000 p!
+1M!
 0)!
 1)!
 1D
@@ -25498,19 +25487,7 @@ b1100 (
 b0 #!
 1)!
 b0 G!
-b0 p!
-b1 p!
-b10 G!
-b10 p!
-b110 G!
-b11 p!
-b100 p!
-b101 p!
-b100110 G!
-b110 p!
 b1100110 G!
-b111 p!
-b1000 p!
 1F
 0E
 1B
@@ -25560,20 +25537,8 @@ b1101011 "
 1j!
 0h!
 b0 G!
-1M!
-b0 p!
-b1 p!
-b10 G!
-b10 p!
-b110 G!
-b11 p!
-b100 p!
-b101 p!
-b100110 G!
-b110 p!
 b1100110 G!
-b111 p!
-b1000 p!
+1M!
 0)!
 1)!
 1N
@@ -25625,19 +25590,7 @@ b1101 (
 1)!
 b0 G!
 0M!
-b0 p!
-b1 G!
-b1 p!
-b10 p!
-b11 p!
-b1001 G!
-b100 p!
-b11001 G!
-b101 p!
-b110 p!
-b111 p!
 b10011001 G!
-b1000 p!
 1H
 0G
 0F
@@ -25687,20 +25640,8 @@ b1101011 "
 1j!
 0h!
 b0 G!
-1M!
-b0 p!
-b1 G!
-b1 p!
-b10 p!
-b11 p!
-b1001 G!
-b100 p!
-b11001 G!
-b101 p!
-b110 p!
-b111 p!
 b10011001 G!
-b1000 p!
+1M!
 0)!
 1)!
 1N
