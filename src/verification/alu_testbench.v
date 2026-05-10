@@ -217,6 +217,8 @@ apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
 			apply_test(8'hA0, 8'hA0, 4'b1011, "S_ADD");
 			apply_test(8'h10, 8'h10, 4'b1011, "S_ADD");
 
+			apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
+			apply_test(8'h90, 8'h20, 4'b1011, "S_ADD");
 
 			// S_SUB
 			apply_test(8'h50, 8'h30, 4'b1100, "S_SUB");
@@ -227,6 +229,9 @@ apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
 			apply_test(8'hA0, 8'h70, 4'b1100, "S_SUB");
 			apply_test(8'h90, 8'h70, 4'b1100, "S_SUB");
 			apply_test(8'h50, 8'h10, 4'b1100, "S_SUB");
+
+			apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
+			apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
 
 		end
     endtask
