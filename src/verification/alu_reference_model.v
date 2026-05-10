@@ -17,7 +17,7 @@ module alu_reference_model(
 	wire signed [7:0] s_add = sOPA + sOPB;
 	wire signed [7:0] s_sub = sOPA - sOPB;
 	
-	reg [2:0]i;
+	reg [3:0]i;
 
     always @(*) begin
         // Default values
@@ -141,12 +141,12 @@ module alu_reference_model(
                 		4'b1011: RES = OPB << 1;   // SHL1_B
 						4'b1100: begin  // ROL_A_B
 									ERR = (OPB[7:4])?1:0;
-							for( i = 1'd0; i <= 3'd7; i = i + 1'd1)
+							for( i = 1'd0; i < 4'd8; i = i + 1'd1)
 										RES[i] = OPA[(i - OPB[2:0] + 8) % 8];
                 				end
                 		4'b1101: begin  // ROR_A_B
 									ERR = (OPB[7:4])?1:0;
-							for( i = 1'd0; i <= 3'd7; i = i + 1'd1)
+							for( i = 1'd0; i < 4'd8; i = i + 1'd1)
         								RES[i] = OPA[(i + OPB[2:0]) % 8];
                 				end
 						default	:	begin	RES = 0;	ERR = 1;	end
