@@ -318,14 +318,14 @@ module alu_testbench;
 
 					
 					if (RES_dut !== RES_ref) begin
-                		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
+                		if (!((RES_dut === 16'd0) && (RES_ref === 16'd0)))
                     	compare__outputs = 0;
             		end
 				end
 			else	begin
             // Compare RES (handle Z values)
             if (RES_dut !== RES_ref) begin
-                if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
+				if (!((RES_dut === 16'd0) && (RES_ref === 16'd0)))
                     compare__outputs = 0;
             end
 			end
@@ -346,7 +346,7 @@ endtask
         begin
             if (dut === ref)
                 compare_bit = 1;
-            else if ((dut === 1'bz) && (ref === 1'bz))
+			else if ((dut === 1'b0) && (ref === 1'b0))
                 compare_bit = 1;
             else
                 compare_bit = 0;
