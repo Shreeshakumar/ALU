@@ -204,9 +204,14 @@ module alu_testbench;
 
             // S_ADD
 			apply_test(8'h10, 8'h20, 4'b1011, "S_ADD");
+			apply_test(8'h20, 8'h10, 4'b1011, "S_ADD");
+			apply_test(8'h20, 8'h20, 4'b1011, "S_ADD");
 
-            // S_SUB
+			// S_SUB
 			apply_test(8'h50, 8'h30, 4'b1100, "S_SUB");
+			apply_test(8'h30, 8'h50, 4'b1100, "S_SUB");
+			apply_test(8'h40, 8'h40, 4'b1100, "S_SUB");
+
 		end
     endtask
 
