@@ -246,7 +246,6 @@ module alu_testbench;
             
             @(posedge CLK);
             @(posedge CLK);
-            @(posedge CLK);
             
             test_count = test_count + 1;
             compare_outputs(cmp);
@@ -271,7 +270,8 @@ module alu_testbench;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
 				begin
-				#1;#1;#1;	
+            @(posedge CLK);
+            @(posedge CLK);
 					
 					if (RES_dut !== RES_ref) begin
                 		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
