@@ -1,5 +1,5 @@
 # vsim work.alu_testbench -l log_file.log -coverage -c -do "coverage save -onexit -codeAll coverage_file.ucdb; run -all; exit" 
-# Start time: 19:26:42 on May 10,2026
+# Start time: 19:48:50 on May 10,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -111,6 +111,15 @@
 # [FAIL]                                                                           MUL_AB: OPA=0xff OPB=0xff CMD=0x9
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           MUL_AB: OPA=0xff OPB=0x04 CMD=0x9
+#   DUT: RES=0x0500 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           MUL_AB: OPA=0x04 OPB=0xff CMD=0x9
+#   DUT: RES=0x0500 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                           MUL_AB: OPA=0x00 OPB=0x00 CMD=0x9
+#   DUT: RES=0x0001 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x001 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
 # [FAIL]                                                                        SHIFT_MUL: OPA=0x04 OPB=0x03 CMD=0xa
 #   DUT: RES=0x0018 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 #   REF: RES=0x018 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
@@ -222,6 +231,15 @@
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                           MUL_AB: OPA=0xff OPB=0xff CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0xff OPB=0x04 CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x04 OPB=0xff CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x00 OPB=0x00 CMD=0x9
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                        SHIFT_MUL: OPA=0x04 OPB=0x03 CMD=0xa
@@ -337,6 +355,15 @@
 # [PASS]                                                                           MUL_AB: OPA=0xff OPB=0xff CMD=0x9
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0xff OPB=0x04 CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x04 OPB=0xff CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x00 OPB=0x00 CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                        SHIFT_MUL: OPA=0x04 OPB=0x03 CMD=0xa
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
@@ -448,6 +475,15 @@
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                           MUL_AB: OPA=0xff OPB=0xff CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0xff OPB=0x04 CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x04 OPB=0xff CMD=0x9
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                           MUL_AB: OPA=0x00 OPB=0x00 CMD=0x9
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                        SHIFT_MUL: OPA=0x04 OPB=0x03 CMD=0xa
@@ -676,14 +712,14 @@
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # 
 # === TEST SUMMARY ===
-# Total Tests: 212
-# PASS: 190
-# FAIL: 22
+# Total Tests: 224
+# PASS: 199
+# FAIL: 25
 # 
 # *** SOME TESTS FAILED ***
 # 
 # ** Note: $finish    : alu_testbench.v(137)
-#    Time: 7965 ns  Iteration: 0  Instance: /alu_testbench
+#    Time: 8685 ns  Iteration: 0  Instance: /alu_testbench
 # Saving coverage database on exit...
-# End time: 19:26:44 on May 10,2026, Elapsed time: 0:00:02
+# End time: 19:48:51 on May 10,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
