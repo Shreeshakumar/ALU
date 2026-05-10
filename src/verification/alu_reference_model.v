@@ -80,7 +80,7 @@ module alu_reference_model(
 					endcase	end else begin	RES = 0;	ERR = 1;	end 
 				end
 			else if (INP_VALID == 2'b01 || INP_VALID == 2'b11)	//only a or ab valid
-				begin if (INP_VALID == 2'b01 || INP_VALID == 2'b11) end
+				begin if (INP_VALID == 2'b01 || INP_VALID == 2'b11) begin
 				case(CMD)
 					4'b0100: 	RES = OPA + 1;  // INC_A
                 	4'b0101: 	RES = OPA - 1;  // DEC_A
