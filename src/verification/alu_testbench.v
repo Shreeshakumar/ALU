@@ -272,6 +272,8 @@ module alu_testbench;
 				begin
             @(posedge CLK);
             @(posedge CLK);
+            @(posedge CLK);
+
 					
 					if (RES_dut !== RES_ref) begin
                 		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
