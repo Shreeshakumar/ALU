@@ -210,6 +210,10 @@ module alu_testbench;
 
 
             // SHIFT_MUL
+			apply_test(8'hFE, 8'h00, 4'b1010, "SHIFT_MUL");//1
+			apply_test(8'hFF, 8'h05, 4'b1010, "SHIFT_MUL");//0
+			apply_test(8'hFE, 8'h00, 4'b1010, "SHIFT_MUL");//1
+					
 					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
 					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
 
