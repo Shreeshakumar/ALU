@@ -102,7 +102,8 @@ module alu_testbench;
 					
         // Test Logical Operations
         $display("\n=== Testing Logical Operations (MODE=0) ===");
-        MODE = 0;					test_logical();
+        MODE = 0;
+		INP_VALID = 2'b10;			test_logical();
 
 		// INVALID 01
         $display("\n=== Testing Logical Operations (INVALID=b01) ===");
