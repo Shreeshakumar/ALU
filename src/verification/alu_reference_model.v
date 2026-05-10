@@ -8,7 +8,7 @@ module alu_reference_model(
     output reg COUT, OFLOW, G, E, L, ERR
 );
 
-	reg [7:0] OPA_1, OPB_1, OPA_L1;
+	reg [7:0] OPA_1, OPB_1;
 
 	//signed reg
 	wire signed [7:0]sOPA = OPA;
@@ -70,8 +70,8 @@ module alu_reference_model(
 									RES = OPA_1 * OPB_1; 
 								end
 					4'd10	:	begin	// A<<1 nA * B
-									OPA_L1 = OPA << 1;
-									RES = OPA_L1 * OPB; 
+									
+						RES = (OPA << 1) * OPB; 
 								end
 					4'd11	:	begin	//A n B signed A+B
 										RES = s_add;
