@@ -99,6 +99,10 @@ module alu_testbench;
 		// INVALID 10
         $display("\n=== Testing Arithmetic Operations (INVALID=b10) ===");
 		INP_VALID = 2'b10;	        test_arithmetic();
+
+		// INVALID 00
+		$display("\n=== Testing Arithmetic Operations (INVALID=b00) ===");
+		INP_VALID = 2'b00;	        test_arithmetic();
 					
         // Test Logical Operations
         $display("\n=== Testing Logical Operations (MODE=0) ===");
@@ -112,6 +116,10 @@ module alu_testbench;
 		// INVALID 10
         $display("\n=== Testing Logical Operations (INVALID=b10) ===");
 		INP_VALID = 2'b10;	        test_logical();
+
+		// INVALID 00
+		$display("\n=== Testing Logical Operations (INVALID=b00) ===");
+		INP_VALID = 2'b00;	        test_logical();
 		
         // Summary
         $display("\n=== TEST SUMMARY ===");
