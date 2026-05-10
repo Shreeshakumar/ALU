@@ -68,26 +68,10 @@ module alu_reference_model(
 					4'd9	:	begin	// A+1 B+1 nA * nB
 									OPA_1 = OPA + 1; OPB_1 = OPB + 1; 
 									RES = OPA_1 * OPB_1; 
-
-								begin  // CMP                    			
-								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
-								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
-								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
-								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
-                				end
-						
 								end
 					4'd10	:	begin	// A<<1 nA * B
 									OPA_L1 = OPA << 1;
 									RES = OPA_L1 * OPB; 
-						
-								begin  // CMP                    			
-								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
-								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
-								else if (OPA < OPB) begin	E = 1'b0; G = 1'b0; L = 1'b1;	end
-								else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
-                				end
-						
 								end
 					4'd11	:	begin	//A n B signed A+B
 										RES = s_add;
