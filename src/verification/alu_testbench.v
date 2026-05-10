@@ -266,13 +266,25 @@ module alu_testbench;
 		input dummy;
         begin
             compare_outputs = 1;
-            
+
+			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
+				begin
+					@(posedge CLK);
+					@(posedge CLK);
+					
+					if (RES_dut !== RES_ref) begin
+                		if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
+                    	compare_outputs = 0;
+            		end
+				end
+			else	begin
             // Compare RES (handle Z values)
             if (RES_dut !== RES_ref) begin
                 if (!((RES_dut === 9'bzzzzzzzzz) && (RES_ref === 9'bzzzzzzzzz)))
                     compare_outputs = 0;
             end
-            
+			end
+			
             // Compare flags (handle Z values)
             if (!compare_bit(COUT_dut, COUT_ref)) compare_outputs = 0;
             if (!compare_bit(OFLOW_dut, OFLOW_ref)) compare_outputs = 0;
