@@ -13,17 +13,17 @@ b181:[{dummy:0},
 ,{cr:'c',t:'I',z:'					if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'320',h:'12',c:'g'}
 ,{cr:'c',t:'A',z:'					if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'320',h:'140',c:'g'}
 ]},
-{anchor:'cvg184',items:[{z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',h:'12',c:'g'}
-,{cr:'m',t:'A',z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',h:'0',c:'r'}
+{anchor:'cvg184',items:[{z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',h:'12',c:'g'}
+,{cr:'m',t:'A',z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',h:'0',c:'r'}
 ]},
 {anchor:'cvg185',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',h:'16',c:'g'}
 ,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',h:'152',c:'g'}
 ]},
-{anchor:'cvg186',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',h:'16',c:'g'}
-,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',h:'0',c:'r'}
+{anchor:'cvg186',items:[{z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',h:'16',c:'g'}
+,{cr:'m',t:'A',z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',h:'0',c:'r'}
 ]},
 {anchor:'cvg187',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare__outputs = 0;',f:'alu_testbench.v',l:'334',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare__outputs = 0;',f:'alu_testbench.v',l:'334',h:'0',c:'r'}
@@ -52,7 +52,7 @@ b181:[{dummy:0},
 b199:[{dummy:0},
 {anchor:'cvg200',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'347',c:'Y',p:'66.66'}
 ,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'347',h:'1876',c:'g'}
-,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'349',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if ((dut === 1\'b0) && (ref === 1\'b0))',f:'alu_testbench.v',l:'349',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'351',h:'44',c:'g'}
 ]}],
 b3:[{dummy:0},
@@ -660,17 +660,17 @@ b739:[{dummy:0},
 ,{cr:'c',t:'I',z:'					if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'320',h:'12',c:'g'}
 ,{cr:'c',t:'A',z:'					if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'320',h:'140',c:'g'}
 ]},
-{anchor:'cvg742',items:[{z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',h:'12',c:'g'}
-,{cr:'m',t:'A',z:'                		if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzz...',f:'alu_testbench.v',l:'321',h:'0',c:'r'}
+{anchor:'cvg742',items:[{z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',h:'12',c:'g'}
+,{cr:'m',t:'A',z:'                		if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'321',h:'0',c:'r'}
 ]},
 {anchor:'cvg743',items:[{z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',h:'16',c:'g'}
 ,{cr:'c',t:'A',z:'            if (RES_dut !== RES_ref) begin',f:'alu_testbench.v',l:'327',h:'152',c:'g'}
 ]},
-{anchor:'cvg744',items:[{z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',h:'16',c:'g'}
-,{cr:'m',t:'A',z:'                if (!((RES_dut === 9\'bzzzzzzzzz) && (RES_ref === 9\'bzzzzz...',f:'alu_testbench.v',l:'328',h:'0',c:'r'}
+{anchor:'cvg744',items:[{z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',h:'16',c:'g'}
+,{cr:'m',t:'A',z:'				if (!((RES_dut === 16\'d0) && (RES_ref === 16\'d0)))',f:'alu_testbench.v',l:'328',h:'0',c:'r'}
 ]},
 {anchor:'cvg745',items:[{z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare__outputs = 0;',f:'alu_testbench.v',l:'334',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'            if (!compare_bit(COUT_dut, COUT_ref)) compare__outputs = 0;',f:'alu_testbench.v',l:'334',h:'0',c:'r'}
@@ -699,7 +699,7 @@ b739:[{dummy:0},
 b757:[{dummy:0},
 {anchor:'cvg758',items:[{z:'            if (dut === ref)',f:'alu_testbench.v',l:'347',c:'Y',p:'66.66'}
 ,{cr:'c',t:'I',z:'            if (dut === ref)',f:'alu_testbench.v',l:'347',h:'1876',c:'g'}
-,{cr:'m',t:'T',z:'            else if ((dut === 1\'bz) && (ref === 1\'bz))',f:'alu_testbench.v',l:'349',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'			else if ((dut === 1\'b0) && (ref === 1\'b0))',f:'alu_testbench.v',l:'349',h:'0',c:'r'}
 ,{cr:'c',t:'E',z:'            else',f:'alu_testbench.v',l:'351',h:'44',c:'g'}
 ]}],
 b2:[{dummy:0},
