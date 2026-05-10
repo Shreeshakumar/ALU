@@ -9,23 +9,22 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/shreeshakumar/ALU/src/verification
 T_opt
-!s110 1778415891
-VcYQXJS?fMf?JOBmYJLEdL2
+!s110 1778418583
+V]3?d?48ikPT6H[Xi>S@JU0
 04 13 4 work alu_testbench fast 0
-=1-6805caf5892e-6a007913-13b11-37b79
+=1-6805caf5892e-6a008397-4270b-3be4d
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OE;O;10.6c;65
-R0
 valu_reference_model
-Z2 !s110 1778416164
+Z2 !s110 1778418579
 !i10b 1
-!s100 hN15H;10Q`abkN2D:Sgk<1
-IebahPoLWX8n`dCS[Z[9Ye1
+!s100 Gg_Da`RI^aaJeiKES?HXK0
+ILh[0U;P_9;fX9c@Q8zaPY1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1778396919
+w1778417046
 8alu_reference_model.v
 Falu_reference_model.v
 L0 1
@@ -33,21 +32,21 @@ Z4 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z5 !s108 1778416164.000000
-!s107 alu_testbench.v|alu_reference_model.v|Eight_bit_ALU_rtl_design.v|
-Z6 !s90 +acc|+cover|-l|log_file.log|Eight_bit_ALU_rtl_design.v|alu_reference_model.v|alu_testbench.v|
+Z5 !s108 1778418579.000000
+Z6 !s107 alu_testbench.v|alu_reference_model.v|Eight_bit_ALU_rtl_design.v|
+Z7 !s90 +acc|+cover|-l|log_file.log|Eight_bit_ALU_rtl_design.v|alu_reference_model.v|alu_testbench.v|
 !i113 0
-Z7 !s102 +cover
-Z8 o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s102 +cover
+Z9 o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 valu_testbench
 R2
 !i10b 1
-!s100 gUfTDzE>Lg]McU1Z835V=0
-IhPdc2hdiG1T2iKeN@`M751
+!s100 OnX`LmJP_oEMDCBIQEGH^0
+IL@@]_HPV>K=>8HE6KCC5I0
 R3
 R0
-w1778415885
+w1778418565
 8alu_testbench.v
 Falu_testbench.v
 L0 3
@@ -56,11 +55,11 @@ r1
 !s85 0
 31
 R5
-Z9 !s107 alu_testbench.v|alu_reference_model.v|Eight_bit_ALU_rtl_design.v|
 R6
-!i113 0
 R7
+!i113 0
 R8
+R9
 R1
 vEight_bit_ALU_rtl_design
 R2
@@ -78,10 +77,10 @@ r1
 !s85 0
 31
 R5
-R9
 R6
-!i113 0
 R7
+!i113 0
 R8
+R9
 R1
 n@eight_bit_@a@l@u_rtl_design
