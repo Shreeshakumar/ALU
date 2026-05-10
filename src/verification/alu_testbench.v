@@ -277,6 +277,7 @@ module alu_testbench;
 			apply_test(8'hC6, 8'h65, 4'b1100, "ROL_A_B");
 			apply_test(8'hC6, 8'h66, 4'b1100, "ROL_A_B");
 			apply_test(8'hC6, 8'h67, 4'b1100, "ROL_A_B");
+			apply_test(8'hC6, 8'b000000x0, 4'b1100, "ROL_A_B");
 
 			apply_test(8'hCC, 8'h0B, 4'b1101, "ROR_A_B");
 			apply_test(8'hCC, 8'h6B, 4'b1101, "ROR_A_B");
@@ -289,6 +290,7 @@ module alu_testbench;
 			apply_test(8'hCC, 8'h05, 4'b1101, "ROR_A_B");
 			apply_test(8'hCC, 8'h06, 4'b1101, "ROR_A_B");
 			apply_test(8'hCC, 8'h07, 4'b1101, "ROR_A_B");
+			apply_test(8'hC6, 8'b000000x0, 4'b1101, "ROR_A_B");
 			
         end
     endtask
