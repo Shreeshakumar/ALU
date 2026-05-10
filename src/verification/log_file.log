@@ -1,5 +1,5 @@
 # vsim work.alu_testbench -l log_file.log -coverage -c -do "coverage save -onexit -codeAll coverage_file.ucdb; run -all; exit" 
-# Start time: 20:34:21 on May 10,2026
+# Start time: 21:02:14 on May 10,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -141,6 +141,15 @@
 # [PASS]                                                                            S_ADD: OPA=0x20 OPB=0x20 CMD=0xb
 #   DUT: RES=0x0040 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 #   REF: RES=0x040 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+# [FAIL]                                                                            S_ADD: OPA=0x70 OPB=0x70 CMD=0xb
+#   DUT: RES=0x00e0 COUT=0 OFLOW=1 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x1e0 COUT=0 OFLOW=1 G=0 E=1 L=0 ERR=0
+# [FAIL]                                                                            S_ADD: OPA=0xa0 OPB=0xa0 CMD=0xb
+#   DUT: RES=0xff40 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x040 COUT=0 OFLOW=1 G=0 E=1 L=0 ERR=0
+# [PASS]                                                                            S_ADD: OPA=0x10 OPB=0x10 CMD=0xb
+#   DUT: RES=0x0020 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+#   REF: RES=0x020 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 # [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x30 CMD=0xc
 #   DUT: RES=0x0020 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
 #   REF: RES=0x020 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
@@ -150,6 +159,18 @@
 # [PASS]                                                                            S_SUB: OPA=0x40 OPB=0x40 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+# [FAIL]                                                                            S_SUB: OPA=0x70 OPB=0x90 CMD=0xc
+#   DUT: RES=0x00e0 COUT=0 OFLOW=1 G=1 E=0 L=0 ERR=0
+#   REF: RES=0x1e0 COUT=0 OFLOW=1 G=0 E=0 L=1 ERR=0
+# [FAIL]                                                                            S_SUB: OPA=0xa0 OPB=0x70 CMD=0xc
+#   DUT: RES=0xff30 COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
+#   REF: RES=0x030 COUT=0 OFLOW=1 G=1 E=0 L=0 ERR=0
+# [FAIL]                                                                            S_SUB: OPA=0x90 OPB=0x70 CMD=0xc
+#   DUT: RES=0xff20 COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
+#   REF: RES=0x020 COUT=0 OFLOW=1 G=1 E=0 L=0 ERR=0
+# [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x10 CMD=0xc
+#   DUT: RES=0x0040 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
+#   REF: RES=0x040 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
 # 
 # === Testing Arithmetic Operations (INVALID=b01) ===
 # [PASS]                                                                              ADD: OPA=0x01 OPB=0x01 CMD=0x0
@@ -269,6 +290,15 @@
 # [PASS]                                                                            S_ADD: OPA=0x20 OPB=0x20 CMD=0xb
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x70 OPB=0x70 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0xa0 OPB=0xa0 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x10 OPB=0x10 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x30 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
@@ -276,6 +306,18 @@
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x40 OPB=0x40 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x70 OPB=0x90 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0xa0 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x90 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x10 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # 
@@ -397,6 +439,15 @@
 # [PASS]                                                                            S_ADD: OPA=0x20 OPB=0x20 CMD=0xb
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x70 OPB=0x70 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0xa0 OPB=0xa0 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x10 OPB=0x10 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x30 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
@@ -404,6 +455,18 @@
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x40 OPB=0x40 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x70 OPB=0x90 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0xa0 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x90 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x10 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # 
@@ -525,6 +588,15 @@
 # [PASS]                                                                            S_ADD: OPA=0x20 OPB=0x20 CMD=0xb
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x70 OPB=0x70 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0xa0 OPB=0xa0 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_ADD: OPA=0x10 OPB=0x10 CMD=0xb
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x30 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
@@ -532,6 +604,18 @@
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # [PASS]                                                                            S_SUB: OPA=0x40 OPB=0x40 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x70 OPB=0x90 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0xa0 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x90 OPB=0x70 CMD=0xc
+#   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+#   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [PASS]                                                                            S_SUB: OPA=0x50 OPB=0x10 CMD=0xc
 #   DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # 
@@ -736,14 +820,14 @@
 #   REF: RES=0x000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
 # 
 # === TEST SUMMARY ===
-# Total Tests: 232
-# PASS: 205
-# FAIL: 27
+# Total Tests: 260
+# PASS: 228
+# FAIL: 32
 # 
 # *** SOME TESTS FAILED ***
 # 
 # ** Note: $finish    : alu_testbench.v(137)
-#    Time: 9165 ns  Iteration: 0  Instance: /alu_testbench
+#    Time: 10845 ns  Iteration: 0  Instance: /alu_testbench
 # Saving coverage database on exit...
-# End time: 20:34:22 on May 10,2026, Elapsed time: 0:00:01
+# End time: 21:02:15 on May 10,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
