@@ -198,9 +198,11 @@ module alu_testbench;
 					apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");
 					apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
 					
-			apply_test(8'hFF, 8'h04, 4'b1001, "MUL_AB");
-			apply_test(8'h04, 8'hFF, 4'b1001, "MUL_AB");
-			apply_test(8'h00, 8'h00, 4'b1001, "MUL_AB");
+apply_test(8'h00, 8'h00, 4'b1001, "MUL_AB");
+apply_test(8'h01, 8'h01, 4'b1001, "MUL_AB");
+apply_test(8'h0F, 8'h0F, 4'b1001, "MUL_AB");
+apply_test(8'h7F, 8'h7F, 4'b1001, "MUL_AB");
+apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");
 
             // SHIFT_MUL
 					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
