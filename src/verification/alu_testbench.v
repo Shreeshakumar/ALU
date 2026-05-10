@@ -246,12 +246,14 @@ module alu_testbench;
             
             @(posedge CLK);
             @(posedge CLK);
+            @(posedge CLK);
             
             test_count = test_count + 1;
             compare_outputs(cmp);
             if (cmp) begin
                 $display("[PASS] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
                          test_name, a, b, cmd);
+                display_mismatch();
                 pass_count = pass_count + 1;
             end else begin
                 $display("[FAIL] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
