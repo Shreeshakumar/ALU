@@ -4,7 +4,7 @@ module alu_reference_model(
     input [7:0] OPA, OPB,
     input CIN, MODE,
     input [3:0] CMD,
-    output reg [16:0] RES,
+	output reg [15:0] RES,
     output reg COUT, OFLOW, G, E, L, ERR
 );
 
@@ -62,7 +62,7 @@ module alu_reference_model(
 								//else begin	E = 1'b0; G = 1'b0; L = 1'b0;	end
                 				end
 					4'd9	:	begin	// A+1 B+1 nA * nB
-									RES = ((OPA + 1) * (OPB + 1)); 
+						RES = ((OPA + 1'b1) * (OPB + 1'b1)); 
 								end
 					4'd10	:	begin	// A<<1 nA * B
 									RES = (OPA << 1) * OPB; 
