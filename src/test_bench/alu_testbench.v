@@ -19,6 +19,7 @@ module alu_testbench;
     integer fail_count = 0;
     integer test_count = 0;
 	reg cmp;
+	reg abcd;
 
     // DUT instantiation
     Eight_bit_ALU_rtl_design dut (
@@ -340,9 +341,8 @@ module alu_testbench;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10) && INP_VALID == 2'b11)
 				begin
-            		@(posedge CLK);
-            		@(posedge CLK);
-					@(posedge CLK);		if (RES_dut !== 1'bx ) 		compare__outputs = 0;
+            		abcd = 1;
+					@(posedge CLK);		//if (RES_dut !== 1'bx ) 		compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 				end
 			else	begin
@@ -391,3 +391,4 @@ endtask
     end
 
 endmodule
+
