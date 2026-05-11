@@ -340,10 +340,10 @@ module alu_testbench;
         begin
             compare__outputs = 1;
 
-			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
+			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10)
 				begin
 					@(posedge CLK); 	if (RES_dut !== 1'bx) 		compare__outputs = 0;
-            		@(posedge CLK);		if (RES_dut !== RES_ref) 		compare__outputs = 0;
+            		@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 				end
 			else	begin
