@@ -12,8 +12,8 @@ module alu_reference_model(
 	wire signed [7:0]sOPA = OPA;
 	wire signed [7:0]sOPB = OPB;
 	//signes calculus
-	wire signed [7:0] s_add = sOPA + sOPB;
-	wire signed [7:0] s_sub = sOPA - sOPB;
+	wire signed [15:0] s_add = sOPA + sOPB;
+	wire signed [15:0] s_sub = sOPA - sOPB;
 	
     always @(*) begin
         // Default values
