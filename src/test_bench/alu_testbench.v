@@ -300,6 +300,8 @@ module alu_testbench;
 			apply_test(8'hCC, 8'h07, 4'b1101, "ROR_A_B");
 			apply_test(8'hC6, 8'b000000x0, 4'b1101, "ROR_A_B");
 			
+			apply_test(8'hC6, 8'b000000x0, 4'b1111, "extra");
+			
         end
     endtask
 
