@@ -178,7 +178,6 @@ module alu_testbench;
 			apply_test(8'h49, 8'h00, 4'b0101, "DEC_A");
 			apply_test(8'h00, 8'h00, 4'b0101, "DEC_A");
 			apply_test(8'h0A, 8'h00, 4'b0101, "DEC_A");
-
 	
             // INC_B
 			apply_test(8'h00, 8'h50, 4'b0110, "INC_B");
@@ -189,9 +188,9 @@ module alu_testbench;
 			apply_test(8'h00, 8'h00, 4'b0111, "DEC_B");
             
             // CMP
-					apply_test(8'd200, 8'd100, 4'b1000, "CMP (equal)");
-					apply_test(8'd50, 8'd200, 4'b1000, "CMP (greater)");
-					apply_test(8'd128, 8'd128, 4'b1000, "CMP (less)");
+			apply_test(8'd200, 8'd100, 4'b1000, "CMP (equal)");
+			apply_test(8'd50, 8'd200, 4'b1000, "CMP (greater)");
+			apply_test(8'd128, 8'd128, 4'b1000, "CMP (less)");
 
             // MUL_AB
 			apply_test(8'hFE, 8'hFE, 4'b1001, "MUL_AB");//FF*FF 11111111 11111111
@@ -202,11 +201,11 @@ module alu_testbench;
 			apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");//1*6
 			apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");//0*0
 					
-			//apply_test(8'h60, 8'h60, 4'b1001, "MUL_AB");//70*70
-			//apply_test(8'h7E, 8'h7E, 4'b1001, "MUL_AB");//7F*7F
-			//apply_test(8'h08, 8'h08, 4'b1001, "MUL_AB");//9*9
-			//apply_test(8'h03, 8'h03, 4'b1001, "MUL_AB");//4*4
-			//apply_test(8'h07, 8'h07, 4'b1001, "MUL_AB");//08*08
+			apply_test(8'h60, 8'h60, 4'b1001, "MUL_AB");//70*70
+			apply_test(8'h7E, 8'h7E, 4'b1001, "MUL_AB");//7F*7F
+			apply_test(8'h08, 8'h08, 4'b1001, "MUL_AB");//9*9
+			apply_test(8'h03, 8'h03, 4'b1001, "MUL_AB");//4*4
+			apply_test(8'h07, 8'h07, 4'b1001, "MUL_AB");//08*08
 
 
             // SHIFT_MUL
@@ -214,25 +213,25 @@ module alu_testbench;
 			apply_test(8'hFF, 8'h05, 4'b1010, "SHIFT_MUL");//0
 			apply_test(8'hFE, 8'h00, 4'b1010, "SHIFT_MUL");//1
 					
-					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
-					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
 
-			//apply_test(8'h7E, 8'h01, 4'b1010, "SHIFT_MUL");
-			//apply_test(8'h55, 8'h01, 4'b1010, "SHIFT_MUL");
-			//apply_test(8'h04, 8'h02, 4'b1010, "SHIFT_MUL");
-			//apply_test(8'h02, 8'h02, 4'b1010, "SHIFT_MUL");
-			//apply_test(8'h01, 8'h04, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h7E, 8'h01, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h55, 8'h01, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h04, 8'h02, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h02, 8'h02, 4'b1010, "SHIFT_MUL");
+			apply_test(8'h01, 8'h04, 4'b1010, "SHIFT_MUL");
 
             // S_ADD
 			apply_test(8'h10, 8'h20, 4'b1011, "S_ADD");
 			apply_test(8'h20, 8'h10, 4'b1011, "S_ADD");
 			apply_test(8'h20, 8'h20, 4'b1011, "S_ADD");
 
-			//apply_test(8'h70, 8'h70, 4'b1011, "S_ADD");
-			//apply_test(8'hA0, 8'hA0, 4'b1011, "S_ADD");
-			//apply_test(8'h10, 8'h10, 4'b1011, "S_ADD");
+			apply_test(8'h70, 8'h70, 4'b1011, "S_ADD");
+			apply_test(8'hA0, 8'hA0, 4'b1011, "S_ADD");
+			apply_test(8'h10, 8'h10, 4'b1011, "S_ADD");
 
-			//apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
+			apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
 			//apply_test(8'h90, 8'h20, 4'b1011, "S_ADD");
 
 			apply_test(8'h00, 8'h00, 4'b1011, "S_ADD");
@@ -244,13 +243,13 @@ module alu_testbench;
 			apply_test(8'h30, 8'h50, 4'b1100, "S_SUB");
 			apply_test(8'h40, 8'h40, 4'b1100, "S_SUB");
 
-			//apply_test(8'h70, 8'h90, 4'b1100, "S_SUB");
-			//apply_test(8'hA0, 8'h70, 4'b1100, "S_SUB");
-			//apply_test(8'h90, 8'h70, 4'b1100, "S_SUB");
-			//apply_test(8'h50, 8'h10, 4'b1100, "S_SUB");
+			apply_test(8'h70, 8'h90, 4'b1100, "S_SUB");
+			apply_test(8'hA0, 8'h70, 4'b1100, "S_SUB");
+			apply_test(8'h90, 8'h70, 4'b1100, "S_SUB");
+			apply_test(8'h50, 8'h10, 4'b1100, "S_SUB");
 
-			//apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
-			//apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
+			apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
+			apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
 
 			apply_test(8'h00, 8'h00, 4'b1100, "S_SUB");
 			apply_test(8'hFF, 8'hFF, 4'b1100, "S_SUB");
@@ -342,8 +341,8 @@ module alu_testbench;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10))
 				begin
-					@(posedge CLK); 	if (RES_dut !== 1'bx) 		compare__outputs = 0;
-            		@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
+					@(posedge CLK); 	if (RES_dut !== 1'bx ) 		compare__outputs = 0;
+					@(posedge CLK);		if (RES_dut !== 1'bx ) 		compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 				end
 			else	begin
