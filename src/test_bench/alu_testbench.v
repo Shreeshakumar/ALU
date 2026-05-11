@@ -309,7 +309,6 @@ module alu_testbench;
         input [80*8:1] test_name
     );
         begin
-            @(posedge CLK);
             OPA = a;
             OPB = b;
             CMD = cmd;
@@ -341,7 +340,6 @@ module alu_testbench;
 
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10))
 				begin
-					@(posedge CLK); 	if (RES_dut !== 1'bx ) 		compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== 1'bx ) 		compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 				end
