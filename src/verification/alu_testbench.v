@@ -235,6 +235,10 @@ module alu_testbench;
 			apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
 			apply_test(8'h90, 8'h20, 4'b1011, "S_ADD");
 
+			apply_test(8'h00, 8'h00, 4'b1011, "S_ADD");
+			apply_test(8'hFF, 8'hFF, 4'b1011, "S_ADD");
+			apply_test(8'h00, 8'h00, 4'b1011, "S_ADD");
+
 			// S_SUB
 			apply_test(8'h50, 8'h30, 4'b1100, "S_SUB");
 			apply_test(8'h30, 8'h50, 4'b1100, "S_SUB");
@@ -247,6 +251,10 @@ module alu_testbench;
 
 			apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
 			apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
+
+			apply_test(8'h00, 8'h00, 4'b1100, "S_SUB");
+			apply_test(8'hFF, 8'hFF, 4'b1100, "S_SUB");
+			apply_test(8'h00, 8'h00, 4'b1100, "S_SUB");
 
 		end
     endtask
@@ -335,7 +343,7 @@ module alu_testbench;
 			if (MODE == 4'd1 && (CMD == 4'd9 || CMD == 4'd10 || CMD == 4'd11 || CMD == 4'd12))
 				begin
 					@(posedge CLK); 	if (RES_dut !== 1'bx) 		compare__outputs = 0;
-            		@(posedge CLK);		if (RES_dut !== 1'bx) 		compare__outputs = 0;
+            		@(posedge CLK);		if (RES_dut !== RES_ref) 		compare__outputs = 0;
 					@(posedge CLK);		if (RES_dut !== RES_ref) 	compare__outputs = 0;
 				end
 			else	begin
