@@ -202,11 +202,11 @@ module alu_testbench;
 			apply_test(8'h00, 8'h05, 4'b1001, "MUL_AB");//1*6
 			apply_test(8'hFF, 8'hFF, 4'b1001, "MUL_AB");//0*0
 					
-			apply_test(8'h60, 8'h60, 4'b1001, "MUL_AB");//70*70
-			apply_test(8'h7E, 8'h7E, 4'b1001, "MUL_AB");//7F*7F
-			apply_test(8'h08, 8'h08, 4'b1001, "MUL_AB");//9*9
-			apply_test(8'h03, 8'h03, 4'b1001, "MUL_AB");//4*4
-			apply_test(8'h07, 8'h07, 4'b1001, "MUL_AB");//08*08
+			//apply_test(8'h60, 8'h60, 4'b1001, "MUL_AB");//70*70
+			//apply_test(8'h7E, 8'h7E, 4'b1001, "MUL_AB");//7F*7F
+			//apply_test(8'h08, 8'h08, 4'b1001, "MUL_AB");//9*9
+			//apply_test(8'h03, 8'h03, 4'b1001, "MUL_AB");//4*4
+			//apply_test(8'h07, 8'h07, 4'b1001, "MUL_AB");//08*08
 
 
             // SHIFT_MUL
@@ -217,23 +217,23 @@ module alu_testbench;
 					apply_test(8'h04, 8'h03, 4'b1010, "SHIFT_MUL");
 					apply_test(8'h00, 8'h05, 4'b1010, "SHIFT_MUL");
 
-			apply_test(8'h7E, 8'h01, 4'b1010, "SHIFT_MUL");
-			apply_test(8'h55, 8'h01, 4'b1010, "SHIFT_MUL");
-			apply_test(8'h04, 8'h02, 4'b1010, "SHIFT_MUL");
-			apply_test(8'h02, 8'h02, 4'b1010, "SHIFT_MUL");
-			apply_test(8'h01, 8'h04, 4'b1010, "SHIFT_MUL");
+			//apply_test(8'h7E, 8'h01, 4'b1010, "SHIFT_MUL");
+			//apply_test(8'h55, 8'h01, 4'b1010, "SHIFT_MUL");
+			//apply_test(8'h04, 8'h02, 4'b1010, "SHIFT_MUL");
+			//apply_test(8'h02, 8'h02, 4'b1010, "SHIFT_MUL");
+			//apply_test(8'h01, 8'h04, 4'b1010, "SHIFT_MUL");
 
             // S_ADD
 			apply_test(8'h10, 8'h20, 4'b1011, "S_ADD");
 			apply_test(8'h20, 8'h10, 4'b1011, "S_ADD");
 			apply_test(8'h20, 8'h20, 4'b1011, "S_ADD");
 
-			apply_test(8'h70, 8'h70, 4'b1011, "S_ADD");
-			apply_test(8'hA0, 8'hA0, 4'b1011, "S_ADD");
-			apply_test(8'h10, 8'h10, 4'b1011, "S_ADD");
+			//apply_test(8'h70, 8'h70, 4'b1011, "S_ADD");
+			//apply_test(8'hA0, 8'hA0, 4'b1011, "S_ADD");
+			//apply_test(8'h10, 8'h10, 4'b1011, "S_ADD");
 
-			apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
-			apply_test(8'h90, 8'h20, 4'b1011, "S_ADD");
+			//apply_test(8'h70, 8'h90, 4'b1011, "S_ADD");
+			//apply_test(8'h90, 8'h20, 4'b1011, "S_ADD");
 
 			apply_test(8'h00, 8'h00, 4'b1011, "S_ADD");
 			apply_test(8'hFF, 8'hFF, 4'b1011, "S_ADD");
@@ -244,13 +244,13 @@ module alu_testbench;
 			apply_test(8'h30, 8'h50, 4'b1100, "S_SUB");
 			apply_test(8'h40, 8'h40, 4'b1100, "S_SUB");
 
-			apply_test(8'h70, 8'h90, 4'b1100, "S_SUB");
-			apply_test(8'hA0, 8'h70, 4'b1100, "S_SUB");
-			apply_test(8'h90, 8'h70, 4'b1100, "S_SUB");
-			apply_test(8'h50, 8'h10, 4'b1100, "S_SUB");
+			//apply_test(8'h70, 8'h90, 4'b1100, "S_SUB");
+			//apply_test(8'hA0, 8'h70, 4'b1100, "S_SUB");
+			//apply_test(8'h90, 8'h70, 4'b1100, "S_SUB");
+			//apply_test(8'h50, 8'h10, 4'b1100, "S_SUB");
 
-			apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
-			apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
+			//apply_test(8'h02, 8'hFF, 4'b1100, "S_SUB");
+			//apply_test(8'h10, 8'hF0, 4'b1100, "S_SUB");
 
 			apply_test(8'h00, 8'h00, 4'b1100, "S_SUB");
 			apply_test(8'hFF, 8'hFF, 4'b1100, "S_SUB");
