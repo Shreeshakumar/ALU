@@ -125,18 +125,18 @@ module alu_reference_model(
 			if (INP_VALID == 2'b11)
 				begin 
 					case(CMD)
-						4'b0000: RES = OPA & OPB;       // AND
-                		4'b0001: RES = ~(OPA & OPB);    // NAND
-		                4'b0010: RES = OPA | OPB;       // OR
-                		4'b0011: RES = ~(OPA | OPB);    // NOR
-						4'b0100: RES = OPA ^ OPB;       // XOR
-                		4'b0101: RES = ~(OPA ^ OPB);    // XNOR
-						4'b0110: RES = ~OPA;       // NOT_A
-						4'b0111: RES = ~OPB;    // NOT_B
-						4'b1000: RES = OPA >> 1;      // SHR1_A
-						4'b1001: RES = OPA << 1;      // SHL1_A
-						4'b1010: RES = OPB >> 1;   // SHR1_B
-                		4'b1011: RES = OPB << 1;   // SHL1_B
+						4'b0000: RES = {8'b0, OPA & OPB};       // AND
+						4'b0001: RES = {8'b0, ~(OPA & OPB)};    // NAND
+						4'b0010: RES = {8'b0, OPA | OPB};       // OR
+						4'b0011: RES = {8'b0, ~(OPA | OPB)};    // NOR
+						4'b0100: RES = {8'b0, OPA ^ OPB};       // XOR
+						4'b0101: RES = {8'b0, ~(OPA ^ OPB)};    // XNOR
+						4'b0110: RES = {8'b0, ~OPA};       // NOT_A
+						4'b0111: RES = {8'b0, ~OPB};    // NOT_B
+						4'b1000: RES = {8'b0, OPA >> 1};      // SHR1_A
+						4'b1001: RES = {8'b0, OPA << 1};      // SHL1_A
+						4'b1010: RES = {8'b0, OPB >> 1};   // SHR1_B
+						4'b1011: RES = {8'b0, OPB << 1};   // SHL1_B
 						4'b1100: begin  // ROL_A_B
 									case(OPB[2:0])
 										'b000	:	RES[7:0] = OPA;
