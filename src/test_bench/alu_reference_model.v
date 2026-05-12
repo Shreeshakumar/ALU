@@ -40,7 +40,7 @@ module alu_reference_model(
 								COUT = RES[8];
                 				end
 					4'b0001: 	begin  // SUB
-                    			OFLOW = (OPA < OPB);
+                    			OFLOW = (OPA < (OPB + CIN));
 								RES = OPA - OPB;
                 				end
 					4'b0010: 	begin  // ADD_CIN
@@ -48,7 +48,7 @@ module alu_reference_model(
 								COUT = RES[8];
                 				end
 					4'b0011:	begin  // SUB_CIN
-                    			OFLOW = (OPA < OPB);
+								OFLOW = (OPA < (OPB + CIN));
 								RES = OPA - OPB - CIN;
                 				end
 					4'b0100: 	RES = OPA + 8'd1;  // INC_A
