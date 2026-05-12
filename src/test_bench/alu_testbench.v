@@ -324,7 +324,7 @@ module alu_testbench;
             if (cmp) begin
                 $display("[PASS] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
                          test_name, a, b, cmd);
-                //display_mismatch();
+                display_mismatch();
                 pass_count = pass_count + 1;
             end else begin
                 $display("[FAIL] %s: OPA=0x%h OPB=0x%h CMD=0x%h", 
@@ -379,8 +379,8 @@ endtask
     // Display mismatch details
     task display_mismatch();
         begin
-            $display("  DUT: RES=0x%h COUT=%b OFLOW=%b G=%b E=%b L=%b ERR=%b",
-                     RES_dut, COUT_dut, OFLOW_dut, G_dut, E_dut, L_dut, ERR_dut);
+            //$display("  DUT: RES=0x%h COUT=%b OFLOW=%b G=%b E=%b L=%b ERR=%b",
+            //         RES_dut, COUT_dut, OFLOW_dut, G_dut, E_dut, L_dut, ERR_dut);
             $display("  REF: RES=0x%h COUT=%b OFLOW=%b G=%b E=%b L=%b ERR=%b",
                      RES_ref, COUT_ref, OFLOW_ref, G_ref, E_ref, L_ref, ERR_ref);
         end
