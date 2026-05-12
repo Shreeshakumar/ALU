@@ -133,9 +133,9 @@ t5:{items:[{dummy:0}
 ,{id:'cvg83',s:'2',cr:'c',z:'RST',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg84',s:'2',cr:'m',z:'abcd',h1:'0',h2:'0',c:'R',p:'0.00'}
 ,{id:'cvg85',s:'2',cr:'c',z:'cmp',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg87',s:'2',cr:'m',z:'fail_count[31-7]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg112',s:'2',z:'fail_count[6]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg113',s:'2',cr:'c',z:'fail_count[5-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg87',s:'2',cr:'m',z:'fail_count[31-6]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg113',s:'2',z:'fail_count[5]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg114',s:'2',cr:'c',z:'fail_count[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg120',s:'2',cr:'m',z:'pass_count[31-9]',h1:'0',h2:'0',c:'R',p:'0.00'}
 ,{id:'cvg143',s:'2',z:'pass_count[8]',h1:'1',h2:'0',c:'Y',p:'50.00'}
 ,{id:'cvg144',s:'2',cr:'c',z:'pass_count[7-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
@@ -170,9 +170,9 @@ t2:{items:[{dummy:0}
 ,{id:'cvg636',s:'2',cr:'c',z:'RST',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg637',s:'2',cr:'m',z:'abcd',h1:'0',h2:'0',c:'R',p:'0.00'}
 ,{id:'cvg638',s:'2',cr:'c',z:'cmp',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg640',s:'2',cr:'c',z:'fail_count[0-5]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg646',s:'2',z:'fail_count[6]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg647',s:'2',cr:'m',z:'fail_count[7-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg640',s:'2',cr:'c',z:'fail_count[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg645',s:'2',z:'fail_count[5]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg646',s:'2',cr:'m',z:'fail_count[6-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
 ,{id:'cvg673',s:'2',cr:'c',z:'pass_count[0-7]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg681',s:'2',z:'pass_count[8]',h1:'1',h2:'0',c:'Y',p:'50.00'}
 ,{id:'cvg682',s:'2',cr:'m',z:'pass_count[9-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
