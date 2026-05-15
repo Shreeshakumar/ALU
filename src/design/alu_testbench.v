@@ -26,7 +26,7 @@ module alu_testbench;
         .OPA(OPA), .OPB(OPB), .CIN(CIN),
         .CLK(CLK), .RST(RST), .CMD(CMD),
         .CE(CE), .MODE(MODE),
-		.inp_valid(INP_VALID),
+		.INP_VALID(INP_VALID),
         .COUT(COUT_dut), .OFLOW(OFLOW_dut),
         .RES(RES_dut),
         .G(G_dut), .E(E_dut), .L(L_dut),
