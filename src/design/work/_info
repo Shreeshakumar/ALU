@@ -1,0 +1,85 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/fetools/work_area/frontend/Batch_11/shreeshakumar/projects/ALU/src/design
+T_opt
+!s110 1778839684
+VX[>`hLAinZE:fHc8JOZQC0
+04 13 4 work alu_testbench fast 0
+=1-6805caf5892e-6a06f084-8e062-156e4
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OE;O;10.6c;65
+valu_design
+Z2 !s110 1778839661
+!i10b 1
+!s100 BoCLZn0OU=YY6S9l151X;1
+ILhDKKYDaOHGH2oC^2zh?12
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1778839394
+8alu_design.v
+Falu_design.v
+L0 4
+Z4 OE;L;10.6c;65
+r1
+!s85 0
+31
+Z5 !s108 1778839661.000000
+Z6 !s107 alu_testbench.v|alu_reference_model.v|alu_design.v|
+Z7 !s90 +acc|+cover|-l|log_file.log|alu_design.v|alu_reference_model.v|alu_testbench.v|
+!i113 0
+Z8 !s102 +cover
+Z9 o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+valu_reference_model
+R2
+!i10b 1
+!s100 6=cLaO3fO9@oFc16WW^cF0
+IVk1z14Q=kl?HAeA^_FngV0
+R3
+R0
+w1778839534
+8alu_reference_model.v
+Falu_reference_model.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R1
+valu_testbench
+R2
+!i10b 1
+!s100 H^z?MQ<jn9E8I40[gki4;3
+Ibo[I7KY46<gCkeAgfn64;0
+R3
+R0
+w1778839642
+8alu_testbench.v
+Falu_testbench.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R1

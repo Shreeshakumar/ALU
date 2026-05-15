@@ -1,0 +1,40 @@
+var g_data = {
+f3:{
+scopes:[{link:'z.htm?f=0&s=3',val:'work.alu_design'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg275',items:[{c:'G',p:'100.00',z:'cnt_9'}
+,{cr:'c',s:'1',z:'st0',h:'809',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'22',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'22',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'22',c:'g'}
+]}
+,{anchor:'cvg278',items:[{c:'G',p:'100.00',z:'cnt_10'}
+,{cr:'c',s:'1',z:'st0',h:'817',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'20',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'20',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'20',c:'g'}
+]}
+
+],
+},
+f205:{
+scopes:[{s:'5',b:'1',val:'alu_testbench'},{link:'z.htm?f=0&s=205',val:'dut'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg275',items:[{c:'G',p:'100.00',z:'cnt_9'}
+,{cr:'c',s:'1',z:'st0',h:'809',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'22',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'22',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'22',c:'g'}
+]}
+,{anchor:'cvg278',items:[{c:'G',p:'100.00',z:'cnt_10'}
+,{cr:'c',s:'1',z:'st0',h:'817',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'20',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'20',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'20',c:'g'}
+]}
+
+],
+},
+dummyEnd:0
+};
+processFsmData(g_data);
