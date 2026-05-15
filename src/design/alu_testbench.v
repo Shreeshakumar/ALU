@@ -317,6 +317,7 @@ module alu_testbench;
             CMD = cmd;
             
             @(posedge CLK);
+			@(posedge CLK);
             @(posedge CLK);
             
             test_count = test_count + 1;
