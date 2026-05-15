@@ -36,25 +36,25 @@ module alu_reference_model(
 				begin	
 					case(CMD)
                 	4'b0000: 	begin  // ADD
-                    			RES = OPA + OPB;
+                    			RES[7:0]  = OPA + OPB;
 								COUT = RES[8];
                 				end
 					4'b0001: 	begin  // SUB
                     			OFLOW = (OPA < (OPB + CIN));
-								RES = OPA - OPB;
+								RES[7:0]  = OPA - OPB;
                 				end
 					4'b0010: 	begin  // ADD_CIN
-                    			RES = OPA + OPB + CIN;
+                    			RES[7:0]  = OPA + OPB + CIN;
 								COUT = RES[8];
                 				end
 					4'b0011:	begin  // SUB_CIN
 								OFLOW = (OPA < (OPB + CIN));
-								RES = OPA - OPB - CIN;
+								RES[7:0]  = OPA - OPB - CIN;
                 				end
-					4'b0100: 	RES = OPA + 8'd1;  // INC_A
-                	4'b0101: 	RES = OPA - 8'd1;  // DEC_A
-					4'b0110: 	RES = OPB + 8'd1;  // INC_B
-					4'b0111: 	RES = OPB - 8'd1;  // DEC_B
+					4'b0100: 	RES[7:0]  = OPA + 8'd1;  // INC_A
+                	4'b0101: 	RES[7:0]  = OPA - 8'd1;  // DEC_A
+					4'b0110: 	RES[7:0]  = OPB + 8'd1;  // INC_B
+					4'b0111: 	RES[7:0]  = OPB - 8'd1;  // DEC_B
 					4'b1000: 	begin  // CMP                    			
 								if (OPA == OPB) begin	E = 1'b1; G = 1'b0; L = 1'b0;	end 
 								else if (OPA > OPB) begin	E = 1'b0; G = 1'b1; L = 1'b0;end 
